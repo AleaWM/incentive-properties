@@ -1,0 +1,19 @@
+---
+title: "How PINs Relate to Projects"
+---
+
+## Basic units
+
+A **PIN** identifies an individual tax parcel. A single commercial or industrial development may contain several parcels and therefore several PINs.
+
+A **project** is the broader property grouping created from the available appeal records, sale documents, valuation worksheets, and parcel proximity. The manually assigned **key PIN** identifies that grouped project.
+
+## Geographic organization
+
+Each PIN is associated with a municipality and a township. The detailed reports are rendered by township because the parcel analysis was written around township boundaries and because there are substantially fewer townships than municipalities.
+
+Municipal boundaries and township boundaries do not always match. A municipality may therefore appear in more than one township report. The municipality directory lists every relevant township report rather than pretending each municipality belongs to exactly one township.
+
+## Using the site
+
+Use **Municipalities** when you know the municipality name. Use **Search PINs** when you know a PIN, project key PIN, appellant, township, or municipality. Both pages link to the pre-rendered township reports.

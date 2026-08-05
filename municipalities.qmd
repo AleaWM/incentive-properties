@@ -1,0 +1,56 @@
+---
+title: "Municipality Directory"
+page-layout: full
+---
+
+Search for a municipality below. A municipality may link to more than one township report when it crosses township boundaries.
+
+```{r}
+#| label: municipality-directory
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(readr)
+library(stringr)
+library(DT)
+
+slugify <- function(x) {
+  x |>
+    str_to_lower() |>
+    str_replace_all("[^a-z0-9]+", "-") |>
+    str_remove("^-") |>
+    str_remove("-$")
+}
+
+comm_ind <- read_csv("../Merriman RA/ptax/Output/comm_ind_PINs_2011to2022_timeseries.csv", show_col_types = FALSE) |>
+  filter(year == 2022) |>
+  mutate(
+    pin10 = str_sub(pin, 1, 10),
+    township_slug = slugify(Township),
+    report = paste0(
+      '<a href="townships/', township_slug,
+      '-projects.html">Open ', Township, ' report</a>'
+    )
+  )
+
+municipality_directory <- comm_ind |>
+  filter(!is.na(clean_name), clean_name != "", !is.na(Township), Township != "") |>
+  group_by(Municipality = clean_name, Township, report) |>
+  summarise(PINs = n_distinct(pin), .groups = "drop") |>
+  arrange(Municipality, Township)
+
+DT::datatable(
+  municipality_directory,
+  rownames = FALSE,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = 25,
+    searchHighlight = TRUE,
+    autoWidth = TRUE
+  ),
+  colnames = c("Municipality", "Township", "PINs", "Township report")
+)
+```

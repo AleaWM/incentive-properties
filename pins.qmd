@@ -1,0 +1,72 @@
+---
+title: "Search PINs and Projects"
+page-layout: full
+---
+
+Search by full or partial PIN, municipality, township, project key PIN, or appellant. The last column opens the relevant pre-rendered township report.
+
+```{r}
+#| label: pin-directory
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(readxl)
+library(readr)
+library(stringr)
+library(DT)
+
+slugify <- function(x) {
+  x |>
+    str_to_lower() |>
+    str_replace_all("[^a-z0-9]+", "-") |>
+    str_remove("^-") |>
+    str_remove("-$")
+}
+
+comm_ind <- read_csv("../Merriman RA/ptax/Output/comm_ind_PINs_2011to2022_timeseries.csv", show_col_types = FALSE) |>
+  filter(year == 2022) |>
+  select(pin, clean_name, Township, everything()) |>
+  mutate(pin10 = str_sub(pin, 1, 10))
+
+keypins <- read_xlsx("../Merriman RA/ptax/Output/projects_checked_MAINFILE.xlsx") |>
+  mutate(
+    keypin = main_keypin,
+    pin10 = str_sub(as.character(pin), 1, 10)
+  )
+
+pin_directory <- comm_ind |>
+  left_join(
+    keypins |>
+      select(any_of(c("pin10", "keypin", "appellant"))) |>
+      distinct(),
+    by = "pin10"
+  ) |>
+  transmute(
+    PIN = pin,
+    `Project key PIN` = keypin,
+    Municipality = clean_name,
+    Township,
+    Appellant = appellant,
+    Report = paste0(
+      '<a href="townships/', slugify(Township),
+      '-projects.html">Open report</a>'
+    )
+  ) |>
+  distinct() |>
+  arrange(Township, Municipality, PIN)
+
+DT::datatable(
+  pin_directory,
+  rownames = FALSE,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = 25,
+    searchHighlight = TRUE,
+    autoWidth = TRUE,
+    scrollX = TRUE
+  )
+)
+```

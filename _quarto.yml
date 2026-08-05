@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: docs
+  execute-dir: project
+  render:
+    - index.qmd
+    - about.qmd
+    - municipalities.qmd
+    - pins.qmd
+    - townships/*.qmd
+    - "!township_report_template.qmd"
+
+website:
+  title: "PINs to Projects"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: How PINs Relate to Projects
+      - href: municipalities.qmd
+        text: Municipalities
+      - href: pins.qmd
+        text: Search PINs
+  page-footer:
+    center: "Cook County commercial and industrial property projects"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-location: left
+    code-fold: true
+    df-print: paged
+    link-external-newwindow: true
+
+execute:
+  freeze: auto
