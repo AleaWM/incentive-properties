@@ -1,9 +1,11 @@
 ---
-title: "Municipality Directory"
+title: "Municipality Reports"
 page-layout: full
 ---
 
-Search for a municipality below. A municipality may link to more than one township report when it crosses township boundaries.
+Search for a municipality below and open its report. Municipality reports summarize all commercial and industrial PINs located in that municipality, including municipalities that cross township boundaries.
+
+Because projects may cross municipal or township boundaries, report counts are not additive across geographies.
 
 ```{r}
 #| label: municipality-directory
@@ -13,6 +15,7 @@ Search for a municipality below. A municipality may link to more than one townsh
 
 library(tidyverse)
 library(readr)
+library(readxl)
 library(stringr)
 library(DT)
 
@@ -24,22 +27,39 @@ slugify <- function(x) {
     str_remove("-$")
 }
 
-comm_ind <- read_csv("../Merriman RA/ptax/Output/comm_ind_PINs_2011to2022_timeseries.csv", show_col_types = FALSE) |>
+comm_ind <- read_csv(
+  "../Merriman RA/ptax/Output/comm_ind_PINs_2011to2022_timeseries.csv",
+  show_col_types = FALSE
+) |>
   filter(year == 2022) |>
-  mutate(
-    pin10 = str_sub(pin, 1, 10),
-    township_slug = slugify(Township),
-    report = paste0(
-      '<a href="townships/', township_slug,
-      '-projects.html">Open ', Township, ' report</a>'
-    )
-  )
+  mutate(pin = as.character(pin))
+
+keypins <- read_xlsx(
+  "../Merriman RA/ptax/Output/projects_checked_MAINFILE.xlsx"
+) |>
+  transmute(
+    pin = as.character(pin),
+    keypin = as.character(main_keypin)
+  ) |>
+  distinct(pin, keypin)
 
 municipality_directory <- comm_ind |>
-  filter(!is.na(clean_name), clean_name != "", !is.na(Township), Township != "") |>
-  group_by(Municipality = clean_name, Township, report) |>
-  summarise(PINs = n_distinct(pin), .groups = "drop") |>
-  arrange(Municipality, Township)
+  filter(!is.na(clean_name), clean_name != "") |>
+  left_join(keypins, by = "pin") |>
+  group_by(Municipality = clean_name) |>
+  summarise(
+    `C&I PINs` = n_distinct(pin),
+    Projects = n_distinct(keypin, na.rm = TRUE),
+    Townships = n_distinct(Township, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  arrange(Municipality) |>
+  mutate(
+    Report = paste0(
+      '<a href="municipalities/', slugify(Municipality),
+      '-projects.html">Open report</a>'
+    )
+  )
 
 DT::datatable(
   municipality_directory,
@@ -50,7 +70,6 @@ DT::datatable(
     pageLength = 25,
     searchHighlight = TRUE,
     autoWidth = TRUE
-  ),
-  colnames = c("Municipality", "Township", "PINs", "Township report")
+  )
 )
 ```
