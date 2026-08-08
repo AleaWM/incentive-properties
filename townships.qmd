@@ -1,0 +1,78 @@
+---
+title: "Township Reports"
+page-layout: full
+---
+
+Search for a township below and open its report. Township reports summarize the commercial and industrial PINs and projects located within each township.
+
+Because projects may cross municipal or township boundaries, report counts are not additive across geographies.
+
+```{r}
+#| label: township-directory
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(readr)
+library(readxl)
+library(stringr)
+library(DT)
+
+slugify <- function(x) {
+  x |>
+    str_to_lower() |>
+    str_replace_all("[^a-z0-9]+", "-") |>
+    str_remove("^-") |>
+    str_remove("-$")
+}
+
+comm_ind <- read_csv(
+  "../Merriman RA/ptax/Output/comm_ind_PINs_2011to2022_timeseries.csv",
+  show_col_types = FALSE
+) |>
+  filter(year == 2022) |>
+  mutate(pin = as.character(pin))
+
+keypins <- read_xlsx(
+  "../Merriman RA/ptax/Output/projects_checked_MAINFILE.xlsx"
+) |>
+  transmute(
+    pin = as.character(pin),
+    keypin = as.character(main_keypin)
+  ) |>
+  distinct(pin, keypin)
+
+township_directory <- comm_ind |>
+  filter(
+    !is.na(Township), Township != "",
+    Township != "Chicago"
+  ) |>
+  left_join(keypins, by = "pin") |>
+  group_by(Township) |>
+  summarise(
+    `C&I PINs` = n_distinct(pin),
+    Projects = n_distinct(keypin, na.rm = TRUE),
+    Municipalities = n_distinct(clean_name, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  arrange(Township) |>
+  mutate(
+    Report = paste0(
+      '<a href="townships/', slugify(Township),
+      '-projects.html">Open report</a>'
+    )
+  )
+
+DT::datatable(
+  township_directory,
+  rownames = FALSE,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = 25,
+    searchHighlight = TRUE,
+    autoWidth = TRUE
+  )
+)
+```
