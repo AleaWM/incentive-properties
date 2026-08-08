@@ -1,4 +1,5 @@
 # Generate one parameterized Quarto source page for every township.
+# The full site render will convert these generated .qmd files to HTML in docs/townships/.
 # Run from the PINs-to-Projects website project directory.
 
 library(readxl)
