@@ -11,10 +11,11 @@ format:
     code-fold: true
     link-external-newwindow: true
     df-print: paged
+    message: false
 
 ---
 
-[Municipality directory](../municipalities.qmd) · [Search PINs](../pins.qmd)
+[Township directory](../townships.qmd) · [Municipality directory](../municipalities.qmd) · [Search PINs](../pins.qmd)
 
 ```{r, message=FALSE, warning=FALSE}
 #| label: setup
@@ -190,7 +191,12 @@ There are `r paste(comm_ind |> filter(Township == params$township) |> distinct(p
 
 cat("Township:", res$township)
 
-comm_ind |> filter(Township == params$township) |> distinct(clean_name)
+municipalities_in_township <- comm_ind |>
+  filter(Township == params$township, !is.na(clean_name), clean_name != "") |>
+  distinct(Municipality = clean_name) |>
+  arrange(Municipality)
+
+municipalities_in_township
 ```
 
 ## Parcel map (outline only)
