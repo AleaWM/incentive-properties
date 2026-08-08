@@ -6,9 +6,18 @@ project:
     - index.qmd
     - about.qmd
     - municipalities.qmd
+    - townships.qmd
     - pins.qmd
     - townships/*.qmd
+    - municipalities/*.qmd
+    - "*.qmd"
+    - "townships/*.qmd"
+    - "municipalities/*.qmd"
     - "!township_report_template.qmd"
+    - "!municipality-template.qmd"
+    - "!township_report_template.qmd"
+    - "!municipality_report_template.qmd"
+
 
 website:
   title: "PINs to Projects"
@@ -18,10 +27,16 @@ website:
         text: Home
       - href: about.qmd
         text: How PINs Relate to Projects
+        
       - href: municipalities.qmd
-        text: Municipalities
+        text: By Municipality
+        
+      - href: townships.qmd
+        text: By Township
+
+        
       - href: pins.qmd
-        text: Search PINs
+        text: Search PINs/Projects
   page-footer:
     center: "Cook County commercial and industrial property projects"
 
