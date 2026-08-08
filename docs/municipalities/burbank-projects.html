@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Burbank Municipality Projects – PINs to Projects</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+
+<script src="../site_libs/datatables-binding-0.33/datatables.js"></script>
+
+<script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
+<link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+
+<script src="../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+
+<link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+<link href="../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+
+<script src="../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+
+
+</head>
+
+<body class="floating nav-fixed slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">PINs to Projects</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">How PINs Relate to Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../municipalities.html"> 
+<span class="menu-text">By Municipality</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../townships.html"> 
+<span class="menu-text">By Township</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../pins.html"> 
+<span class="menu-text">Search PINs/Projects</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#municipality-overview" id="toc-municipality-overview" class="nav-link active" data-scroll-target="#municipality-overview">Municipality overview</a></li>
+  <li><a href="#parcel-map-outline-only" id="toc-parcel-map-outline-only" class="nav-link" data-scroll-target="#parcel-map-outline-only">Parcel map (outline only)</a></li>
+  <li><a href="#manually-coded-keypins-map" id="toc-manually-coded-keypins-map" class="nav-link" data-scroll-target="#manually-coded-keypins-map">Manually coded keypins – map</a></li>
+  <li><a href="#class-summary-pins-vs-keypins" id="toc-class-summary-pins-vs-keypins" class="nav-link" data-scroll-target="#class-summary-pins-vs-keypins">Class summary (pins vs keypins)</a></li>
+  <li><a href="#keypin-level-summary-fmv-incentives-exemptions" id="toc-keypin-level-summary-fmv-incentives-exemptions" class="nav-link" data-scroll-target="#keypin-level-summary-fmv-incentives-exemptions">Keypin-level summary (fmv, incentives, exemptions)</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Burbank Municipality Projects</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="../townships.html">Township directory</a> · <a href="../municipalities.html">Municipality directory</a> · <a href="../pins.html">Search PINs</a></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#this_municipality &lt;- params$municipality</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">analyze_municipality</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">municipality_name =</span> params<span class="sc">$</span>municipality,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">year          =</span> <span class="dv">2022</span>,     <span class="co"># adjust if you want a different year</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">comm_ind_df   =</span> comm_ind,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">keypins_df    =</span> keypins</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining with `by = join_by(pin, incent_prop, clean_name, Triad, Township,
+pin10)`
+Joining with `by = join_by(pin, class, tax_code_num, tax_bill_total, av_mailed,
+av_certified, av_board, av_clerk, exe_abate, assess_ratio, improvement_ind,
+comparable_props, `building type`, land_use, incent_prop, class_1dig,
+major_class_code, major_class_type, loa, agency_num, tax_code_rate, clean_name,
+Triad, Township, tax_code_distribution_pct, has_AB_exemp, fmv, fmv_NA_flag,
+in_tif, class_group, multi_muni, multimuni_flag, tif_years, years_existed,
+incentive_years, landuse_change, incent_change, tif_change, incent, exempt,
+gain_incent, lose_incent, became_exempt, became_taxed, leave_tif, enter_tif,
+years_exempt, incent_status, exempt_flag, base_year_fmv_2011, fmv_growth_2011,
+reassessed_year, fmv_pct_change, av_clerk_pct_change, av_mailed_pct_change,
+class_lag, improvement_lag, reassess_lag, reassessed_taxyear,
+incent_change_year, next_reassessment, base_year_fmv_2011_w, fmv_growth_2011_w,
+treatment_year, times_changed, type, pin10)`</code></pre>
+</div>
+</div>
+<section id="municipality-overview" class="level2">
+<h2 class="anchored" data-anchor-id="municipality-overview">Municipality overview</h2>
+<p>There are 387 PINs in this municipality that were commercial or industrial at least once.</p>
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<pre><code>Municipality: Burbank</code></pre>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["Township"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"Stickney"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="parcel-map-outline-only" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="parcel-map-outline-only">Parcel map (outline only)</h2>
+<div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(res<span class="sc">$</span>parcels) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>() <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display page-columns page-full">
+<div id="fig-parcels-outline" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-parcels-outline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="burbank-projects_files/figure-html/fig-parcels-outline-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-parcels-outline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: All commercial &amp; industrial parcels in the municipality.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="manually-coded-keypins-map" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="manually-coded-keypins-map">Manually coded keypins – map</h2>
+<div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>parcel_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display page-columns page-full">
+<div id="fig-keypin-map" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-keypin-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="burbank-projects_files/figure-html/fig-keypin-map-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-keypin-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Parcels grouped by manually coded keypins (based off of appeal IDs, sale documents and proximity).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="class-summary-pins-vs-keypins" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="class-summary-pins-vs-keypins">Class summary (pins vs keypins)</h2>
+<div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>class_summary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-class-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-class-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["class"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["pins"],"name":[2],"type":["int"],"align":["right"]},{"label":["keypins"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"0","2":"21","3":"1"},{"1":"100","2":"2","3":"2"},{"1":"190","2":"4","3":"4"},{"1":"212","2":"4","3":"4"},{"1":"290","2":"1","3":"1"},{"1":"417","2":"1","3":"1"},{"1":"490","2":"4","3":"1"},{"1":"517","2":"150","3":"96"},{"1":"522","2":"13","3":"9"},{"1":"523","2":"21","3":"10"},{"1":"528","2":"10","3":"8"},{"1":"529","2":"2","3":"2"},{"1":"530","2":"1","3":"1"},{"1":"531","2":"4","3":"4"},{"1":"590","2":"117","3":"65"},{"1":"592","2":"12","3":"7"},{"1":"593","2":"3","3":"3"},{"1":"597","2":"16","3":"8"},{"1":"729","2":"1","3":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-class-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: PINs and projects per property class
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="keypin-level-summary-fmv-incentives-exemptions" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="keypin-level-summary-fmv-incentives-exemptions">Keypin-level summary (fmv, incentives, exemptions)</h2>
+<div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>keypin_info_summary <span class="sc">|&gt;</span> DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">rownames =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-keypin-info-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-keypin-info-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-456802a4c774c2a15b7b" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-456802a4c774c2a15b7b">{"x":{"filter":"none","vertical":false,"data":[["19332080170000",null,"19303070330000","19332030010000","19312040010000","19324130380000","19283260320000","19304100370000","19312000060000","19321060060000","19324140340000","19333130080000","19284120370000","19284230100000","19312070030000","19313230330000","19283300040000","19284010420000","19284220200000","19304090330000","19311020050000","19312000010000","19324150470000","19331060010000","19333230060000","19334030320000","19334070060000","19284200180000","19284230150000","19293150360000","19294100320000","19294140290000","19303000130000","19311000660000","19311020010000","19324160100000","19331000140000","19334070310000","19283270350000","19283280350000","19284010440000","19284170350000","19284230140000","19293080330000","19293150320000","19294100350000","19294150350000","19303050150000","19311020070000","19312010090000","19321220020000","19322050230000","19322070030000","19323100180000","19323140310000","19324130310000","19324150350000","19331140170000","19331160150000","19332000090000","19332040010000","19332040020000","19332070190000","19332080010000","19333120100000","19334030180000","19334030380000","19334060120000","19334070560000","19334070790000","19334070880000","19283270290000","19283270310000","19283270320000","19283280400000","19283300010000","19283300020000","19283300080000","19283310380000","19284010480000","19284010490000","19284010500000","19284010510000","19284010520000","19284010560000","19284010570000","19284230260000","19284230270000","19284230330000","19293080380000","19293080560000","19293090360000","19293110290000","19294000110000","19294000120000","19294000710000","19294000840000","19294140330000","19294140340000","19294140350000","19294140360000","19294150290000","19294160370000","19294160420000","19303000150000","19303000160000","19303000190000","19303000200000","19303000210000","19303000220000","19303050180000","19304070290000","19304070300000","19311000050000","19311000060000","19311000210000","19311000710000","19311000770000","19311000780000","19311000790000","19311000800000","19311010240000","19311010970000","19311090030000","19311090220000","19312020390000","19312030270000","19312060040000","19312090050000","19312090200000","19312090210000","19312090340000","19312090350000","19313120310000","19313220090000","19313230320000","19313230380000","19313230390000","19314140090000","19314140150000","19321010070000","19321010190000","19321020520000","19321020550000","19321020560000","19321030010000","19321050270000","19321060280000","19321220040000","19321230160000","19322060230000","19323110270000","19323170160000","19323170370000","19324130320000","19324140310000","19324140440000","19324150320000","19324150500000","19324160130000","19324160140000","19324210250000","19324220230000","19331000270000","19331070010000","19331070030000","19331070040000","19331080010000","19331080040000","19331090010000","19331140010000","19331140020000","19332000040000","19332000050000","19332000070000","19332000120000","19332000130000","19332020020000","19332020040000","19332020080000","19332020220000","19332020280000","19332020290000","19332080080000","19332080180000","19334030110000","19334030260000","19334070030000","19334070080000","19334070270000","19334070410000","19334070470000","19334070820000","19334070830000","19334070840000","19334070860000","19334080050000","19334080060000","19334080070000"],[1,21,14,10,7,7,6,6,6,6,6,6,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],["WOODSPRING HOTEL",null,"J&amp;A MOTOR CORP","LCMH  INC","CHUCK'S SOUTHERN COMFO","FIFTH THIRD BANK, NATI","EMRO MARKETING CO","LUCYNA ZUBEK","MOISES PASTOR","REM PROPERTIES, INC.","ZDM INVESTMENTS, LLC","BURBANK REHABILITATION","WM 73 RE LLC","JOSE VILLEGAS","MALKIT SINGH","KRZYSTOF HARBUT","TOM MCAULIFFE","BEST BUY #311A","BURBANK CENTER, LLC","GERBER REAL ESTATE INC","NICHOLAS ANDRICOPULOS","6147 BROADWAY LLC","DOUGLAS GNIADEK","RANDY CONN","US BANK FACILITY MGMT","STANLEY BAFIA","ANTONIO GARCIA","SHEEHY &amp; SONS","78TH &amp; CICERO RE LLC","UNITED HOLY LAND FUND","PROPERTIES INVESTMENT","JULIANNE ROGALA","SPEEDWAY SUPERAMERICA","ATEF SHAMAILEH","MARY RODAK","ELMOSA, DR. SAMMY","ART GROUP LLC","MMCJ PROPERTIES","MICHAEL PAPPAS","GEORGE NORKUS","ERCA BTC NNN, LLC","GHAZI SWEISS","78TH &amp; CICERO RE LLC",null,"UNITED HOLY LAND FUND","PROPERTIES INVESTMENT","AKRAM A. JABER","TRACY DALTON","NICHOLAS ANDRICOPULOS","PETER ALEXANDER","SABURI INVESTMENT GROU","APERION CARE BURBANK","MIDTOWN ENTERPRISES, I","TRI CITY FOODS","FAMILY DOLLAR STORES,","NAVISBAR","PETER BRADARICH","REBECCA SHABAZ","BURBANK PLAZA LTD","BIG LOTS LEASE ADMIN","RUBEN &amp; SILVIA GARCIA","RUBEN &amp; SILVIA GARCIA","PPRE, LLC","GRAHAM ENTERPRISE 108","7 ELEVEN INC   TD23591","FRANK MANCARI","SSC BURBANK IL LLC","PNCY889/Y889PL)","DG #12380","M&amp;N CARBONARA LLC","ABE INVESTMENT, LLC","GERALD WARD","ALEMIC LLC","ALEMIC LLC","CONNIE LOGAN","JIB JAB PROPERTIES, LL","JOHN KELLO","TOM MCAULIFFE","JIB JAB PROPERTIES, LL","GMRI, INC.","ERCA BTC NNN, LLC","BURBANK MALL, LLC","KIN, INC.","ERCA BTC NNN, LLC",null,null,"YAROSLAV YARMOLUK","COM ED","DANIEL CARMODY","MARIA CASTILLO","MARIA CASTILLO","THE DUGOUT","PETER KRAFCISIN","MIKE VAN KLEY","STEPHEN R SCHMIDT","BURBANK MANOR LTD II","BURBANK MANOR LTD II",null,null,null,null,null,"LITTLE HANDSOME INC",null,"DG #11993","7090 W. 79TH ST INC.","7120 LLC","7120 LLC","HAUNTED TRAILS","HAUNTED TRAILS","MARK BRUSS","ED LUKANUS","ED LUKANUS","DANIEL KANDICH","7141 79TH INC.","MR. JOHN MIKOS","DUNKIN DONUTS","B33 BB CROSSING LLC","CTKO LLC","ANDYS FROZEN CUSTARD","GW HARLEM BURBANK","CHERRY PROP GRP NSPI","CORPORATE AMERICA FAMI","M RABER S SIMMONS","M RABER S SIMMONS","LOUIS KRAINIK","EDUARDO HUERTA","CHUCK'S SOUTHERN COMFO",null,"ALGNAG PROPERTIES LP","ALGNAG PROPERTIES LP","HARRY J LESNIAK","ROBERTO GUTIERREZ","JIM APOSTOIOU",null,"KRZYSTOF HARBUT","ADR INVESTMENT BURBANK","ADR INVESTMENT BURBANK","HEATTLAND RETAIL PROPE","YASMIN  IBRAHIM","HIGHLAND LAANDINGS LLC","WILLIAM L BANK","BURBANK INVESTMENT LLC",null,"6215 PARTNERSHIP","VCA RPAC 253 BURBANK","STATE BK OF COUNTRYSDE","AMJAD Z KHAN","STEVE CONTE","HIGHLAND LAANDINGS LLC","SOPHIA CIESLA","RIMKUNAS REAL ESTATE D","GEORGIA PANAGIOTAROS",null,"NAVISBAR","BANKY &amp; ANNA SOLOMACHA","HAFEZ RAMAHI","PETER BRADARICH","JOSEPH KASPER","ABED RAZIK","ELMOSA, DR. SAMMY","CT LAND TRUST T U T A","MY BROTHER LLC","WALGREEN CO.","SANDEEP CHANDRA","ANUSHKA GAGLANI","IRVING ZAGORIN","CARMINE DI MIELE","EMAAR PROPERTIES LLC","MOHAMAD SHOUMAN","V &amp; B MGMT INC","BUW LLC","KALID Y BASTE","8150 S CICERO LLC","BURBANK PLAZA STATION","TIME EQUITIES","GORDON FOOD SERVICES","J R L ENTERPRISES","MIDWAY AIRPORT INN INC","HARRY DELIGIANNIS","J R L ENTERPRISES","JOAQUIN MARTINEZ","MMA REALTY PARTNERS","CFLS EVERGREEN LLC",null,"BUDGET INN INC","SOUFIAN ABDELKADER","ANTHONY MEDRANO","ANTONIO GARCIA","RESEMA  PAGOM SERIES","M&amp;N CARBONARA LLC","MMCJ PROPERTIES","M&amp;N CARBONARA LLC","S PAPANASTASATOS","MANTIS PROPERTIES LLC","CHRISTINE GROTHE","DABBAH PROPERTIES","DABBAH PROPERTIES","JEFF TRZASKA"],[3941190,0,1050000,3449625,269136,425000,1285824,570000,498084,535000,430472,5499048,23162356,287068,558552,395740,334432,6422312,927984,654648,154668,352840,1089140,1552496,1243572,1222520,479812,1045800,428716,795000,135168,396184,3618880,640352,249976,336712,2252176,808040,461548,401540,3334176,223200,126044,118916,142916,114832,381292,72820,278456,254840,527556,5804016,403764,669588,436776,76168,93172,432988,505756,1812308,279304,536088,977548,676532,529200,346976,5232780,598608,855060,562500,224172,371884,81280,34720,285564,119828,102436,89648,1952844,940476,669996,2076948,3537608,2850000,67668,11896,292996,75180,623832,321768,64356,132952,192856,597792,720760,809932,36240,37840,37840,37840,87640,301530,226712,5496,575064,193800,342620,92380,749352,593960,71604,182484,35924,226364,312824,468372,986776,2267008,488336,367488,814600,564408,465000,468068,76732,100188,663228,730864,121572,150640,349360,278360,680132,2987804,349280,57092,34600,291972,341600,489616,159312,424428,406508,28700,44160,273000,432000,381248,521320,1121796,568100,125996,161820,42432,188504,186144,383620,97740,8364,441024,740868,560376,392828,1840460,313028,200740,228112,420000,191184,375260,115680,177588,700560,794136,6800000,2476816,2213608,894032,3366060,1175276,250188,273600,910600,110220,608560,602228,454260,390224,31572,209992,147980,315212,249600,146940,281368,852460,112376,322624,342020],[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>keypin<\/th>\n      <th>n<\/th>\n      <th>appellant<\/th>\n      <th>fmv<\/th>\n      <th>incentive_pins<\/th>\n      <th>exempt<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"name":"keypin","targets":0},{"name":"n","targets":1},{"name":"appellant","targets":2},{"name":"fmv","targets":3},{"name":"incentive_pins","targets":4},{"name":"exempt","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-keypin-info-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Projects in municipality. You can sort each column!
+</figcaption>
+</figure>
+</div>
+</div>
+<p>There are 70 projects with more than 1 pin in them and 199 projects overall based on manually grouped keypins from combined data sources.</p>
+<div class="cell" data-tbl-cap="This many pins were in the valuation worksheets.">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>valuation_wksts <span class="sc">|&gt;</span> <span class="fu">filter</span>(pin <span class="sc">%in%</span> res<span class="sc">$</span>pin_info<span class="sc">$</span>pin)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div data-pagedtable="false"> <div class="table-caption"><p>This many pins were in the valuation worksheets.</p></div>
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["keypin"],"name":[1],"type":["chr"],"align":["left"]},{"label":["pin"],"name":[2],"type":["chr"],"align":["left"]},{"label":["year"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"19322050230000","2":"19322040060000","3":"2023"},{"1":"19322050230000","2":"19322050230000","3":"2023"},{"1":"19333130080000","2":"19333130080000","3":"2023"},{"1":"19333130080000","2":"19333130100000","3":"2023"},{"1":"19333130080000","2":"19333130140000","3":"2023"},{"1":"19333130080000","2":"19333130170000","3":"2023"},{"1":"19333130080000","2":"19333230140000","3":"2023"},{"1":"19333130080000","2":"19333230150000","3":"2023"},{"1":"19332020040000","2":"19332020040000","3":"2023"},{"1":"19332080170000","2":"19332080170000","3":"2023"},{"1":"19334030110000","2":"19334030110000","3":"2023"},{"1":"19283280350000","2":"19283280350000","3":"2023"},{"1":"19283280350000","2":"19283290230000","3":"2023"},{"1":"19283280400000","2":"19283280400000","3":"2023"},{"1":"19284010520000","2":"19284010520000","3":"2023"},{"1":"19284200180000","2":"19284200180000","3":"2023"},{"1":"19284200180000","2":"19284210180000","3":"2023"},{"1":"19284200180000","2":"19284210380000","3":"2023"},{"1":"19284230100000","2":"19284230090000","3":"2023"},{"1":"19284230100000","2":"19284230100000","3":"2023"},{"1":"19284230100000","2":"19284230110000","3":"2023"},{"1":"19284230100000","2":"19284230120000","3":"2023"},{"1":"19284230100000","2":"19284230130000","3":"2023"},{"1":"19293150360000","2":"19293150360000","3":"2023"},{"1":"19293150360000","2":"19293150370000","3":"2023"},{"1":"19293150360000","2":"19293150380000","3":"2023"},{"1":"19294150350000","2":"19294150350000","3":"2023"},{"1":"19294150350000","2":"19294150360000","3":"2023"},{"1":"19303070330000","2":"19303070330000","3":"2023"},{"1":"19303070330000","2":"19303070340000","3":"2023"},{"1":"19303070330000","2":"19303070350000","3":"2023"},{"1":"19303070330000","2":"19303070360000","3":"2023"},{"1":"19303070330000","2":"19303080290000","3":"2023"},{"1":"19303070330000","2":"19303080300000","3":"2023"},{"1":"19303070330000","2":"19303080310000","3":"2023"},{"1":"19303070330000","2":"19303080320000","3":"2023"},{"1":"19303070330000","2":"19303080330000","3":"2023"},{"1":"19303070330000","2":"19303080340000","3":"2023"},{"1":"19303070330000","2":"19303080350000","3":"2023"},{"1":"19303070330000","2":"19303080360000","3":"2023"},{"1":"19303070330000","2":"19303080370000","3":"2023"},{"1":"19303070330000","2":"19303080380000","3":"2023"},{"1":"19304090330000","2":"19304090330000","3":"2023"},{"1":"19304090330000","2":"19304090340000","3":"2023"},{"1":"19304090330000","2":"19304090350000","3":"2023"},{"1":"19304090330000","2":"19304090360000","3":"2023"},{"1":"19304100370000","2":"19304100320000","3":"2023"},{"1":"19304100370000","2":"19304100330000","3":"2023"},{"1":"19304100370000","2":"19304100340000","3":"2023"},{"1":"19304100370000","2":"19304100350000","3":"2023"},{"1":"19304100370000","2":"19304100360000","3":"2023"},{"1":"19304100370000","2":"19304100370000","3":"2023"},{"1":"19311000660000","2":"19311000200000","3":"2023"},{"1":"19311000660000","2":"19311000660000","3":"2023"},{"1":"19311000660000","2":"19311000680000","3":"2023"},{"1":"19311000800000","2":"19311000800000","3":"2023"},{"1":"19312010090000","2":"19312010090000","3":"2023"},{"1":"19312010090000","2":"19312010100000","3":"2023"},{"1":"19313120310000","2":"19313120310000","3":"2023"},{"1":"19314140090000","2":"19314140090000","3":"2023"},{"1":"19321010190000","2":"19321010190000","3":"2023"},{"1":"19321050270000","2":"19321050270000","3":"2023"},{"1":"19322060230000","2":"19322060230000","3":"2023"},{"1":"19324130380000","2":"19324130340000","3":"2023"},{"1":"19324130380000","2":"19324130350000","3":"2023"},{"1":"19324130380000","2":"19324130360000","3":"2023"},{"1":"19324130380000","2":"19324130370000","3":"2023"},{"1":"19324130380000","2":"19324130380000","3":"2023"},{"1":"19324130380000","2":"19324130390000","3":"2023"},{"1":"19324130380000","2":"19324130400000","3":"2023"},{"1":"19324150470000","2":"19324150280000","3":"2023"},{"1":"19324150470000","2":"19324150290000","3":"2023"},{"1":"19324150470000","2":"19324150300000","3":"2023"},{"1":"19324150470000","2":"19324150470000","3":"2023"},{"1":"19324220230000","2":"19324220230000","3":"2023"},{"1":"19331000140000","2":"19331000140000","3":"2023"},{"1":"19331000140000","2":"19331000150000","3":"2023"},{"1":"19331000140000","2":"19331000230000","3":"2023"},{"1":"19331080040000","2":"19331080040000","3":"2023"},{"1":"19332000070000","2":"19332000070000","3":"2023"},{"1":"19332000090000","2":"19332000090000","3":"2023"},{"1":"19332000090000","2":"19332000140000","3":"2023"},{"1":"19332000120000","2":"19332000120000","3":"2023"},{"1":"19332000130000","2":"19332000130000","3":"2023"},{"1":"19332030010000","2":"19332030010000","3":"2023"},{"1":"19332030010000","2":"19332030020000","3":"2023"},{"1":"19332030010000","2":"19332030030000","3":"2023"},{"1":"19332030010000","2":"19332030040000","3":"2023"},{"1":"19332030010000","2":"19332180010000","3":"2023"},{"1":"19332030010000","2":"19332180020000","3":"2023"},{"1":"19332030010000","2":"19332180030000","3":"2023"},{"1":"19332030010000","2":"19332180040000","3":"2023"},{"1":"19332030010000","2":"19332180050000","3":"2023"},{"1":"19332030010000","2":"19332180060000","3":"2023"},{"1":"19333230060000","2":"19333230060000","3":"2023"},{"1":"19333230060000","2":"19333230080000","3":"2023"},{"1":"19333230060000","2":"19333230090000","3":"2023"},{"1":"19333230060000","2":"19333230110000","3":"2023"},{"1":"19334030320000","2":"19334030310000","3":"2023"},{"1":"19334030320000","2":"19334030320000","3":"2023"},{"1":"19334030320000","2":"19334030330000","3":"2023"},{"1":"19334030320000","2":"19334030440000","3":"2023"},{"1":"19334060120000","2":"19334060120000","3":"2023"},{"1":"19334060120000","2":"19334070580000","3":"2023"},{"1":"19334070820000","2":"19334070820000","3":"2023"},{"1":"19334070840000","2":"19334070840000","3":"2023"},{"1":"19334070860000","2":"19334070860000","3":"2023"},{"1":"19334030260000","2":"19334030260000","3":"2023"},{"1":"19321060280000","2":"19321060280000","3":"2023"},{"1":"19312000060000","2":"19312000050000","3":"2023"},{"1":"19312000060000","2":"19312000060000","3":"2023"},{"1":"19312000060000","2":"19312000070000","3":"2023"},{"1":"19312000060000","2":"19312000080000","3":"2023"},{"1":"19312000060000","2":"19312000090000","3":"2023"},{"1":"19312000060000","2":"19312000100000","3":"2023"},{"1":"19312070030000","2":"19312070010000","3":"2023"},{"1":"19312070030000","2":"19312070020000","3":"2023"},{"1":"19312070030000","2":"19312070030000","3":"2023"},{"1":"19312070030000","2":"19312070040000","3":"2023"},{"1":"19312070030000","2":"19312070050000","3":"2023"},{"1":"19332070190000","2":"19332070030000","3":"2023"},{"1":"19332070190000","2":"19332070190000","3":"2023"},{"1":"19332000040000","2":"19332000040000","3":"2023"},{"1":"19283260320000","2":"19283260320000","3":"2023"},{"1":"19283260320000","2":"19283260330000","3":"2023"},{"1":"19283260320000","2":"19283260340000","3":"2023"},{"1":"19283260320000","2":"19283260350000","3":"2023"},{"1":"19283260320000","2":"19283260360000","3":"2023"},{"1":"19283260320000","2":"19283260370000","3":"2023"},{"1":"19333120100000","2":"19333120100000","3":"2023"},{"1":"19333120100000","2":"19333120110000","3":"2023"},{"1":"19332080010000","2":"19332080010000","3":"2023"},{"1":"19332080010000","2":"19332080020000","3":"2023"},{"1":"19303000130000","2":"19303000130000","3":"2023"},{"1":"19303000130000","2":"19303000170000","3":"2023"},{"1":"19303000130000","2":"19303000180000","3":"2023"},{"1":"19294000110000","2":"19294000110000","3":"2023"},{"1":"19294000120000","2":"19294000120000","3":"2023"},{"1":"19311090030000","2":"19311090030000","3":"2023"},{"1":"19284120370000","2":"19284120360000","3":"2023"},{"1":"19284120370000","2":"19284120370000","3":"2023"},{"1":"19284120370000","2":"19284120380000","3":"2023"},{"1":"19284120370000","2":"19284120390000","3":"2023"},{"1":"19284120370000","2":"19284120400000","3":"2023"},{"1":"19334030380000","2":"19334030380000","3":"2023"},{"1":"19334030380000","2":"19334030390000","3":"2023"},{"1":"19284010440000","2":"19284010440000","3":"2023"},{"1":"19284010440000","2":"19284010470000","3":"2023"},{"1":"19284010510000","2":"19284010510000","3":"2023"},{"1":"19284010420000","2":"19284010420000","3":"2023"},{"1":"19284010420000","2":"19284010430000","3":"2023"},{"1":"19284010420000","2":"19284010450000","3":"2023"},{"1":"19284010420000","2":"19284010460000","3":"2023"},{"1":"19284010500000","2":"19284010500000","3":"2023"},{"1":"19283310380000","2":"19283310380000","3":"2023"},{"1":"19311000770000","2":"19311000770000","3":"2023"},{"1":"19332020020000","2":"19332020020000","3":"2023"},{"1":"19331000270000","2":"19331000270000","3":"2023"},{"1":"19331060010000","2":"19331060010000","3":"2023"},{"1":"19331060010000","2":"19331060020000","3":"2023"},{"1":"19331060010000","2":"19331060030000","3":"2023"},{"1":"19331060010000","2":"19331060040000","3":"2023"},{"1":"19332020290000","2":"19332020290000","3":"2023"},{"1":"19332020080000","2":"19332020080000","3":"2023"},{"1":"19334070560000","2":"19334070560000","3":"2023"},{"1":"19334070560000","2":"19334070570000","3":"2023"},{"1":"19321230160000","2":"19321230160000","3":"2023"},{"1":"19311000710000","2":"19311000710000","3":"2023"},{"1":"19284010480000","2":"19284010480000","3":"2023"},{"1":"19303000220000","2":"19303000220000","3":"2023"},{"1":"19334070310000","2":"19334070310000","3":"2023"},{"1":"19334070310000","2":"19334070320000","3":"2023"},{"1":"19334070310000","2":"19334070480000","3":"2023"},{"1":"19294000710000","2":"19294000710000","3":"2023"},{"1":"19321060060000","2":"19321060060000","3":"2023"},{"1":"19321060060000","2":"19321060070000","3":"2023"},{"1":"19321060060000","2":"19321060080000","3":"2023"},{"1":"19321060060000","2":"19321060090000","3":"2023"},{"1":"19321060060000","2":"19321060100000","3":"2023"},{"1":"19321060060000","2":"19321060200000","3":"2023"},{"1":"19312060040000","2":"19312060040000","3":"2023"},{"1":"19303000150000","2":"19303000150000","3":"2023"},{"1":"19332000050000","2":"19332000050000","3":"2023"},{"1":"19323100180000","2":"19323100180000","3":"2023"},{"1":"19323100180000","2":"19323100190000","3":"2023"},{"1":"19324160140000","2":"19324160140000","3":"2023"},{"1":"19312090210000","2":"19312090210000","3":"2023"},{"1":"19284010490000","2":"19284010490000","3":"2023"},{"1":"19284230330000","2":"19284230330000","3":"2023"},{"1":"19283300040000","2":"19283300040000","3":"2023"},{"1":"19283300040000","2":"19283300050000","3":"2023"},{"1":"19283300040000","2":"19283300060000","3":"2023"},{"1":"19283300040000","2":"19283300070000","3":"2023"},{"1":"19334070790000","2":"19334070780000","3":"2023"},{"1":"19334070790000","2":"19334070790000","3":"2023"},{"1":"19311010240000","2":"19311010240000","3":"2023"},{"1":"19332040020000","2":"19332040020000","3":"2023"},{"1":"19332040020000","2":"19332040030000","3":"2023"},{"1":"19322070030000","2":"19322070030000","3":"2023"},{"1":"19322070030000","2":"19322070040000","3":"2023"},{"1":"19312090350000","2":"19312090350000","3":"2023"},{"1":"19331140170000","2":"19331140170000","3":"2023"},{"1":"19331140170000","2":"19331140180000","3":"2023"},{"1":"19284220200000","2":"19284220190000","3":"2023"},{"1":"19284220200000","2":"19284220200000","3":"2023"},{"1":"19284220200000","2":"19284220210000","3":"2023"},{"1":"19284220200000","2":"19284220220000","3":"2023"},{"1":"19313230330000","2":"19313230330000","3":"2023"},{"1":"19313230330000","2":"19313230340000","3":"2023"},{"1":"19313230330000","2":"19313230350000","3":"2023"},{"1":"19313230330000","2":"19313230360000","3":"2023"},{"1":"19313230330000","2":"19313230370000","3":"2023"},{"1":"19324210250000","2":"19324210250000","3":"2023"},{"1":"19284230150000","2":"19284230150000","3":"2023"},{"1":"19284230150000","2":"19284230160000","3":"2023"},{"1":"19284230150000","2":"19284230320000","3":"2023"},{"1":"19334070030000","2":"19334070030000","3":"2023"},{"1":"19331160150000","2":"19331160150000","3":"2023"},{"1":"19331160150000","2":"19331160160000","3":"2023"},{"1":"19323140310000","2":"19323140310000","3":"2023"},{"1":"19323140310000","2":"19323140320000","3":"2023"},{"1":"19294140290000","2":"19294140290000","3":"2023"},{"1":"19294140290000","2":"19294140300000","3":"2023"},{"1":"19294140290000","2":"19294140310000","3":"2023"},{"1":"19312030270000","2":"19312030270000","3":"2023"},{"1":"19324140340000","2":"19324140320000","3":"2023"},{"1":"19324140340000","2":"19324140330000","3":"2023"},{"1":"19324140340000","2":"19324140340000","3":"2023"},{"1":"19324140340000","2":"19324140350000","3":"2023"},{"1":"19324140340000","2":"19324140360000","3":"2023"},{"1":"19324140340000","2":"19324140370000","3":"2023"},{"1":"19334070060000","2":"19334070040000","3":"2023"},{"1":"19334070060000","2":"19334070050000","3":"2023"},{"1":"19334070060000","2":"19334070060000","3":"2023"},{"1":"19334070060000","2":"19334070070000","3":"2023"},{"1":"19334080060000","2":"19334080060000","3":"2023"},{"1":"19321220020000","2":"19321220010000","3":"2023"},{"1":"19321220020000","2":"19321220020000","3":"2023"},{"1":"19283270350000","2":"19283270350000","3":"2023"},{"1":"19283270350000","2":"19283270360000","3":"2023"},{"1":"19334030180000","2":"19334030180000","3":"2023"},{"1":"19334030180000","2":"19334030190000","3":"2023"},{"1":"19303000190000","2":"19303000190000","3":"2023"},{"1":"19321220040000","2":"19321220040000","3":"2023"},{"1":"19293080380000","2":"19293080380000","3":"2023"},{"1":"19311010970000","2":"19311010970000","3":"2023"},{"1":"19321020520000","2":"19321020520000","3":"2023"},{"1":"19314140150000","2":"19314140150000","3":"2023"},{"1":"19334080070000","2":"19334080070000","3":"2023"},{"1":"19312000010000","2":"19312000010000","3":"2023"},{"1":"19312000010000","2":"19312000020000","3":"2023"},{"1":"19312000010000","2":"19312000030000","3":"2023"},{"1":"19312000010000","2":"19312000040000","3":"2023"},{"1":"19332020280000","2":"19332020280000","3":"2023"},{"1":"19324160130000","2":"19324160130000","3":"2023"},{"1":"19313230390000","2":"19313230390000","3":"2023"},{"1":"19331080010000","2":"19331080010000","3":"2023"},{"1":"19311000780000","2":"19311000780000","3":"2023"},{"1":"19311000790000","2":"19311000790000","3":"2023"},{"1":"19311000210000","2":"19311000210000","3":"2023"},{"1":"19334070470000","2":"19334070470000","3":"2023"},{"1":"19334070880000","2":"19334070880000","3":"2023"},{"1":"19334070880000","2":"19334070890000","3":"2023"},{"1":"19294100320000","2":"19294100320000","3":"2023"},{"1":"19294100320000","2":"19294100330000","3":"2023"},{"1":"19294100320000","2":"19294100340000","3":"2023"},{"1":"19331090010000","2":"19331090010000","3":"2023"},{"1":"19283270290000","2":"19283270290000","3":"2023"},{"1":"19334070830000","2":"19334070830000","3":"2023"},{"1":"19303000160000","2":"19303000160000","3":"2023"},{"1":"19284230260000","2":"19284230260000","3":"2023"},{"1":"19311020070000","2":"19311020070000","3":"2023"},{"1":"19311020070000","2":"19311020080000","3":"2023"},{"1":"19331070040000","2":"19331070040000","3":"2023"},{"1":"19321030010000","2":"19321030010000","3":"2023"},{"1":"19311000050000","2":"19311000050000","3":"2023"},{"1":"19331070010000","2":"19331070010000","3":"2023"},{"1":"19284170350000","2":"19284170350000","3":"2023"},{"1":"19284170350000","2":"19284170360000","3":"2023"},{"1":"19311020010000","2":"19311020010000","3":"2023"},{"1":"19311020010000","2":"19311020020000","3":"2023"},{"1":"19311020010000","2":"19311020030000","3":"2023"},{"1":"19334070270000","2":"19334070270000","3":"2023"},{"1":"19294160370000","2":"19294160370000","3":"2023"},{"1":"19311000060000","2":"19311000060000","3":"2023"},{"1":"19323170160000","2":"19323170160000","3":"2023"},{"1":"19324140310000","2":"19324140310000","3":"2023"},{"1":"19304070290000","2":"19304070290000","3":"2023"},{"1":"19331070030000","2":"19331070030000","3":"2023"},{"1":"19323110270000","2":"19323110270000","3":"2023"},{"1":"19331140020000","2":"19331140020000","3":"2023"},{"1":"19293110290000","2":"19293110290000","3":"2023"},{"1":"19283270310000","2":"19283270310000","3":"2023"},{"1":"19324130320000","2":"19324130320000","3":"2023"},{"1":"19293090360000","2":"19293090360000","3":"2023"},{"1":"19293080330000","2":"19293080330000","3":"2023"},{"1":"19293080330000","2":"19293080390000","3":"2023"},{"1":"19303050180000","2":"19303050180000","3":"2023"},{"1":"19312020390000","2":"19312020390000","3":"2023"},{"1":"19324150320000","2":"19324150320000","3":"2023"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>There are 300 PINs in the valuation worksheets with 150 distinct keypins.</p>
+<p>There were 199 projects overall based on manually grouped keypins from combined data sources.</p>
+<p>There were 387 PINs within this municipality that had been commercial or industrial at some point in time.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Cook County commercial and industrial property projects</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

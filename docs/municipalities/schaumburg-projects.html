@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Schaumburg Municipality Projects – PINs to Projects</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+
+<script src="../site_libs/datatables-binding-0.33/datatables.js"></script>
+
+<script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
+<link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+
+<script src="../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+
+<link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+<link href="../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+
+<script src="../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+
+
+</head>
+
+<body class="floating nav-fixed slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">PINs to Projects</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">How PINs Relate to Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../municipalities.html"> 
+<span class="menu-text">By Municipality</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../townships.html"> 
+<span class="menu-text">By Township</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../pins.html"> 
+<span class="menu-text">Search PINs/Projects</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#municipality-overview" id="toc-municipality-overview" class="nav-link active" data-scroll-target="#municipality-overview">Municipality overview</a></li>
+  <li><a href="#parcel-map-outline-only" id="toc-parcel-map-outline-only" class="nav-link" data-scroll-target="#parcel-map-outline-only">Parcel map (outline only)</a></li>
+  <li><a href="#manually-coded-keypins-map" id="toc-manually-coded-keypins-map" class="nav-link" data-scroll-target="#manually-coded-keypins-map">Manually coded keypins – map</a></li>
+  <li><a href="#class-summary-pins-vs-keypins" id="toc-class-summary-pins-vs-keypins" class="nav-link" data-scroll-target="#class-summary-pins-vs-keypins">Class summary (pins vs keypins)</a></li>
+  <li><a href="#keypin-level-summary-fmv-incentives-exemptions" id="toc-keypin-level-summary-fmv-incentives-exemptions" class="nav-link" data-scroll-target="#keypin-level-summary-fmv-incentives-exemptions">Keypin-level summary (fmv, incentives, exemptions)</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Schaumburg Municipality Projects</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="../townships.html">Township directory</a> · <a href="../municipalities.html">Municipality directory</a> · <a href="../pins.html">Search PINs</a></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#this_municipality &lt;- params$municipality</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">analyze_municipality</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">municipality_name =</span> params<span class="sc">$</span>municipality,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">year          =</span> <span class="dv">2022</span>,     <span class="co"># adjust if you want a different year</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">comm_ind_df   =</span> comm_ind,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">keypins_df    =</span> keypins</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining with `by = join_by(pin, incent_prop, clean_name, Triad, Township,
+pin10)`
+Joining with `by = join_by(pin, class, tax_code_num, tax_bill_total, av_mailed,
+av_certified, av_board, av_clerk, exe_abate, assess_ratio, improvement_ind,
+comparable_props, `building type`, land_use, incent_prop, class_1dig,
+major_class_code, major_class_type, loa, agency_num, tax_code_rate, clean_name,
+Triad, Township, tax_code_distribution_pct, has_AB_exemp, fmv, fmv_NA_flag,
+in_tif, class_group, multi_muni, multimuni_flag, tif_years, years_existed,
+incentive_years, landuse_change, incent_change, tif_change, incent, exempt,
+gain_incent, lose_incent, became_exempt, became_taxed, leave_tif, enter_tif,
+years_exempt, incent_status, exempt_flag, base_year_fmv_2011, fmv_growth_2011,
+reassessed_year, fmv_pct_change, av_clerk_pct_change, av_mailed_pct_change,
+class_lag, improvement_lag, reassess_lag, reassessed_taxyear,
+incent_change_year, next_reassessment, base_year_fmv_2011_w, fmv_growth_2011_w,
+treatment_year, times_changed, type, pin10)`</code></pre>
+</div>
+</div>
+<section id="municipality-overview" class="level2">
+<h2 class="anchored" data-anchor-id="municipality-overview">Municipality overview</h2>
+<p>There are 1171 PINs in this municipality that were commercial or industrial at least once.</p>
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<pre><code>Municipality: Schaumburg</code></pre>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["Township"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"Schaumburg"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="parcel-map-outline-only" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="parcel-map-outline-only">Parcel map (outline only)</h2>
+<div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(res<span class="sc">$</span>parcels) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>() <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display page-columns page-full">
+<div id="fig-parcels-outline" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-parcels-outline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="schaumburg-projects_files/figure-html/fig-parcels-outline-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-parcels-outline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: All commercial &amp; industrial parcels in the municipality.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="manually-coded-keypins-map" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="manually-coded-keypins-map">Manually coded keypins – map</h2>
+<div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>parcel_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display page-columns page-full">
+<div id="fig-keypin-map" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-keypin-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="schaumburg-projects_files/figure-html/fig-keypin-map-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-keypin-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Parcels grouped by manually coded keypins (based off of appeal IDs, sale documents and proximity).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="class-summary-pins-vs-keypins" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="class-summary-pins-vs-keypins">Class summary (pins vs keypins)</h2>
+<div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>class_summary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-class-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-class-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["class"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["pins"],"name":[2],"type":["int"],"align":["right"]},{"label":["keypins"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"0","2":"19","3":"1"},{"1":"100","2":"5","3":"5"},{"1":"390","2":"1","3":"1"},{"1":"492","2":"1","3":"1"},{"1":"493","2":"2","3":"2"},{"1":"517","2":"247","3":"222"},{"1":"522","2":"28","3":"24"},{"1":"523","2":"15","3":"15"},{"1":"528","2":"19","3":"19"},{"1":"529","2":"28","3":"27"},{"1":"530","2":"5","3":"5"},{"1":"531","2":"42","3":"37"},{"1":"535","2":"1","3":"1"},{"1":"580","2":"11","3":"10"},{"1":"587","2":"1","3":"1"},{"1":"589","2":"67","3":"23"},{"1":"590","2":"55","3":"42"},{"1":"591","2":"41","3":"33"},{"1":"592","2":"44","3":"41"},{"1":"593","2":"264","3":"248"},{"1":"597","2":"82","3":"69"},{"1":"599","2":"110","3":"33"},{"1":"663","2":"75","3":"67"},{"1":"670","2":"3","3":"3"},{"1":"677","2":"2","3":"2"},{"1":"679","2":"3","3":"3"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-class-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: PINs and projects per property class
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="keypin-level-summary-fmv-incentives-exemptions" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="keypin-level-summary-fmv-incentives-exemptions">Keypin-level summary (fmv, incentives, exemptions)</h2>
+<div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>keypin_info_summary <span class="sc">|&gt;</span> DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">rownames =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-keypin-info-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-keypin-info-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-9e52a90aa729970646bb" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-9e52a90aa729970646bb">{"x":{"filter":"none","vertical":false,"data":[["07332020190000","07102020120000","07113030090000","07113030210000","07114000640000","07142000440000","07331020070000","07331020450000","07331030170000","07332010150000","07331020610000","07332030700000","02334010150000","02343000190000","07034000010000","07102040050000","07102040060000","07102040090000","07104000330000","07104000370000","07104000540000","07104010270000","07111020100000","07111020180000","07111020200000","07112010200000","07112020270000","07113010110000","07113010140000","07113010280000","07113010290000","07114000300000","07114000310000","07114000580000","07114000590000","07114000690000","07114000760000","07114000900000","07114010040000","07123000120000","07123020020000","07123020100000","07321050320000","07331020210000","07331020551003","07331030220000","07331030290000","07331030300000","07331030370000","07331030380000","07332000190000","07332000340000","07332000630000","07332000950000","07332000971003","07332010700000","07332010780000","07332010880000","07332010890000","07332011050000","07332011090000","07332020660000","07332020670000","07332020690000","07332020810000","07332030651007","07332040160000","07333000110000","07333010150000","07334000540000","07334020040000","07334020080000","07142000511001","07142000841029",null,"02343000661001","07331050881001","07332030641001","07333030111002","07133000230000","07332030551001","07333030101001","07334010048002","07101010300000","07134000030000","07331000311001","07331020601001","08061000060000","02341020530000","07011010080000","07103010090000","07124010010000","07131000070000","07134000040000","07142000851001","07191050100000","02353050550000","06242050020000","07094010020000","07114000620000","07114000820000","07122010140000","07124020200000","07132000240000","07132000350000","07134000220000","07142000851005","07161060190000","07193000070000","07321070050000","07331020140000","07331020631001","07332030581001","07334000350000","07341190010000","02334010280000","02343030040000","07011010070000","07093010130000","07094000320000","07102020010000","07103000730000","07104000560000","07112010100000","07112010140000","07112020280000","07113000130000","07113030150000","07114000130000","07114000490000","07114000530000","07114000550000","07114000870000","07121010160000","07121010170000","07123000250000","07123000370000","07123020030000","07124000520000","07124000560000","07124020180000","07131030070000","07131030120000","07132000020000","07132000230000","07132000400000","07134000170000","07141010130000","07142000090000","07142000280000","07142000741001","07142000741006","07142000841033","07142000841035","07151000380000","07193000290000","07194000340000","07204000220000","07223010630000","07224000110000","07224010070000","07224010900000","07224130010000","07242010020000","07244010030000","07273000180000","07284090400000","07321020090000","07321050180000","07321070170000","07331010050000","07331010120000","07331010251002","07331010321001","07331020180000","07331020300000","07331020430000","07331050881006","07332000660000","07332000700000","07332000720000","07332000740000","07332010040000","07332010630000","07332010670000","07332011000000","07332011151001","07332020680000","07332040120000","07333020148002","07334000420000","07334020100000","02334010160000","02334010170000","02334010300000","02334010320000","02341020650000","02341020670000","02343000110000","02343000170000","02343000220000","02343000290000","02343000300000","02343000330000","02343000370000","02343000400000","02343000420000","02343000430000","02343000440000","02343000480000","02343000500000","02343000510000","02343000530000","02343000540000","02343000550000","02343000560000","02343000590000","02343000620000","02343000630000","02343000650000","02343000690000","02343000740000","02343030020000","02353050210000","02353050250000","02353050290000","02353050370000","02353050490000","02353050510000","02353050520000","02353050540000","06242010030000","06242010080000","06242050010000","06242050030000","06244010040000","06244010050000","07012000580000","07012000610000","07013000070000","07021000040000","07021000050000","07021000060000","07021000070000","07024010010000","07031010200000","07031010210000","07032000210000","07093010150000","07093010160000","07093010240000","07093010270000","07093010290000","07093010300000","07093010310000","07094000240000","07094000250000","07094000410000","07094000430000","07101010100000","07101010250000","07101010360000","07101010381001","07101010381002","07101010400000","07101010410000","07102000040000","07102000210000","07102010030000","07102010070000","07102010130000","07102020130000","07102030090000","07102040010000","07102040020000","07102040030000","07102040070000","07102040080000","07102040130000","07103000280000","07103000340000","07103000350000","07103000530000","07103000550000","07103000560000","07103000570000","07103000580000","07103000650000","07103000660000","07103000670000","07103000800000","07103000810000","07103010070000","07103010110000","07103020010000","07104000110000","07104000310000","07104000320000","07104000340000","07104000360000","07104000380000","07104000400000","07104000410000","07104000440000","07104000510000","07104000520000","07104000530000","07104000550000","07104000580000","07104000590000","07104000600000","07104010040000","07104010090000","07104010170000","07104010180000","07104010250000","07104010260000","07111000030000","07111000080000","07111000090000","07111020130000","07111030010000","07111030020000","07111030030000","07112010050000","07112020070000","07112020180000","07112020190000","07112020350000","07112020360000","07112020370000","07112020390000","07112020400000","07112020410000","07112030010000","07112030040000","07113000060000","07113000070000","07113000080000","07113000090000","07113000100000","07113000140000","07113010020000","07113010090000","07113010100000","07113010210000","07113010220000","07113010230000","07113010240000","07113010250000","07113010270000","07113010300000","07113020070000","07113020080000","07113020110000","07113020130000","07113020140000","07113020190000","07113020200000","07113020230000","07113030040000","07113030050000","07113030060000","07113030230000","07113040050000","07113040060000","07113040070000","07113040080000","07114000090000","07114000100000","07114000120000","07114000290000","07114000360000","07114000380000","07114000410000","07114000420000","07114000520000","07114000570000","07114000600000","07114000610000","07114000680000","07114000710000","07114000720000","07114000740000","07114000770000","07114000840000","07114000890000","07114010010000","07114010020000","07114010050000","07121000140000","07121000150000","07121000170000","07122000110000","07122000120000","07122010130000","07122010150000","07122010190000","07122020040000","07123000030000","07123000110000","07123000180000","07123000200000","07123000210000","07123000230000","07123000280000","07123000290000","07123000330000","07123000340000","07123000350000","07123000360000","07123000390000","07123000400000","07123000410000","07123000420000","07123000430000","07123000440000","07123020010000","07123020050000","07124000140000","07124000240000","07124000400000","07124000420000","07124000470000","07124000540000","07124000550000","07124010050000","07124010060000","07124020090000","07124020120000","07124020150000","07131000080000","07131000250000","07131000260000","07131000280000","07131000300000","07131000310000","07131010060000","07131010090000","07131010120000","07131010130000","07131010140000","07131010150000","07131010170000","07131010180000","07131010190000","07131010200000","07131010210000","07131020010000","07131020020000","07131030010000","07131030020000","07131030030000","07131030080000","07131030140000","07131030150000","07132000050000","07132000100000","07132000210000","07132000220000","07132000270000","07132000280000","07132000290000","07132000340000","07132000370000","07132000380000","07133000160000","07133000260000","07133000270000","07133000280000","07133000320000","07133000340000","07133000380000","07133000390000","07133000400000","07133060020000","07133060030000","07133060040000","07133060050000","07133060060000","07133060070000","07134000120000","07134000190000","07134000300000","07134000310000","07134000320000","07134010100000","07134080020000","07134080050000","07134080090000","07134080100000","07134080110000","07134080130000","07134080140000","07141010020000","07141010100000","07141010150000","07141010160000","07142000150000","07142000250000","07142000370000","07142000470000","07142000490000","07142000511016","07142000520000","07142000530000","07142000580000","07142000590000","07142000630000","07142000741003","07142000741004","07142000741005","07142000760000","07142000770000","07142000780000","07142000790000","07142000841001","07142000841003","07142000841004","07142000841026","07142000841027","07142000841032","07143020060000","07143020131006","07143020131008","07143020131009","07143020180000","07143020190000","07143020200000","07144000060000","07144000070000","07144010070000","07144010100000","07144010110000","07144010120000","07144010130000","07144010150000","07144010160000","07144010210000","07144010220000","07144090190000","07151000260000","07151000280000","07151000300000","07151000310000","07151000390000","07151000430000","07161010100000","07161010290000","07161010370000","07161010390000","07161010400000","07162000160000","07162000170000","07162000190000","07162000280000","07162000290000","07162000400000","07162000410000","07162000530000","07162000590000","07162000600000","07162000610000","07171000070000","07171000080000","07171100370000","07171170010000","07171170020000","07184000070000","07184000120000","07184000130000","07191050030000","07191050050000","07191050060000","07191050110000","07193000050000","07193010260000","07194000270000","07194000280000","07194000310000","07194000320000","07202000020000","07204000080000","07204000240000","07204000250000","07212010068002","07221040280000","07222010080000","07222010110000","07223010240000","07223010480000","07223010510000","07223010520000","07223010570000","07223010590000","07224000010000","07224000170000","07224010380000","07224010390000","07224010830000","07224010850000","07224010860000","07224010890000","07224010920000","07224010930000","07224010950000","07224040080000","07224060370000","07224060380000","07224060390000","07231010150000","07231010280000","07231010290000","07233010130000","07234040310000","07242010090000","07242010150000","07242010170000","07242010180000","07243000100000","07243000110000","07243030160000","07244040010000","07271010080000","07271010090000","07271011700000","07271020210000","07271020220000","07272000040000","07272000150000","07272000190000","07272010270000","07272010280000","07272010300000","07272010390000","07272070040000","07272120130000","07272120200000","07273000120000","07273000140000","07273000150000","07273000160000","07273000170000","07273020540000","07273020600000","07273020610000","07273020640000","07273020650000","07274000270000","07274000280000","07274000290000","07274000300000","07274000310000","07274000320000","07284090420000","07293090060000","07293090080000","07293090110000","07293090120000","07293090130000","07293090140000","07293090160000","07293090180000","07293090190000","07321000300000","07321020010000","07321050260000","07321050280000","07321050290000","07321050300000","07321070060000","07321070160000","07321070190000","07321090460000","07321090470000","07324010050000","07331000120000","07331000170000","07331000190000","07331000200000","07331000210000","07331000220000","07331000250000","07331000270000","07331000290000","07331000300000","07331010060000","07331010070000","07331010140000","07331010180000","07331010190000","07331010200000","07331010210000","07331010220000","07331010230000","07331010251001","07331010251004","07331010260000","07331010300000","07331010310000","07331010321003","07331010321004","07331010330000","07331010340000","07331020090000","07331020120000","07331020150000","07331020160000","07331020170000","07331020200000","07331020220000","07331020230000","07331020240000","07331020260000","07331020320000","07331020340000","07331020360000","07331020370000","07331020380000","07331020390000","07331020400000","07331020420000","07331020440000","07331020530000","07331020540000","07331020551001","07331020551002","07331020551004","07331020551005","07331020560000","07331020590000","07331030260000","07331030340000","07331050881002","07331050881005","07332000040000","07332000200000","07332000390000","07332000460000","07332000470000","07332000480000","07332000510000","07332000580000","07332000670000","07332000690000","07332000760000","07332000770000","07332000940000","07332000971001","07332000971002","07332000980000","07332010070000","07332010410000","07332010430000","07332010450000","07332010550000","07332010650000","07332010690000","07332010720000","07332010730000","07332010740000","07332010750000","07332010760000","07332010790000","07332010800000","07332010820000","07332010830000","07332010840000","07332010860000","07332010870000","07332010950000","07332010960000","07332010970000","07332010990000","07332011030000","07332011040000","07332011060000","07332011100000","07332011120000","07332011141001","07332011141002","07332011141003","07332011141004","07332011151003","07332011151004","07332020030000","07332020120000","07332020160000","07332020170000","07332020200000","07332020220000","07332020350000","07332020360000","07332020400000","07332020410000","07332020430000","07332020440000","07332020450000","07332020470000","07332020490000","07332020500000","07332020510000","07332020520000","07332020560000","07332020590000","07332020620000","07332020630000","07332020640000","07332020650000","07332020700000","07332020710000","07332020750000","07332020760000","07332020770000","07332020780000","07332020790000","07332020800000","07332020820000","07332020840000","07332030240000","07332030270000","07332030300000","07332030320000","07332030360000","07332030380000","07332030390000","07332030400000","07332030420000","07332030440000","07332030450000","07332030490000","07332030551005","07332030630000","07332030670000","07332030690000","07332040170000","07333000060000","07333010140000","07333010180000","07333010190000","07333010200000","07333010210000","07333010220000","07333010230000","07333010250000","07333010270000","07333010280000","07333010290000","07333010300000","07333020148004","07333020148005","07333020148006","07333020148007","07333030130000","07333030140000","07334000240000","07334000280000","07334000430000","07334000460000","07334000480000","07334000500000","07334000530000","07334010048004","07334020090000","07334020120000","07341000040000","07341000100000","07341000110000","07341190140000","07341190170000","08073010090000","08073020010000"],[4,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,22,19,19,14,12,12,11,7,7,7,7,5,5,5,5,5,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],["UMW INC","ICON MARS PROPERTY OWN","1300 BASSWOOD, LLC","ZEV G LLC","CLI TOWER, LLC","895 N AMERICAN LN LLC","TWO MG LLC","GSR PROPERTIES","1420 S WRIGHT BLVD LLC","PRECISION MCGILL LLC","SAVAGE","811 MORSE AVENUE LLC","2324 PALMER LLC","HUNTER REALTY LTD","SUNSTAR AMERICAS","CHIP MICELI","CHRISTINE IPPOLITO","LUCID STAR LLC","S &amp; B INVESTMENTS INC","MEOD LLC","RYBRO LLC","KURIYAMA OF AMERICA","TAKISAWA INC","SODICK INC","2KWRF LLC","GFP ACCOUNTS PAYABLE","BEM INVESTMENTS, LLC","710 REMINGTON LLC","BERNDT K FETZER","RMS PROPERTIES LLC","SHIGIYA USA LTD","PLASTIC RECOVERY TECH","VINAYAKA HOLDINGS CORP","851 STATE LLC","LIONHEART PROPERTIES,","VENUS PHARMACEUTICAL M","AEROFLOT CORP","BDJ HOLDING CORP.","UNI PACIFIC INTERNTION","TOWER ENTERPRISES LLC","NOVA FIRE PROTECTION","1200 TOWER ROAD LLC","BRUCE HAVEL","MICHAEL MEILAHN","IMPERIAL GRANITE &amp; MAR","TODD A. FURRY","KEY TOWER, LLC","TALATRANS ENTERPRISE L","LASER CENTER CORP",null,"SMAD PROPERTIES INC","736 ESTES LLC","610 ESTES AVE LLC","AA REAL ESTATE LLC","WALTRAUD LEGAT","508 512 LUNT LLC","THE LORRAINE GAWLIK LI","MR. MARTY WALKER","CUSTOM PRECISION, INC.","DEGEN FAMILY LIMITED P","CKJK LLC","JAYTAMNYC HOLDINGS LLC","815 LUNT AVENUE LLC","UNITED MANAGEMENT GROU","PEC DEVELOPMENT, L.L.C","JOHN W ENGSTROM","1365 MITCHELL LLC","TWENTY LAKE MANAGEMENT","STANISLAW BARNAS","OLYMPIC STEEL, INC.","CPT PRIME INDUSTRIAL","TAXPAYER OF","PLUM GROVE REALTY LLC","YAPARK RLTY LLC",null,"SCHAUMBURG MNGMT GRP","SCHAUMBURG SOUTH CONDO","MITCHELL COMMONS I CON","WRIGHT COMMONS CONDOMI","SCHAUMBURG CC OWNER","VI INVESTMENT LLC","INTERNATIONAL COMMONS","VILLAGE OF SCHAUMBURG","HILLCREST COMMONS OFFI","THE PATRICK DEALER GRP","CENTRAL MARKETPLACE","1010 CONDO ASSN","SALT CREEK, LLC","RMS PROPERTIES VII, LL","1933 MEACHAM RD ACQ LL","STEPHEN NAPLETON","BRE DDR WOODFIELD VILL","INRETAIL FUNDWOODFIELD","BRE STREETS OF WOODFIE","EXPERIAN NORTH AMERICA","ARC PTSCHIL001 LLC","1444 ALGONQUIN RD LLC","SCHAUMBURG COURT LIMIT","GRAND NATIONAL BANK TR","SPARROWHAWK CHGO INDUS","100 W GOLF LLC","GATEWAY-WALDEN, LLC","WOODFIELD HOSPITALITY","WOODFIELD MALL LLC, A","WOODFIELD MALL LLC, A","675 MALL DRIVE, LLC","AMERICAN INSURANCE ACQ","MER CAR CORP","SCHARRINGTON-BELMONT L","OMEGA REST","MCWILLIAMS ELECTRIC CO","SEVEN14 PROPERTIES LLC","FREE BIRD PROPERTIES L","EARLE M JORGENSEN CO","BRIDGESTONE RETAIL OPE","PUBLIC STORAGE","TUF PARTNERS LLC","PEARLSHIRE SCHAUMBURG","GOLF HIGGINS PLZ LLC","UNCUS LLC","BARRINGTON GRP PARTNER","GORDON CURTIS","SCHAUMBURG MZL LLC","NICOR GAS REAL ESTATE","HMC CHP 1201 WILEY, LL","FELSOMAT HOLDING","QUEST DIAGNOSTICS","BASSWOOD ENTERPRISES","ROBERT V ROHRMAN","KORMAN LEDERER &amp; ASSOC","VINAYAKA HOLDINGS CORP","NICHICON AMERICA CORPO","1301 PLUM GROVE LLC","AMERICAN VETERINARY ME","WOODFIELD GREEN LLC","TEF SCHAUMBURG I LLC","PARM MEACHAM SQUARE LL","ABX SOLUTIONS, LLC","INDUSPAD BRAVEHEART I","CS17 ILLINOIS HOTELS L","BOTTLENECK SCHAUMBURG","WOODFIELD MALL LLC, A","LANDMARK SCHAUMBURG TO","TRANSFORM HOLDCO LLC","IRC SCHAUMBURG PROM","SHOREWOOD DEVELOPMENT","MARC REALTY","PARM GOLF CENTER LLC","BOB ROHRMAN","CPP SCHAUMBURG LLC","WFL LIMITED PARTNERS","911 PLUM GROVE LLC","RETANT LLC","SHANTI WELCOME LLC","RMS PROPERTIES","IRC SCHAUMBURG PLAZA","IN, LLC","RMS PROPERTIES","I.G. CAPITAL, LLC","MIGLIORERIOS PROPERTIE","MCLENNAN PROP","THE MALNATI ORGANIZATI","EZDUZIT 17 LLC","UNICOM INNOVATION PARK","WOODFIELD PRESERVE PRO","CM &amp; Z HOLDINGS, LLC","COVE SHOPPING CNTR LLC","KOTHARI INVESTMENTS","ODONNELL AND ODONNELL,","LEONARD TOMA","HARVEST PLAZA LLC","CHICAGO INDUSTRIAL LL,","HEMENDRA SHAH","BRIAN SPYCHALSKI","PFC VENTURE II","WE-WE 1203 LLC","CHNA LLC","1025 WISE LLC","SKA PROPERTY LLC","EDDIE DINKHA","SANJAY JETHVA","HIGH POINT CENTER INC","MR. STANLEY CHRACA AND","GERALD WATTRON","AHRENS REALTY, LLC - 6","CFO","801 PARTNERS &amp; STA-KLE","MR. STANLEY CHRACA AND","BRICKWORKS SUPPLY, LLC","NORTHWEST FLYERS INC",null,"NAT SCLAFANI","NEXT GRAVITY INC","HAK MANAGEMENT, LLC","JEES LLC","NATIONS PIZZA PRODUCTS","KINDERCARE LEARNING CE","MERIDIAN LAKEWOODS, LL","ALA CARTE ENT LTD PRTN",null,"MIJEN FAMILY LIMITED P","THOMAS CORCORAN","BRUCE &amp; CAROL LIPPO","JACK JOHNSON","2207 HAMMOND DR LLC","823 53 ALGONQUIN RD","2309 HAMMOND LLC","NICOLINA GARABETTA","TRES PROPERTIES LLC","M &amp; D LTD PARTNERSHIP","GROWLER JONES AN ILLIN","GB PROPERTIES","ILLINOIS BECKNELL INV","COLFIN COLBALT I-II OW","MK IMPORTERS, INC.","GOLDA HOLDINGS, LLC","DERRICK TAYLOR","FENESS HOLDINGS LLC","ROBERT O. HANSEN, D.D.","ITALIA FOODS INC/MARIA","GOLDA HOLDINGS, LLC","PUBLIC STORAGE","MSI CO JACKIE PAVLIDIS","ZUBHA REALTY LP","WENDY'S OLD FASHIONED","GEORGE ZERVOS","WENDY'S OLD FASHIONED","ALDI INC CO RYAN TAX","1410 E ALGONQUIN LLC","KJUNG 1414 LLC","CHICAGO PRIME","ANDYS FROZEN CUSTARD","PLAYHOUSE DEVLOPMENT","THE HOME DEPOT STORE #","CFA INC PROPTAXDPT3348","OLD NATIONAL BANK","TARGET PROPTAX T 835","TAXPAYER OF",null,"GALVIN HQ LLC","WELBIC IV LLC","LOCK ONE INVESTMENTS","NEW BREMEN INVESTMENTS","ARC IND","MSI CO JACKIE PAVLIDIS","ARMINI CENTRAL LLC","120 CENTER LLC","NISFI INC","RICHARD HANSEN","BAR ASSOCIATES","800 SCHAUMBURG LLC","VENTURE VEST PARTNERS","BARRINGTON ORTHOPEDIC","AJZ JAGUAR LAND ROVER","STEPHEN R NAPLETON","DEVHALEY PROPERTY LLC","MIDAS REALTY","GIA PROPERTIES LLC","WINDY LANDINGS, LLC","SSC PROPERTY HOLDINGS","PAL HOSPITALITY LLC","KRISTIN 22 LLC","KRISTIN ROSELLE INVEST","21 KRISTIN DRIVE OWNER","SCHAUMBURG LODGING LLC","CS HOTELS",null,"1901 ROSELLE (SCHAUMBU",null,"THK AMERICA INC","AMADA NORTH AMERICA IN","FIRST AMERICAN PROP","CAREPOINT HOLDINGS LLC","THE TECHNOLOGY AND MAN","HISCO INC","US CELLULAR CORP","GLOBAL COMMERCE II LLC","COMMERCE DEV LLC","CHICAGO NINE INDUSTRIA","SENTINEL TESLA I OWNER","ROYAL DENTAL HOLDINGS","FORAY PROPERTIES","1234 N ROSELLE RD INC","MIDDLE HOPE RETAIL","TONY GOURMET GRP INC","ELAINE KRIEGER","MET TURKAY PROPERTY","ABHIRAM GARAPATI","STEVEN CHEE","REMINGTON DIRECT PROPE","AMERICAN GLOBAL HOSPIT","ROSELLE &amp; VALLEY LAKE,","SRI GANESHA PROPERTY A","ZEIGLER AUTO GROUP","PARKWAY BK FACILITIES","WATERSHED I LLC","CORE COPLEY, LLC","NEW PRIVATE RESTAURANT","KATO USA INC","AMERISTAR ENT","SRI DEVELOPMENT, LLC","INTELLIGENT ACTUATOR","HAEGER ENGINEERING LLC","FEDEX CORPORATION","JACK GORE","MAYURI HOSPITALITY LLC","TRADEAM LLC","GOLF &amp; ROSELLE, LLC","GOLF ROSE PROP LLC","MARK KRAKLIO DVM","MARK KRAKLIO","NNN AUTO OWNER IV LLC","HEIDENHAIN CORPORATION","HOSIDEN AMERICA CORPOR","MIKUNI AMERICAN CORPOR","140 E STATE PKWY LLC","CARMAX",null,"MAZAK CORPORATION","BMW OF NORTH AMERICA","GLENWIN PARTNERS LLC","SAKURAI USA, INC.","KITAGAWA NORTHTECH INC","LAMINART INC",null,"COMMONWEALTH EDISON CO","MOSAK PROPERTIES LLC","PREMIER BLANKET SERVIC","1665 PENNYLANE LLC","1605 PENNY LANE LLC","AMERICAN FOUNDRY SOCIE","REEDY INVESTMENTS LLC","ATT MOBILITY PROP TAX","CARVANA LLC",null,"MSI CO JACKIE PAVLIDIS","REMINGTON PLUM GROVE","STAG INDUSTRIAL HOLDIN","FAB INVESTMENTS","MACHINERY SYSTEMS","CLI BASSWOOD, LLC","BNY OLYMPIC SPE LLC","HS3 LLC","GSG DEVELOPERS LLC","COOPER CT PROP LLC","HNH PROPERTY MANAGEMEN","SCHAUMBURG COMMERCE CT","KANAKMAL JAIN FAMILY","CREATIVE HI TECH LTD.","CKA INDUSTRIAL LLC","FUTABA CORPORATION","MLG PF 1300 SCHAUMBURG","707 REMINGTON (SCHAUMB","YAMAZEN, INC.","RVR SCHAUMBURG REAL ES","DAWSON GOLF ROAD RTY","G&amp;I X UL &amp; ISF IL POOL","GOLFWOOD SQUARE LLC","ZH REAL ESTATE LLC","PATRICK BMW","MLRP 415 STATE PK LLC","KYOO SEUNG CHO","RELLEUM HOLDINGS LLC","BEM INVESTMENTS, LLC","BAHAMA BREEZE HOLDINGS","JAY PUNUKOLLU","KOHLS PROP TAX DEPT","IRC WOODFIELD PLAZA","GARY SOLOMON &amp; COMPANY","BEST BUY PROP MGT 305","SCHAUMBURG DAWSON RTY","REMINGTON PLUM GROVE","PARKWAY BANK AND TRUST","LEGEND INVESTMENTS LLC","ROHRMAN FAMILY REALTY","1001 E REMINGTON RD","BANIAK  AND SONS LLC","B M PARTNERS, LLC","HMC CHP 1437 PAYNE LLC","ARAVAN REAL ESTATE, LL","ROHRMAN FAMILY REALTY","SCHAUM COMPANY TRUST","RL SCHAUMBURG","JONERIC 1000 STATE PKY","HAMALOT INC","PENNY MUSTARD","LIFESTORAGE LP","REMINGTON ROAD LLC","SD&amp;S/TOWER LLC","CINTAS CORP","MEACHAM BUSS CENT LLC","TAXPAYER OF","TERRANCE EVANS","VINAYAKA HOSPITALITY",null,"FRED HOFFMANN","ALA CARTE ENT LTD","SUMMIT REAL ESTATE","NICOR GAS REAL ESTATE","NARE CROSSROADS OF SCH","THOR 1211 TOWER ROAD L","TEF SCHAUMBURG I LLC","AJZ SC LLC","ROBERT V ROHRMAN","UP REMINGTON LLC","REMINGTON PARTNERSHIP","REMINGTON OFFICE BUILD","SARC USA, INC.","K AND M PRINTING CO.,","1105 REMINGTON LLC","REMINGTON BUSINESS CEN","IRB HOLDING CORP.","MIR JAFER JOFFREY","VIPUL PATEL","CMYBESS LLC","IRC-NARE 1300 MEACHUM",null,"AMERICENTER SCHAUMBURG","PROPERTIES LLC","ONE CENTURY CENTRE",null,"IKEA NORTH AMERICA SVC","KP TC 1700 LLC","ROCK SOLID LLC","LANDRY'S INC.","NADG NNN JDEL SCH IL A","SHOREWOOD DEVELOPMENT","COSTCO PROP TAX 387","KP CC 1900 LLC","MICHAEL MANZO AND ROBE","HIMALAYA INVESTMENT LL","SCHAUMBURG REAL ESTATE","VILLAGE OF SCHAUMBURG","COMBINED PROPERTIES LL","SCHAUMBURG MEACHAM POI","EGG HARBOR REAL ESTATE","EK ACQUISITION 2 LLC","AREAWIDE REALTY TRUST","MISKIN EDUCATIONAL ENT","VILLAGE OF SCHAUMBURG","PARKWAY CORPORATE SPE","SCHAUMBURG BANQUEST","CS17 ILLINOIS HOTELS L","WEBER GRILL RESTAURANT","V LAND SCHAUMBURG LLC","WHISKEY RESTAURANT INC","CH RETAIL FUND I","870 OTB LLC","RMS  PROPERTIES","WOODFIELD RESTAURANT","RMS PROPERTIES","CENTRAL FLORIDA RESTAU","HOOTERS ON GOLF, INC.","RMS PROPERTIES","STORE CAPITAL LLC","SCHAUMBURG HOTEL PTNER","MACYS","DA SCHAUMBURG, LLC","HAMILTON PARTNERS INC","MR 1051, LLC","BANK OF AMERICA","RARE HOSPITALITY MANAG","GMRI, INC.","LT WOODFIELD LLC","BRIDGESTONE RETAIL OPE","J.C. PENNEY COMPANY, I","JPMORGAN CHASE BANK, N","WOODFIELD FINANCIAL CE","THE GARDNER SCHOOL AP","MAGS BANK DRIVE LLC","BENIHANA SCHAUMBURG CO","SHREE SHAKTI HOSPITALI","DAN KUESIS","SCHMBURG WLDFIRE LEY","GCMS LODGING PARTNERS","FRESH INTERNATIONAL SC","IRC RETAIL CENTERS","SCHAUMBURG RANGER LLC","HSG SCHAUMBURG LLC","TARGET CORPORATION/TAX",null,"STAMBOLIC RE LLC","SYNDOXIE PROP LLC","NATRAJ INVESTMENTS LLC","ILLINOIS BELL PROP TAX","BUDDY BELLS INC","BRINKER INTERNATIONAL,","VYAS INCORPORATED","LOUIE GATZIOLIS","SHREE ISHAK CORPORATIO","RMLS HOP ILLINOIS, LLC","JACK GORE","WENDY'S PROPERTIES LLC","GMRI, INC.","VILLAGE OF SCHAUMBURG","DOLORES GIANNINI","PORTILLOS HOT DOGS LLC","EVA BUZIECKI TRUST","ARG BBSCHIL001 LLC","SCHAUMBURG ASSOCIATES,","VINAYAKA HOLDINGS CORP","AAA HOSPITALITY, LLC","VH WOODFIELD INC","ALLIED PROFESSIONALS H","CHICK FIL A INC","DAVID BEAR","RYAN LLC","RAYTEK THREE WOODFIELD",null,"RPPS INVESTMENT LLC","HSK PROPERTY LLC","BT PLUM GROVE LLC","RYAN LLC","AM SOC OF ANESTH","SOMOHA, LLC","EMERGENCY NURSES ASSOC","RANDALL F. RANDAZZO","814 E WOODFIELD RD LLC","SHANTI WELCOME LLC","JWW PROPERTY LLC","DR JONATHAN WONG","JN BROS LLC","MR. DAVID R. HEIDNER","HARPER COLLEGE",null,"DANIEL N UDITSKY","HIGGINS GROVE PLAZA, L","SUNRISE THIRD SCHAUMBU","BURRITO PROPERTIES LLC","BANK OF AMERICA","WOODFIELD GROVE LLC","LTF REAL ESTATE MP I,","REALWISE CHICAGO","WOODFIELD PROFESSIONAL","SML PROPERTIES LLC","CHIYS TRIVEDI HOSPITAL","KLT SCHAUMBURG LLC","SCHAUMBURG BANK &amp; TRUS","FP SCHAUMBURG LLC","TRIVEDI HOSPITALITY, I","FIFTH THIRD BANK, NATI","INES TURUS","SCHAUMBURG MP STE 106","BUDDY BELLS LAND HOLDI","FDW REAL ESTATE INC","HEARTLAND BANK AND TRU","SCHAUMBURG CHILDCARE","GULFSTREAM PROP INC","HEIDNER PROPERTY MGMT","801 WEST GOLF ROAD LLC","JRPR LTD. PARTNERSHI;","ROBUSTO GARDENS LLC","MARQUETTE NATIONAL BAN",null,"CAROLYN VERMIGLIO TRUS","GOLDSHORE HOLDINGS LLC","DUNKIN BRANDS RE TAX","SHAILESH SHAH","SALEM PLAZA","HALLE PROP DEPT 1100","SALEM PLAZA II","AMRIT THIRTHAMATTUR","BREX INC","CUP OF JOJO, INC","TSANTILIS &amp; CHAPPAS","IRON GATE MANAGEMENT","POLAR CREEK PLAZA LLC","HAMRA CHICAGO, LLC","YUNN LIAN CHANG REVOCA","DIPTESH PATEL","KINDERCARE LEARNING CE","JOHN MOURIKES","ASHYANA LLC","FIFTH THIRD BANK, NATI","KOHLS DEPARTMENT STORE","DERRICK TAYLOR","RTY OME ILLINOIS PROP","2351 SCHAUMBURG RD LLC","CORINIUM PLAZA III","CORINIUM PLAZA 1 PTNR","CORINIUM PLAZA II","CASEYS RETAIL COMPANY","DTS PROPERTIES, LLC","HERITAGE BANK OF SCHAU","RMS PROPERTIES LLC",null,"ITASCA BANK &amp; TRUST SH","LOUIS BENEDETTO","TAXPAYER OF","20 S. ROSELLE ASSETS,","ITASCA BANK &amp; TRUST TS","RAY WALKER","WORLD SAVINGS BK FSB","MHK SCHAUMBURG REAL ES","OBERWEIS DAIRY, INC.","CHATTELS HOLDINGS AN I","GEORGE STATLER","DAVID GEISS","HYACINTH ROBERTSON","REGE BUILDING 1 LLC","TURRET HOUSE LLC","TURRET HOUSE LLC","MALNATI ORGANIZATION",null,null,"SAVELLI","AMERICAN ENTERPRISE BA","PARIS REALTY LLC",null,"METCALF FAMILY FOUNDAT","TAXPAYER OF","SAM MARKOS","WALGREEN CO.","COM ED","SPRING VALLEY PLAZA","300 N MARTINGALE LLC","MARTINGALE ROAD, LLC","WOODFIELDRPORATE CENTE","SCHAUMBURG HOTEL OWNER","SCHAUMBURG PC LLC","SURESH V SHAH","LEXINGTON RETAIL, LLC","KINDERCARE LEARNING CE","DERRICK TAYLOR","RTY OME ILLINOIS PROP","SCHAUMBURG INVEST GROU","HEIDNER PROPERTY MGMT","PNC INVOKE TAX PTNRS",null,"JESUS CASTANEDA","BENJAMIN TURNWALD","ALEXANDRA BIALY",null,"LA PETITE ACADEMY INC","BELLA TERRA SCHAUMBURG","VEQUITY SERIES XVII DO","RDK VENTURES LLC","NCH HEALTHCARE","PUBLIC STORAGE","NASSIM KAWAR","ANITA SHAH","ENTERPISE RENT A CAR","VVP GROUP, INC. C/O DR","ROSELLE CAPITAL PARTNE","TORAGO LIMITED PARTNER","JPMORGAN CHASE BANK, N","WALGREEN CO.","TORAGO LIMITED PARTNER","ALBERTSONS","IRC NANTUCKET SQ LLC","CHEN &amp; LU INVESTMENTS","JAM INVESTMENT PARTNER","SD&amp;S KINGSPORT LLC","BUDDY BELLS INC","KINDERCARE LEARNING CE","B&amp;G 1600 LLC","DHM SCHAUMBURG RE LLC","BANAYA PROPERTIES INC","AYODHIA SALWAN","MOJO REALTY LLC","DOROTHY ODIGIE","MDMJ TRUST","NISAN PLAZA LLC","HEIDNER PROPERTY MGMT","ALI ALFOROOKH","GAIL SKLAR","JON SOBIESKI","CUBESMART #616 SCHAUMB","1720 W. IRVING PARK RO","GEORGE VLAHAKIS","7 ELEVEN ATTN TAX DEPT","UNIVERSAL POOLS D/B/A","CHUNG NGUY","HIGHLAND PARK CVS, LLC","GEORGETOWN SQUARE LLC","SHURGARD FREMONT PARTN","RCM SALES LLC","IRA HOLTZMAN","LOUIS PACINI","1016 LUNT LLC","INITIAL ASCENT LLC","EWA KOJDER","DANNAN LLC","1000 W. LUNT, LLC","TAXPAYER OF","H&amp;Y ASSOCIATES LLC","PRITESH PATEL","CTLTC TRUST NO. 800234","L LANDIS","MABEL KHOSHABA","SUNEET GOYAL","916 LUNT LLC","TAKL HOLDINGS LLC","930 LUNT AVE LLC","TWR SERVICE CORP","JOSEPH MASSA","FRANK ALBERGA",null,"D &amp; D COMMERCIAL PROPE","TAS POWERED ENERGY D B","915-921 CONDO ASSN","921 ESTES LLC","SHAHZAD KHAN","FOX SPRINKLER CORP","NEW STONE DESIGN","GRIP FAST HOLDINGS","FOXFIELD PROPERTIES, L","TRUSTEE THE 1037 LUNT","A. MAESTRANZI SONS KNI","DCMA LLC","RICH FOERSTER","CRISTOBAL HINOJOSA","ATG LAND TRUST CO.","PRECISION MCGILL LLC","CHRIS BLASE","MAXIMUS DEVELOPMENT","BONGSOO &amp; KYUNGSUB LEE","MCJ PROPERTIES LLC","PRE LLC","MAC MORSE INVESTMENTS","A Z STONE  AN ILLINOIS","935 LUNT LLC","HARLAND C. KREBEL, JR","SCOTT A. CURATTI","PRECISION AUTO SERVICE","ROBERT HOREL","TADEUSZ KOMOSA","PARTNERS HOLDINGS INC","PARTNERS MANUFACTURING","MGD VENTURES LLC","VIPUL M. JAYSWAL","MARTIN P. GANNON","FIRST STUDENT INC","INVERNESS PHYSICIANS M","ROYAL HARTWIG","AT&amp;T","LDL EXECUTIVES LLC","ESHO GORGISS","FRANK ALEMAN","A 1 AMERICAN LLC","JOHN GIANNINI","KEVIN KINCAID","BRIAN BERG","KIEU KIM THI NGUYEN","JEFFREY ELEVATOR CO","MY PROPERTY HOLDINGS,","WILKES &amp; MCLEAN, LTD.","PUBLIC STORAGE","WALTRAUD LEGAT","JACKIE WU",null,"B &amp; A GROUP INC","IOM PROPERTY LLC","WILLIAM O SACCUCI","LOUIS CASTIELLO","T J ENTERPRISES","RYGIL LLC","MILOS ORLIC","509 ESTES LLC","KEVIN MURRAY","NIRANJAN PATEL","AHRENS REALTY, LLC - 4","DJK EXECUTIVES LLC","MICHAEL S ARNOLD","DRCO LLC","BISON PARTNERS, LP","SOCO PROPERTIES, LLC","TIMELESS GRANITE INC","C.S.I PROPERTIES, LLC","JOHN CADE","AHRENS REALTY, LLC - 4","GERALD WATTRON","GAYLEN WESTER  CO SONG","611 LUNT AVENUE LLC","REAL INCOME ILLINOIS P","MOIZ MOHAMMED","MS. SUSAN FELTS","PAUL IWANSKI","602 LUNT AVE LLC","EARL EVERSON",null,"TIMMY VELESIOTIS","KAREN VANASSCHE","DARREN FORD","GTS REALTY LLC","4F PROP 519 LUNT SERIE","1405-1409 WRIGHT, LLC","MR. STAN SVETLICHNIY","RACE HOLDINGS LLC","NAZAR UKRAYINCHUK","A 1 AMERICAN LLC","AHRENS REALTY, LLC - 6","611 LUNT AVENUE LLC",null,"819 HOLDINGS LLC",null,"801 LUNT LLC.","CZI INVEST HOLDING GRP","A28 REAL ESTATE 613 61","MORSE ACCOUNT","BEATA SWIERC","STANISLAW BIENDRON","800 MORSE AVENUE LLC","TFDI PROPERTIES LLC","C &amp; E KUZNICKI","H &amp; V ASSOCIATES LLC","PIO FALCO","LORBERN MFG","JUNG JA MOON","JOHN A JOBST","650 MORSE AVE LLC","EASY STREET, LLC",null,"LUDWIG BEUTEL","ERNEST J FREY","AREEBA TRADERS LLC","MARIO PECORA","502 MORSE AVE LLC","810 MORSE LLC","ROBERT R GRISTM","JAIG SERVICES LLC","RUGUI BRIGHTS USA LLC","NAT SCLAFANI","PRAIRIE PROPERTIES EQU","501 MORSE AVE LLC","LOGAN SQUARE ALUMINUM","529 MORSE HOLDINGS LLC","SMI PARTNERS LLC","JANICE ZIMMER","521 MORSE LLC","NAT SCLAFANI","CHARLES P FIDUCCIA","RDSAB PROPERTIES LLC","PATRICIA CAPPAS","MATTHEW I OLSEN TRUSTE","MARATHON PETROLEUM COM","BISCO INC","WE KEEP RUNNING MESSEN","SIGNATURE AUTO HOLDING","CLOOS INTL INC","NAT SCLAFANI","JERRY COLLISION CENTER","C&amp;M CHICAGO ENTERPRISE","RUN TRANS INC","AFC REALTY LLC","ALBION AND WRIGHT PART","ISTORAGE #8324","GREGORY &amp; SANDRA ROSS","CAPITOL COIL INC","PILOT PETE'S RESTAURAN",null,"J MINGINAS PILOT PETES","VILLAGE OF SCHAUMBURG","TLMV, LLC","CANGA RESTORATION &amp; RE","OPUS INSPECTION INC","1735 SCHAUMBURG INDUST","TRI PROPERTIES","JOSEPH MOLCZYJ","AZURE REAL ESTATE LLC","CERATIZIT CHICAGO INC","SHAD LLC","NORTHWEST FLYERS INC","TCG INDUSTRIAL ALBION","FEDEX FREIGHT",null,null,"FRANKLIN J FURLETT","JOSHI BROTHERS, INC.","THEODORE KASTRANTAS &amp;","KP CC 1900 LLC","CAPITAL GRILL HOLDINGS"],[1604586,7894590,3368180,2694490,3679990,1548180,665840,874000,3552130,985660,699566,826584,2417430,6621390,30958960,3061430,1328180,1379360,940280,2102580,3509430,8334170,1349640,5028880,5123520,6045430,4140000,1325000,890060,2099040,1275750,2063730,2063740,1451460,1283160,1829980,1053700,1598270,1385440,3124980,1303010,765250,4515340,424540,341990,663420,1150000,905000,5023000,574980,1831980,2020120,769900,1718850,855770,710210,539350,974400,390650,537700,389860,524230,950000,769890,350000,453900,15815710,8756390,599380,12127290,9811170,11924990,9085000,3645288,0,934556,1673116,3573596,2660496,65280000,1079484,1417128,6784824,5070556,7176540,974160,800832,5441720,6278520,10222220,6373320,54506060,15897320,84297392,14999444,14493452,1307880,6206848,1749048,7175296,4762552,13858344,13073104,2198876,294464076,1309052,6070848,2996328,18132048,870000,1363584,624000,792776,22000000,905036,5960268,9929324,8285124,6062096,1890440,2423616,943564,18412584,1408000,2399692,2779580,4881420,2050000,6515900,1954528,1281852,4106708,762196,7152600,9063300,2200000,3514760,3717900,25912892,17111928,3915356,1779284,65343488,10125444,9352704,6200000,9383924,3351372,4500000,2928852,830000,857792,558300,870488,8406152,5315352,1005212,5577952,6462992,894172,1457192,1270028,667652,12030568,55218632,1086224,2841508,547740,763440,1272428,3084640,3176176,320000,409992,474940,438372,1261564,377192,893000,668012,2171852,990192,755940,631104,739200,577000,413140,2036356,856680,1245204,435428,3951908,2036212,2945248,1399312,8598104,1368360,5729684,1998992,54360,732456,320000,315000,2328120,896044,1343064,395200,883696,1244176,2002492,552260,999984,3724304,3932916,400000,695352,1567512,330000,559024,407420,2082368,6572000,1200284,893204,824820,1392496,161124,2244016,994400,1478260,1423392,757492,1377148,7535912,1208956,1289600,14664116,2080224,69284,11425084,1617244,3324248,2703716,2726000,16468848,3024736,1699996,6664088,381008,379236,1454764,560996,7048592,5981624,1909928,408344,624132,835588,1564948,5309380,4625020,1938940,127364,122052,4589392,600308,104224,20337556,63816,5264020,11013108,9363572,5029720,1103160,1190536,3140304,1498876,1340388,5339936,3547456,956100,1229880,1860704,859988,377680,910736,630000,342188,510668,8520196,3217500,1433564,1965452,10551164,1115100,2829008,7706724,996000,797884,1217476,1316552,1960000,819572,4294652,2322396,4513192,2748320,910000,947500,2282288,2150728,10218640,5544980,1288804,756672,1536736,13913424,64672,3163680,2837292,1644184,1216636,1726424,1742308,43596,783588,1860000,1532708,2124908,1720732,1730640,1403180,5568668,2296704,11055240,33678052,1426192,4198976,1839124,1252696,2048204,5409236,1145000,974648,917544,900000,1144160,1127800,1250000,1585168,2176180,4225316,2590188,2989880,3857040,2908480,2944236,6990528,900524,5508044,3379848,1491776,1631204,1140000,2451924,1694704,7326220,10594084,3975236,7095232,3148360,1514404,3239280,2523012,1029080,1960816,650580,795576,1024972,1175000,1162180,1510572,2055180,2341600,4476340,2549776,7472372,1816996,3944752,2115900,5397680,4993472,112743424,4089476,787784,839736,1552380,1463656,62740,9499984,3077972,6194000,3216568,3770996,2903532,4808996,3609296,2115860,1646080,2462220,992376,1502820,982512,897716,1701636,1952180,1564700,1105272,763088,15217116,1089844,25317032,13189488,3901088,1820232,1237424,7200000,12237000,19376020,1599996,5472708,16022620,3757832,1664280,5077996,1496248,1789808,1274130,8686192,6564508,12073272,2824416,9996932,1872932,1479128,1668608,3008000,1798932,3500130,3755840,7534564,1536884,1202160,6283960,2583900,4884552,13018800,1953824,7062328,11609364,2608252,1932000,2246132,4580520,2724000,11992000,4975112,10500000,2254052,1868324,1777760,3353356,2865772,2418496,3033876,2720420,1510264,2216164,8219944,11025000,2100136,2502800,1465832,5211596,750916,1256008,3065268,1117392,1966580,3033952,952752,2648848,887952,2118056,1143396,1738492,2952600,2456264,9668416,5140988,7500000,3543856,10598720,443064,1505724,1862252,9004628,4950128,96872,419996,532064,420000,4540928,8218832,6518440,4679975,417732,896636,418440,209068,209068,286836,739188,66120,336660,154636,1817872,7733908,872912,2038200,4121532,14909212,3225548,1727756,1843440,3499168,1096860,2547904,10616204,7888624,2350000,2199992,6650420,904800,783248,2106516,1518320,1207380,1133596,623484,9470288,2709828,1071360,241500,454932,857920,776520,575592,3180768,1335208,2698356,832260,787020,607500,697960,1399368,5377484,963844,797332,571200,1092556,2983524,1166884,1439900,9543648,1626336,3056872,815256,391668,1675172,1658200,1237060,514472,1775480,8203348,32000,2608540,848104,878992,744668,4660896,1176140,1106400,718076,864120,445000,736976,1105484,409976,635284,74464,133932,309756,38584,31308,1694308,1130964,2454416,129000,179164,1422180,3683532,1741900,1183232,2080644,9288104,57100000,29400000,18842388,1223660,1678520,720376,2530516,1310288,1624464,5249624,3226612,1185900,137260,1082552,623948,355528,657028,1160776,11464816,2008304,817732,1758412,2820420,586036,783756,488440,514224,1587116,747100,1092420,1811688,10293800,7138820,5865756,950620,632816,4683144,532840,1131708,828356,1422000,646056,1752748,626488,785404,579900,703568,3316128,480000,498856,868180,2140668,1012716,506704,1567424,2884200,372268,2231252,3451576,5168444,325000,759052,520808,388704,366452,388700,425000,428456,375000,783660,585960,842400,390656,595544,723900,536216,585104,480000,498000,177824,177824,48164,507500,290992,234392,215000,1143276,1180580,622500,375000,890032,390660,390660,390656,300000,360000,310000,237696,667904,674000,768844,320000,306960,670604,450000,468396,282724,303560,355000,202000,235664,235664,235664,550000,605624,833000,2050408,170000,149512,2273440,390656,1891156,1176472,545120,507736,760904,824180,1593796,825476,1637476,451440,4939328,554216,514388,1515688,504000,585984,360000,350000,338300,304420,710216,340000,381316,390656,500000,317752,312480,665100,548100,802028,427000,700640,321752,832172,322896,390660,621916,1333540,600000,238000,641876,556920,208808,221860,206012,250780,214400,263700,336524,384116,360000,355000,275000,510292,1154632,350000,455344,774832,393780,364996,311180,430480,898448,390656,420000,949560,772100,350000,474076,523716,735264,393156,312524,394984,517988,390656,390656,578200,349996,360000,1466504,734944,846904,455980,664004,1435540,1161324,1003772,1376360,497924,818572,740220,644420,1641316,138580,1482820,1789152,837000,1994172,4647000,803096,805344,922152,1726452,583296,670620,653000,1307900,2664492,7665000,327500,330000,4,4,23924,52800,3246708,408180,708008,2140072,765000,829324,2425228,1598848,5399228,396004,911852,7217376,98370,636000,376544,457656,792348,1094544,2355844],[3,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>keypin<\/th>\n      <th>n<\/th>\n      <th>appellant<\/th>\n      <th>fmv<\/th>\n      <th>incentive_pins<\/th>\n      <th>exempt<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"name":"keypin","targets":0},{"name":"n","targets":1},{"name":"appellant","targets":2},{"name":"fmv","targets":3},{"name":"incentive_pins","targets":4},{"name":"exempt","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-keypin-info-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Projects in municipality. You can sort each column!
+</figcaption>
+</figure>
+</div>
+</div>
+<p>There are 132 projects with more than 1 pin in them and 872 projects overall based on manually grouped keypins from combined data sources.</p>
+<div class="cell" data-tbl-cap="This many pins were in the valuation worksheets.">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>valuation_wksts <span class="sc">|&gt;</span> <span class="fu">filter</span>(pin <span class="sc">%in%</span> res<span class="sc">$</span>pin_info<span class="sc">$</span>pin)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div data-pagedtable="false"> <div class="table-caption"><p>This many pins were in the valuation worksheets.</p></div>
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["keypin"],"name":[1],"type":["chr"],"align":["left"]},{"label":["pin"],"name":[2],"type":["chr"],"align":["left"]},{"label":["year"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"08061000060000","2":"07012000550000","3":"2025"},{"1":"08061000060000","2":"07012000560000","3":"2025"},{"1":"08061000060000","2":"07122010020000","3":"2025"},{"1":"08061000060000","2":"07122010200000","3":"2025"},{"1":"08061000060000","2":"08061000060000","3":"2025"},{"1":"08073020010000","2":"08073020010000","3":"2025"},{"1":"06242010080000","2":"06242010080000","3":"2025"},{"1":"06242050020000","2":"06242050020000","3":"2025"},{"1":"06242050020000","2":"06242050040000","3":"2025"},{"1":"06242050020000","2":"06242050050000","3":"2025"},{"1":"06244010040000","2":"06244010040000","3":"2025"},{"1":"06242010030000","2":"06242010030000","3":"2025"},{"1":"06242050010000","2":"06242050010000","3":"2025"},{"1":"06242050030000","2":"06242050030000","3":"2025"},{"1":"06244010050000","2":"06244010050000","3":"2025"},{"1":"02353050290000","2":"02353050290000","3":"2025"},{"1":"02334010290000","2":"02334010290000","3":"2025"},{"1":"02341020650000","2":"02341020650000","3":"2025"},{"1":"02341020670000","2":"02341020670000","3":"2025"},{"1":"02343000740000","2":"02343000740000","3":"2025"},{"1":"02343030040000","2":"02343030040000","3":"2025"},{"1":"02344010020000","2":"02344010020000","3":"2025"},{"1":"02353050490000","2":"02353050490000","3":"2025"},{"1":"02334010150000","2":"02334010150000","3":"2025"},{"1":"02334010160000","2":"02334010160000","3":"2025"},{"1":"02334010170000","2":"02334010170000","3":"2025"},{"1":"02334010300000","2":"02334010300000","3":"2025"},{"1":"02334010320000","2":"02334010320000","3":"2025"},{"1":"02343000190000","2":"02343000190000","3":"2025"},{"1":"02343000220000","2":"02343000220000","3":"2025"},{"1":"02343000290000","2":"02343000290000","3":"2025"},{"1":"02343000300000","2":"02343000300000","3":"2025"},{"1":"02343000330000","2":"02343000330000","3":"2025"},{"1":"02343000370000","2":"02343000370000","3":"2025"},{"1":"02343000420000","2":"02343000420000","3":"2025"},{"1":"02343000430000","2":"02343000430000","3":"2025"},{"1":"02343000440000","2":"02343000440000","3":"2025"},{"1":"02343000500000","2":"02343000500000","3":"2025"},{"1":"02343000530000","2":"02343000530000","3":"2025"},{"1":"02343000540000","2":"02343000540000","3":"2025"},{"1":"02343000550000","2":"02343000550000","3":"2025"},{"1":"02343000560000","2":"02343000560000","3":"2025"},{"1":"02343000620000","2":"02343000620000","3":"2025"},{"1":"02343000630000","2":"02343000630000","3":"2025"},{"1":"02343000650000","2":"02343000650000","3":"2025"},{"1":"02343000661001","2":"02343000661001","3":"2025"},{"1":"02343000661002","2":"02343000661002","3":"2025"},{"1":"02343000661003","2":"02343000661003","3":"2025"},{"1":"02343000661004","2":"02343000661004","3":"2025"},{"1":"02343000661005","2":"02343000661005","3":"2025"},{"1":"02343000661006","2":"02343000661006","3":"2025"},{"1":"02343000661007","2":"02343000661007","3":"2025"},{"1":"02343000661008","2":"02343000661008","3":"2025"},{"1":"02343000661009","2":"02343000661009","3":"2025"},{"1":"02343000661010","2":"02343000661010","3":"2025"},{"1":"02343000661011","2":"02343000661011","3":"2025"},{"1":"02343000661012","2":"02343000661012","3":"2025"},{"1":"02343000661013","2":"02343000661013","3":"2025"},{"1":"02343000661014","2":"02343000661014","3":"2025"},{"1":"02343000690000","2":"02343000690000","3":"2025"},{"1":"02334010280000","2":"02334010280000","3":"2025"},{"1":"02343000110000","2":"02343000110000","3":"2025"},{"1":"02343000400000","2":"02343000400000","3":"2025"},{"1":"02343000480000","2":"02343000480000","3":"2025"},{"1":"02343000510000","2":"02343000510000","3":"2025"},{"1":"02343000590000","2":"02343000590000","3":"2025"},{"1":"02353050210000","2":"02353050210000","3":"2025"},{"1":"02353050250000","2":"02353050250000","3":"2025"},{"1":"02353050510000","2":"02353050510000","3":"2025"},{"1":"02353050520000","2":"02353050520000","3":"2025"},{"1":"02353050540000","2":"02353050540000","3":"2025"},{"1":"07012000580000","2":"07012000580000","3":"2025"},{"1":"07093010240000","2":"07093010240000","3":"2025"},{"1":"07131000260000","2":"07131000260000","3":"2025"},{"1":"07134000120000","2":"07134000120000","3":"2025"},{"1":"07143020060000","2":"07143020060000","3":"2025"},{"1":"07194000270000","2":"07194000270000","3":"2025"},{"1":"07202000020000","2":"07202000020000","3":"2025"},{"1":"07223010570000","2":"07223010570000","3":"2025"},{"1":"07231010150000","2":"07231010150000","3":"2025"},{"1":"07272070040000","2":"07272070040000","3":"2025"},{"1":"07272120130000","2":"07272120130000","3":"2025"},{"1":"07293090060000","2":"07293090060000","3":"2025"},{"1":"07321070060000","2":"07321070060000","3":"2025"},{"1":"07332040170000","2":"07332040170000","3":"2025"},{"1":"07272010390000","2":"07272010390000","3":"2025"},{"1":"07011010070000","2":"07011010070000","3":"2025"},{"1":"07011010070000","2":"07121010220000","3":"2025"},{"1":"07101010250000","2":"07101010250000","3":"2025"},{"1":"07101010400000","2":"07101010400000","3":"2025"},{"1":"07103000800000","2":"07103000800000","3":"2025"},{"1":"07104000510000","2":"07104000510000","3":"2025"},{"1":"07104000520000","2":"07104000520000","3":"2025"},{"1":"07104000530000","2":"07104000530000","3":"2025"},{"1":"07122000110000","2":"07122000110000","3":"2025"},{"1":"07124000560000","2":"07124000560000","3":"2025"},{"1":"07124000580000","2":"07124000580000","3":"2025"},{"1":"07124020150000","2":"07124020150000","3":"2025"},{"1":"07124020220000","2":"07124020220000","3":"2025"},{"1":"07131000250000","2":"07131000250000","3":"2025"},{"1":"07131000280000","2":"07131000280000","3":"2025"},{"1":"07131010120000","2":"07131010120000","3":"2025"},{"1":"07131010150000","2":"07131010150000","3":"2025"},{"1":"07131030150000","2":"07131030150000","3":"2025"},{"1":"07133000340000","2":"07133000340000","3":"2025"},{"1":"07133000400000","2":"07133000400000","3":"2025"},{"1":"07134080090000","2":"07134080090000","3":"2025"},{"1":"07134080110000","2":"07134080110000","3":"2025"},{"1":"07142000470000","2":"07142000470000","3":"2025"},{"1":"07142000580000","2":"07142000580000","3":"2025"},{"1":"07142000760000","2":"07142000760000","3":"2025"},{"1":"07144010130000","2":"07144010130000","3":"2025"},{"1":"07144010210000","2":"07144010210000","3":"2025"},{"1":"07144010220000","2":"07144010220000","3":"2025"},{"1":"07242010180000","2":"07242010180000","3":"2025"},{"1":"07011010080000","2":"07011010080000","3":"2025"},{"1":"07011010080000","2":"07011010090000","3":"2025"},{"1":"07011010080000","2":"07121010230000","3":"2025"},{"1":"07011010080000","2":"07121010240000","3":"2025"},{"1":"07013000070000","2":"07013000070000","3":"2025"},{"1":"07024010010000","2":"07024010010000","3":"2025"},{"1":"07031010200000","2":"07031010200000","3":"2025"},{"1":"07031010210000","2":"07031010210000","3":"2025"},{"1":"07032000210000","2":"07032000210000","3":"2025"},{"1":"07093010130000","2":"07093010120000","3":"2025"},{"1":"07093010130000","2":"07093010130000","3":"2025"},{"1":"07093010150000","2":"07093010150000","3":"2025"},{"1":"07093010270000","2":"07093010270000","3":"2025"},{"1":"07093010290000","2":"07093010290000","3":"2025"},{"1":"07093010300000","2":"07093010300000","3":"2025"},{"1":"07093010310000","2":"07093010310000","3":"2025"},{"1":"07094000250000","2":"07094000250000","3":"2025"},{"1":"07094000410000","2":"07094000410000","3":"2025"},{"1":"07094010020000","2":"07094010020000","3":"2025"},{"1":"07094010020000","2":"07094010030000","3":"2025"},{"1":"07094010020000","2":"07094010040000","3":"2025"},{"1":"07101010100000","2":"07101010100000","3":"2025"},{"1":"07101010360000","2":"07101010360000","3":"2025"},{"1":"07102000210000","2":"07102000210000","3":"2025"},{"1":"07102040080000","2":"07102040080000","3":"2025"},{"1":"07103000280000","2":"07103000280000","3":"2025"},{"1":"07103000580000","2":"07103000580000","3":"2025"},{"1":"07103000660000","2":"07103000660000","3":"2025"},{"1":"07103000670000","2":"07103000670000","3":"2025"},{"1":"07103010070000","2":"07103010070000","3":"2025"},{"1":"07103010090000","2":"07103000200000","3":"2025"},{"1":"07103010090000","2":"07103000210000","3":"2025"},{"1":"07103010090000","2":"07103000240000","3":"2025"},{"1":"07103010090000","2":"07103010090000","3":"2025"},{"1":"07103010090000","2":"07103010100000","3":"2025"},{"1":"07103010110000","2":"07103010110000","3":"2025"},{"1":"07103020010000","2":"07103020010000","3":"2025"},{"1":"07104000310000","2":"07104000310000","3":"2025"},{"1":"07104000560000","2":"07104000560000","3":"2025"},{"1":"07104000560000","2":"07104000570000","3":"2025"},{"1":"07104000590000","2":"07104000590000","3":"2025"},{"1":"07104000600000","2":"07104000600000","3":"2025"},{"1":"07104010040000","2":"07104010040000","3":"2025"},{"1":"07104010170000","2":"07104010170000","3":"2025"},{"1":"07104010260000","2":"07104010260000","3":"2025"},{"1":"07111000090000","2":"07111000090000","3":"2025"},{"1":"07112020410000","2":"07112020410000","3":"2025"},{"1":"07112030040000","2":"07112030040000","3":"2025"},{"1":"07113000130000","2":"07113000120000","3":"2025"},{"1":"07113000130000","2":"07113000130000","3":"2025"},{"1":"07113010020000","2":"07113010020000","3":"2025"},{"1":"07113020110000","2":"07113020110000","3":"2025"},{"1":"07113020130000","2":"07113020130000","3":"2025"},{"1":"07113020190000","2":"07113020190000","3":"2025"},{"1":"07113020230000","2":"07113020230000","3":"2025"},{"1":"07113030150000","2":"07113030150000","3":"2025"},{"1":"07113030150000","2":"07113030180000","3":"2025"},{"1":"07114000120000","2":"07114000120000","3":"2025"},{"1":"07114000130000","2":"07114000130000","3":"2025"},{"1":"07114000130000","2":"07114000560000","3":"2025"},{"1":"07114000420000","2":"07114000420000","3":"2025"},{"1":"07114000830000","2":"07114000830000","3":"2025"},{"1":"07114000890000","2":"07114000890000","3":"2025"},{"1":"07114010010000","2":"07114010010000","3":"2025"},{"1":"07121000140000","2":"07121000140000","3":"2025"},{"1":"07121000170000","2":"07121000170000","3":"2025"},{"1":"07121010160000","2":"07011010050000","3":"2025"},{"1":"07121010160000","2":"07121010160000","3":"2025"},{"1":"07122010140000","2":"07122010140000","3":"2025"},{"1":"07122010140000","2":"07122010160000","3":"2025"},{"1":"07122010140000","2":"07122010180000","3":"2025"},{"1":"07122010190000","2":"07122010190000","3":"2025"},{"1":"07123000200000","2":"07123000200000","3":"2025"},{"1":"07123000210000","2":"07123000210000","3":"2025"},{"1":"07123000440000","2":"07123000440000","3":"2025"},{"1":"07124000140000","2":"07124000140000","3":"2025"},{"1":"07124000400000","2":"07124000400000","3":"2025"},{"1":"07124000420000","2":"07124000420000","3":"2025"},{"1":"07124000520000","2":"07124000520000","3":"2025"},{"1":"07124000530000","2":"07124000530000","3":"2025"},{"1":"07131010140000","2":"07131010140000","3":"2025"},{"1":"07132000230000","2":"07132000230000","3":"2025"},{"1":"07132000230000","2":"07132000300000","3":"2025"},{"1":"07131000070000","2":"07131000070000","3":"2025"},{"1":"07131000070000","2":"07142000140000","3":"2025"},{"1":"07131000070000","2":"07142000260000","3":"2025"},{"1":"07131000070000","2":"07142000270000","3":"2025"},{"1":"07131010090000","2":"07131010090000","3":"2025"},{"1":"07131010180000","2":"07131010180000","3":"2025"},{"1":"07131030010000","2":"07131030010000","3":"2025"},{"1":"07131030070000","2":"07131030070000","3":"2025"},{"1":"07131030070000","2":"07132000150000","3":"2025"},{"1":"07131030070000","2":"07132000240000","3":"2025"},{"1":"07131030070000","2":"07132000250000","3":"2025"},{"1":"07131030070000","2":"07132000260000","3":"2025"},{"1":"07131030070000","2":"07132000320000","3":"2025"},{"1":"07131030070000","2":"07132000350000","3":"2025"},{"1":"07131030080000","2":"07131030080000","3":"2025"},{"1":"07131030120000","2":"07131030120000","3":"2025"},{"1":"07131030120000","2":"07131030130000","3":"2025"},{"1":"07132000020000","2":"07132000020000","3":"2025"},{"1":"07132000020000","2":"07132000090000","3":"2025"},{"1":"07132000050000","2":"07132000050000","3":"2025"},{"1":"07132000210000","2":"07132000210000","3":"2025"},{"1":"07132000220000","2":"07132000220000","3":"2025"},{"1":"07132000270000","2":"07132000270000","3":"2025"},{"1":"07132000330000","2":"07132000330000","3":"2025"},{"1":"07132000340000","2":"07132000340000","3":"2025"},{"1":"07132000370000","2":"07132000370000","3":"2025"},{"1":"07132000380000","2":"07132000380000","3":"2025"},{"1":"07133000160000","2":"07133000160000","3":"2025"},{"1":"07133000230000","2":"07133000180000","3":"2025"},{"1":"07133000230000","2":"07133000190000","3":"2025"},{"1":"07133000230000","2":"07133000200000","3":"2025"},{"1":"07133000230000","2":"07133000210000","3":"2025"},{"1":"07133000230000","2":"07133000220000","3":"2025"},{"1":"07133000230000","2":"07133000230000","3":"2025"},{"1":"07133000230000","2":"07133000240000","3":"2025"},{"1":"07133000260000","2":"07133000260000","3":"2025"},{"1":"07133000270000","2":"07133000270000","3":"2025"},{"1":"07133000380000","2":"07133000380000","3":"2025"},{"1":"07133060020000","2":"07133060020000","3":"2025"},{"1":"07134010100000","2":"07134010100000","3":"2025"},{"1":"07332030700000","2":"07332030700000","3":"2025"},{"1":"07332030700000","2":"07332030710000","3":"2025"},{"1":"07134000030000","2":"07133000090000","3":"2025"},{"1":"07134000030000","2":"07133000100000","3":"2025"},{"1":"07134000030000","2":"07134000030000","3":"2025"},{"1":"07134000030000","2":"07134000050000","3":"2025"},{"1":"07134000030000","2":"07134000060000","3":"2025"},{"1":"07134000040000","2":"07134000040000","3":"2025"},{"1":"07134000040000","2":"07134010050000","3":"2025"},{"1":"07134000040000","2":"07134010060000","3":"2025"},{"1":"07134000040000","2":"07134010090000","3":"2025"},{"1":"07134000170000","2":"07134000170000","3":"2025"},{"1":"07134000170000","2":"07134000360000","3":"2025"},{"1":"07134000300000","2":"07134000300000","3":"2025"},{"1":"07141010100000","2":"07141010100000","3":"2025"},{"1":"07142000090000","2":"07142000090000","3":"2025"},{"1":"07142000090000","2":"07142000300000","3":"2025"},{"1":"07142000280000","2":"07142000280000","3":"2025"},{"1":"07142000280000","2":"07142000290000","3":"2025"},{"1":"07142000490000","2":"07142000490000","3":"2025"},{"1":"07142000590000","2":"07142000590000","3":"2025"},{"1":"07142000770000","2":"07142000770000","3":"2025"},{"1":"07142000780000","2":"07142000780000","3":"2025"},{"1":"07142000790000","2":"07142000790000","3":"2025"},{"1":"07144000060000","2":"07144000060000","3":"2025"},{"1":"07144010070000","2":"07144010070000","3":"2025"},{"1":"07144010160000","2":"07144010160000","3":"2025"},{"1":"07144090190000","2":"07144090190000","3":"2025"},{"1":"07151000280000","2":"07151000280000","3":"2025"},{"1":"07151000380000","2":"07151000320000","3":"2025"},{"1":"07151000380000","2":"07151000380000","3":"2025"},{"1":"07151000390000","2":"07151000390000","3":"2025"},{"1":"07144010120000","2":"07144010120000","3":"2025"},{"1":"07161010370000","2":"07161010370000","3":"2025"},{"1":"07161010390000","2":"07161010390000","3":"2025"},{"1":"07161010400000","2":"07161010400000","3":"2025"},{"1":"07162000410000","2":"07162000410000","3":"2025"},{"1":"07162000590000","2":"07162000590000","3":"2025"},{"1":"07162000600000","2":"07162000600000","3":"2025"},{"1":"07162000610000","2":"07162000610000","3":"2025"},{"1":"07171170010000","2":"07171170010000","3":"2025"},{"1":"07184000130000","2":"07184000130000","3":"2025"},{"1":"07191050060000","2":"07191050060000","3":"2025"},{"1":"07191050100000","2":"07191050100000","3":"2025"},{"1":"07191050100000","2":"07191050120000","3":"2025"},{"1":"07191050100000","2":"07191050140000","3":"2025"},{"1":"07193000290000","2":"07193000290000","3":"2025"},{"1":"07193000290000","2":"07193000310000","3":"2025"},{"1":"07193010260000","2":"07193010260000","3":"2025"},{"1":"07204000220000","2":"07204000210000","3":"2025"},{"1":"07204000220000","2":"07204000220000","3":"2025"},{"1":"07204000240000","2":"07204000240000","3":"2025"},{"1":"07204000250000","2":"07204000250000","3":"2025"},{"1":"07222010080000","2":"07222010080000","3":"2025"},{"1":"07222010110000","2":"07222010110000","3":"2025"},{"1":"07223010520000","2":"07223010520000","3":"2025"},{"1":"07223010630000","2":"07223010630000","3":"2025"},{"1":"07223010630000","2":"07223010640000","3":"2025"},{"1":"07224000110000","2":"07224000110000","3":"2025"},{"1":"07224000110000","2":"07224000130000","3":"2025"},{"1":"07224000170000","2":"07224000170000","3":"2025"},{"1":"07224010070000","2":"07224010070000","3":"2025"},{"1":"07224010070000","2":"07224010270000","3":"2025"},{"1":"07224010390000","2":"07224010390000","3":"2025"},{"1":"07224010830000","2":"07224010830000","3":"2025"},{"1":"07224010850000","2":"07224010850000","3":"2025"},{"1":"07224010860000","2":"07224010860000","3":"2025"},{"1":"07224010890000","2":"07224010890000","3":"2025"},{"1":"07224010950000","2":"07224010950000","3":"2025"},{"1":"07224040080000","2":"07224040080000","3":"2025"},{"1":"07224060380000","2":"07224060380000","3":"2025"},{"1":"07231010280000","2":"07231010280000","3":"2025"},{"1":"07234040310000","2":"07234040310000","3":"2025"},{"1":"07242010020000","2":"07242010020000","3":"2025"},{"1":"07242010020000","2":"07242010140000","3":"2025"},{"1":"07242010090000","2":"07242010090000","3":"2025"},{"1":"07242010150000","2":"07242010150000","3":"2025"},{"1":"07242010170000","2":"07242010170000","3":"2025"},{"1":"07243000100000","2":"07243000100000","3":"2025"},{"1":"07244010030000","2":"07244010030000","3":"2025"},{"1":"07244010030000","2":"07244010040000","3":"2025"},{"1":"07244040010000","2":"07244040010000","3":"2025"},{"1":"07271010090000","2":"07271010090000","3":"2025"},{"1":"07271011700000","2":"07271011700000","3":"2025"},{"1":"07271020210000","2":"07271020210000","3":"2025"},{"1":"07271020220000","2":"07271020220000","3":"2025"},{"1":"07272010280000","2":"07272010280000","3":"2025"},{"1":"07272010300000","2":"07272010300000","3":"2025"},{"1":"07272120200000","2":"07272120200000","3":"2025"},{"1":"07273000120000","2":"07273000120000","3":"2025"},{"1":"07273020610000","2":"07273020610000","3":"2025"},{"1":"07273020650000","2":"07273020650000","3":"2025"},{"1":"07274000270000","2":"07274000270000","3":"2025"},{"1":"07274000280000","2":"07274000280000","3":"2025"},{"1":"07284090420000","2":"07284090420000","3":"2025"},{"1":"07293090140000","2":"07293090140000","3":"2025"},{"1":"07293090160000","2":"07293090160000","3":"2025"},{"1":"07293090190000","2":"07293090190000","3":"2025"},{"1":"07321050180000","2":"07321050180000","3":"2025"},{"1":"07321050180000","2":"07321050190000","3":"2025"},{"1":"07321050260000","2":"07321050260000","3":"2025"},{"1":"07321050280000","2":"07321050280000","3":"2025"},{"1":"07321070170000","2":"07321070170000","3":"2025"},{"1":"07321070170000","2":"07321070180000","3":"2025"},{"1":"07321070190000","2":"07321070190000","3":"2025"},{"1":"07324010050000","2":"07324010050000","3":"2025"},{"1":"07331010070000","2":"07331010070000","3":"2025"},{"1":"07331010200000","2":"07331010200000","3":"2025"},{"1":"07331010330000","2":"07331010330000","3":"2025"},{"1":"07331020540000","2":"07331020540000","3":"2025"},{"1":"07332000460000","2":"07332000460000","3":"2025"},{"1":"07332000470000","2":"07332000470000","3":"2025"},{"1":"07332000660000","2":"07332000650000","3":"2025"},{"1":"07332000660000","2":"07332000660000","3":"2025"},{"1":"07332000670000","2":"07332000670000","3":"2025"},{"1":"07332000720000","2":"07332000720000","3":"2025"},{"1":"07332000720000","2":"07332000730000","3":"2025"},{"1":"07332000740000","2":"07332000740000","3":"2025"},{"1":"07332000740000","2":"07332000750000","3":"2025"},{"1":"07332000940000","2":"07332000940000","3":"2025"},{"1":"07332011030000","2":"07332011030000","3":"2025"},{"1":"07333010280000","2":"07333010280000","3":"2025"},{"1":"07333020148003","2":"07333020148003","3":"2025"},{"1":"07333020148006","2":"07333020148006","3":"2025"},{"1":"07333020148007","2":"07333020148007","3":"2025"},{"1":"07333030140000","2":"07333030140000","3":"2025"},{"1":"07334010048002","2":"07334010048002","3":"2025"},{"1":"07334010048003","2":"07334010048003","3":"2025"},{"1":"07334010048004","2":"07334010048004","3":"2025"},{"1":"07334010048005","2":"07334010048005","3":"2025"},{"1":"07334010048006","2":"07334010048006","3":"2025"},{"1":"07334010048007","2":"07334010048007","3":"2025"},{"1":"07334010048008","2":"07334010048008","3":"2025"},{"1":"07334010048009","2":"07334010048009","3":"2025"},{"1":"07341000110000","2":"07341000110000","3":"2025"},{"1":"07341190010000","2":"07341190010000","3":"2025"},{"1":"07341190010000","2":"07341190150000","3":"2025"},{"1":"07341190010000","2":"07341190160000","3":"2025"},{"1":"07151000430000","2":"07151000430000","3":"2025"},{"1":"07171100370000","2":"07171100370000","3":"2025"},{"1":"07332000390000","2":"07332000390000","3":"2025"},{"1":"07224130010000","2":"07224130010000","3":"2025"},{"1":"07224130010000","2":"07224130020000","3":"2025"},{"1":"07274000310000","2":"07274000310000","3":"2025"},{"1":"07162000530000","2":"07162000530000","3":"2025"},{"1":"07224010900000","2":"07224010900000","3":"2025"},{"1":"07224010900000","2":"07224010910000","3":"2025"},{"1":"07331010060000","2":"07331010060000","3":"2025"},{"1":"07113020200000","2":"07113020200000","3":"2025"},{"1":"07102040030000","2":"07102040030000","3":"2025"},{"1":"07193000070000","2":"07193000060000","3":"2025"},{"1":"07193000070000","2":"07193000070000","3":"2025"},{"1":"07193000070000","2":"07193000080000","3":"2025"},{"1":"07112030010000","2":"07112030010000","3":"2025"},{"1":"07341000040000","2":"07341000080000","3":"2025"},{"1":"07143020190000","2":"07143020190000","3":"2025"},{"1":"07021000040000","2":"07021000040000","3":"2025"},{"1":"07021000050000","2":"07021000050000","3":"2025"},{"1":"07021000060000","2":"07021000060000","3":"2025"},{"1":"07021000070000","2":"07021000070000","3":"2025"},{"1":"07034000010000","2":"07034000010000","3":"2025"},{"1":"07102010070000","2":"07102010070000","3":"2025"},{"1":"07102010130000","2":"07102010130000","3":"2025"},{"1":"07102020010000","2":"07102020010000","3":"2025"},{"1":"07102020010000","2":"07102020020000","3":"2025"},{"1":"07102020120000","2":"07102020120000","3":"2025"},{"1":"07102020120000","2":"07102020140000","3":"2025"},{"1":"07102040010000","2":"07102040010000","3":"2025"},{"1":"07102040020000","2":"07102040020000","3":"2025"},{"1":"07102040050000","2":"07102040050000","3":"2025"},{"1":"07102040060000","2":"07102040060000","3":"2025"},{"1":"07102040070000","2":"07102040070000","3":"2025"},{"1":"07102040090000","2":"07102040090000","3":"2025"},{"1":"07102040130000","2":"07102040130000","3":"2025"},{"1":"07104000330000","2":"07104000330000","3":"2025"},{"1":"07104000340000","2":"07104000340000","3":"2025"},{"1":"07104000360000","2":"07104000360000","3":"2025"},{"1":"07104000370000","2":"07104000370000","3":"2025"},{"1":"07104000380000","2":"07104000380000","3":"2025"},{"1":"07104000440000","2":"07104000440000","3":"2025"},{"1":"07104000540000","2":"07104000540000","3":"2025"},{"1":"07104010090000","2":"07104010090000","3":"2025"},{"1":"07104010180000","2":"07104010180000","3":"2025"},{"1":"07104010250000","2":"07104010250000","3":"2025"},{"1":"07104010270000","2":"07104010270000","3":"2025"},{"1":"07111000080000","2":"07111000080000","3":"2025"},{"1":"07111020100000","2":"07111020100000","3":"2025"},{"1":"07111020130000","2":"07111020130000","3":"2025"},{"1":"07111020180000","2":"07111020180000","3":"2025"},{"1":"07111020200000","2":"07111020200000","3":"2025"},{"1":"07111030010000","2":"07111030010000","3":"2025"},{"1":"07111030020000","2":"07111030020000","3":"2025"},{"1":"07111030030000","2":"07111030030000","3":"2025"},{"1":"07112010100000","2":"07112010100000","3":"2025"},{"1":"07112010140000","2":"07112010140000","3":"2025"},{"1":"07112010140000","2":"07121000160000","3":"2025"},{"1":"07112010200000","2":"07112010200000","3":"2025"},{"1":"07112020070000","2":"07112020070000","3":"2025"},{"1":"07112020180000","2":"07112020180000","3":"2025"},{"1":"07112020190000","2":"07112020190000","3":"2025"},{"1":"07112020270000","2":"07112020270000","3":"2025"},{"1":"07112020280000","2":"07112020280000","3":"2025"},{"1":"07112020280000","2":"07112020290000","3":"2025"},{"1":"07112020350000","2":"07112020350000","3":"2025"},{"1":"07112020360000","2":"07112020360000","3":"2025"},{"1":"07112020370000","2":"07112020370000","3":"2025"},{"1":"07112020390000","2":"07112020390000","3":"2025"},{"1":"07113000060000","2":"07113000060000","3":"2025"},{"1":"07113000070000","2":"07113000070000","3":"2025"},{"1":"07113000080000","2":"07113000080000","3":"2025"},{"1":"07113000090000","2":"07113000090000","3":"2025"},{"1":"07113000100000","2":"07113000100000","3":"2025"},{"1":"07113000140000","2":"07113000140000","3":"2025"},{"1":"07113010090000","2":"07113010090000","3":"2025"},{"1":"07113010100000","2":"07113010100000","3":"2025"},{"1":"07113010110000","2":"07113010110000","3":"2025"},{"1":"07113010140000","2":"07113010140000","3":"2025"},{"1":"07113010210000","2":"07113010210000","3":"2025"},{"1":"07113010220000","2":"07113010220000","3":"2025"},{"1":"07113010230000","2":"07113010230000","3":"2025"},{"1":"07113010240000","2":"07113010240000","3":"2025"},{"1":"07113010250000","2":"07113010250000","3":"2025"},{"1":"07113010280000","2":"07113010280000","3":"2025"},{"1":"07113010290000","2":"07113010290000","3":"2025"},{"1":"07113010300000","2":"07113010300000","3":"2025"},{"1":"07113020070000","2":"07113020070000","3":"2025"},{"1":"07113020080000","2":"07113020080000","3":"2025"},{"1":"07113020140000","2":"07113020140000","3":"2025"},{"1":"07113030040000","2":"07113030040000","3":"2025"},{"1":"07113030050000","2":"07113030050000","3":"2025"},{"1":"07113030060000","2":"07113030060000","3":"2025"},{"1":"07113030090000","2":"07113030090000","3":"2025"},{"1":"07113030090000","2":"07113030110000","3":"2025"},{"1":"07113030210000","2":"07113030210000","3":"2025"},{"1":"07113030210000","2":"07113030220000","3":"2025"},{"1":"07113030230000","2":"07113030230000","3":"2025"},{"1":"07114000270000","2":"07114000270000","3":"2025"},{"1":"07114000270000","2":"07114000280000","3":"2025"},{"1":"07114000290000","2":"07114000290000","3":"2025"},{"1":"07114000300000","2":"07114000300000","3":"2025"},{"1":"07114000310000","2":"07114000310000","3":"2025"},{"1":"07114000360000","2":"07114000360000","3":"2025"},{"1":"07114000490000","2":"07114000490000","3":"2025"},{"1":"07114000500000","2":"07114000500000","3":"2025"},{"1":"07114000520000","2":"07114000520000","3":"2025"},{"1":"07114000530000","2":"07114000530000","3":"2025"},{"1":"07114000530000","2":"07114000540000","3":"2025"},{"1":"07114000550000","2":"07114000440000","3":"2025"},{"1":"07114000550000","2":"07114000550000","3":"2025"},{"1":"07114000570000","2":"07114000570000","3":"2025"},{"1":"07114000580000","2":"07114000580000","3":"2025"},{"1":"07114000590000","2":"07114000590000","3":"2025"},{"1":"07114000600000","2":"07114000600000","3":"2025"},{"1":"07114000610000","2":"07114000610000","3":"2025"},{"1":"07114000640000","2":"07114000640000","3":"2025"},{"1":"07114000640000","2":"07114000700000","3":"2025"},{"1":"07114000690000","2":"07114000690000","3":"2025"},{"1":"07114000740000","2":"07114000740000","3":"2025"},{"1":"07114000760000","2":"07114000760000","3":"2025"},{"1":"07114000770000","2":"07114000770000","3":"2025"},{"1":"07114000900000","2":"07114000900000","3":"2025"},{"1":"07114010020000","2":"07114010020000","3":"2025"},{"1":"07114010040000","2":"07114010040000","3":"2025"},{"1":"07114010050000","2":"07114010050000","3":"2025"},{"1":"07121000150000","2":"07121000150000","3":"2025"},{"1":"07123000110000","2":"07123000110000","3":"2025"},{"1":"07123000120000","2":"07123000120000","3":"2025"},{"1":"07123000230000","2":"07123000230000","3":"2025"},{"1":"07123000280000","2":"07123000280000","3":"2025"},{"1":"07123000290000","2":"07123000290000","3":"2025"},{"1":"07123000340000","2":"07123000340000","3":"2025"},{"1":"07123000360000","2":"07123000360000","3":"2025"},{"1":"07123020020000","2":"07123020020000","3":"2025"},{"1":"07123020030000","2":"07123020030000","3":"2025"},{"1":"07123020030000","2":"07123020040000","3":"2025"},{"1":"07123020100000","2":"07123020100000","3":"2025"},{"1":"07134000310000","2":"07134000310000","3":"2025"},{"1":"07142000440000","2":"07142000440000","3":"2025"},{"1":"07142000440000","2":"07142000460000","3":"2025"},{"1":"07233010130000","2":"07233010130000","3":"2025"},{"1":"07321050290000","2":"07321050290000","3":"2025"},{"1":"07321050320000","2":"07321050320000","3":"2025"},{"1":"07331000120000","2":"07331000120000","3":"2025"},{"1":"07331000170000","2":"07331000170000","3":"2025"},{"1":"07331000190000","2":"07331000190000","3":"2025"},{"1":"07331000200000","2":"07331000200000","3":"2025"},{"1":"07331000210000","2":"07331000210000","3":"2025"},{"1":"07331000220000","2":"07331000220000","3":"2025"},{"1":"07331000250000","2":"07331000250000","3":"2025"},{"1":"07331000270000","2":"07331000270000","3":"2025"},{"1":"07331000290000","2":"07331000290000","3":"2025"},{"1":"07331000300000","2":"07331000300000","3":"2025"},{"1":"07331010120000","2":"07331010120000","3":"2025"},{"1":"07331010120000","2":"07331010270000","3":"2025"},{"1":"07331010140000","2":"07331010140000","3":"2025"},{"1":"07331010180000","2":"07331010180000","3":"2025"},{"1":"07331010190000","2":"07331010190000","3":"2025"},{"1":"07331010210000","2":"07331010210000","3":"2025"},{"1":"07331010220000","2":"07331010220000","3":"2025"},{"1":"07331010230000","2":"07331010230000","3":"2025"},{"1":"07331010251001","2":"07331010251001","3":"2025"},{"1":"07331010251002","2":"07331010251002","3":"2025"},{"1":"07331010251003","2":"07331010251003","3":"2025"},{"1":"07331010251004","2":"07331010251004","3":"2025"},{"1":"07331010300000","2":"07331010300000","3":"2025"},{"1":"07331010310000","2":"07331010310000","3":"2025"},{"1":"07331010321001","2":"07331010321001","3":"2025"},{"1":"07331010321002","2":"07331010321002","3":"2025"},{"1":"07331010321003","2":"07331010321003","3":"2025"},{"1":"07331010321004","2":"07331010321004","3":"2025"},{"1":"07331010340000","2":"07331010340000","3":"2025"},{"1":"07331020070000","2":"07331020070000","3":"2025"},{"1":"07331020070000","2":"07331020080000","3":"2025"},{"1":"07331020090000","2":"07331020090000","3":"2025"},{"1":"07331020120000","2":"07331020120000","3":"2025"},{"1":"07331020140000","2":"07331020140000","3":"2025"},{"1":"07331020140000","2":"07331020460000","3":"2025"},{"1":"07331020140000","2":"07331020490000","3":"2025"},{"1":"07331020150000","2":"07331020150000","3":"2025"},{"1":"07331020170000","2":"07331020170000","3":"2025"},{"1":"07331020180000","2":"07331020180000","3":"2025"},{"1":"07331020180000","2":"07331020190000","3":"2025"},{"1":"07331020200000","2":"07331020200000","3":"2025"},{"1":"07331020210000","2":"07331020210000","3":"2025"},{"1":"07331020220000","2":"07331020220000","3":"2025"},{"1":"07331020230000","2":"07331020230000","3":"2025"},{"1":"07331020240000","2":"07331020240000","3":"2025"},{"1":"07331020260000","2":"07331020260000","3":"2025"},{"1":"07331020320000","2":"07331020320000","3":"2025"},{"1":"07331020340000","2":"07331020340000","3":"2025"},{"1":"07331020360000","2":"07331020360000","3":"2025"},{"1":"07331020370000","2":"07331020370000","3":"2025"},{"1":"07331020380000","2":"07331020380000","3":"2025"},{"1":"07331020390000","2":"07331020390000","3":"2025"},{"1":"07331020420000","2":"07331020420000","3":"2025"},{"1":"07331020430000","2":"07331020430000","3":"2025"},{"1":"07331020430000","2":"07331020500000","3":"2025"},{"1":"07331020440000","2":"07331020440000","3":"2025"},{"1":"07331020450000","2":"07331020450000","3":"2025"},{"1":"07331020450000","2":"07331020510000","3":"2025"},{"1":"07331020530000","2":"07331020530000","3":"2025"},{"1":"07331020551003","2":"07331020551003","3":"2025"},{"1":"07331020560000","2":"07331020560000","3":"2025"},{"1":"07331020590000","2":"07331020590000","3":"2025"},{"1":"07331020601001","2":"07331020601001","3":"2025"},{"1":"07331020601002","2":"07331020601002","3":"2025"},{"1":"07331020601003","2":"07331020601003","3":"2025"},{"1":"07331020601004","2":"07331020601004","3":"2025"},{"1":"07331020601005","2":"07331020601005","3":"2025"},{"1":"07331020610000","2":"07331020610000","3":"2025"},{"1":"07331020610000","2":"07331020620000","3":"2025"},{"1":"07331020631001","2":"07331020631001","3":"2025"},{"1":"07331020631002","2":"07331020631002","3":"2025"},{"1":"07331020631003","2":"07331020631003","3":"2025"},{"1":"07331030170000","2":"07331030170000","3":"2025"},{"1":"07331030170000","2":"07331030250000","3":"2025"},{"1":"07331030220000","2":"07331030220000","3":"2025"},{"1":"07331030260000","2":"07331030260000","3":"2025"},{"1":"07331030290000","2":"07331030290000","3":"2025"},{"1":"07331030300000","2":"07331030300000","3":"2025"},{"1":"07331030340000","2":"07331030340000","3":"2025"},{"1":"07331030370000","2":"07331030370000","3":"2025"},{"1":"07331030380000","2":"07331030380000","3":"2025"},{"1":"07332000040000","2":"07332000040000","3":"2025"},{"1":"07332000190000","2":"07332000190000","3":"2025"},{"1":"07332000200000","2":"07332000200000","3":"2025"},{"1":"07332000340000","2":"07332000340000","3":"2025"},{"1":"07332000510000","2":"07332000510000","3":"2025"},{"1":"07332000630000","2":"07332000630000","3":"2025"},{"1":"07332000690000","2":"07332000690000","3":"2025"},{"1":"07332000700000","2":"07332000700000","3":"2025"},{"1":"07332000700000","2":"07332000710000","3":"2025"},{"1":"07332000760000","2":"07332000760000","3":"2025"},{"1":"07332000770000","2":"07332000770000","3":"2025"},{"1":"07332000950000","2":"07332000950000","3":"2025"},{"1":"07332000971001","2":"07332000971001","3":"2025"},{"1":"07332000971002","2":"07332000971002","3":"2025"},{"1":"07332000971003","2":"07332000971003","3":"2025"},{"1":"07332010040000","2":"07332010040000","3":"2025"},{"1":"07332010040000","2":"07332010500000","3":"2025"},{"1":"07332010070000","2":"07332010070000","3":"2025"},{"1":"07332010150000","2":"07332010150000","3":"2025"},{"1":"07332010150000","2":"07332010660000","3":"2025"},{"1":"07332010410000","2":"07332010410000","3":"2025"},{"1":"07332010430000","2":"07332010430000","3":"2025"},{"1":"07332010450000","2":"07332010450000","3":"2025"},{"1":"07332010550000","2":"07332010550000","3":"2025"},{"1":"07332010630000","2":"07332010630000","3":"2025"},{"1":"07332010630000","2":"07332010710000","3":"2025"},{"1":"07332010650000","2":"07332010650000","3":"2025"},{"1":"07332010670000","2":"07332010670000","3":"2025"},{"1":"07332010670000","2":"07332010980000","3":"2025"},{"1":"07332010690000","2":"07332010690000","3":"2025"},{"1":"07332010700000","2":"07332010700000","3":"2025"},{"1":"07332010720000","2":"07332010720000","3":"2025"},{"1":"07332010730000","2":"07332010730000","3":"2025"},{"1":"07332010740000","2":"07332010740000","3":"2025"},{"1":"07332010750000","2":"07332010750000","3":"2025"},{"1":"07332010760000","2":"07332010760000","3":"2025"},{"1":"07332010780000","2":"07332010780000","3":"2025"},{"1":"07332010790000","2":"07332010790000","3":"2025"},{"1":"07332010800000","2":"07332010800000","3":"2025"},{"1":"07332010820000","2":"07332010820000","3":"2025"},{"1":"07332010830000","2":"07332010830000","3":"2025"},{"1":"07332010840000","2":"07332010840000","3":"2025"},{"1":"07332010860000","2":"07332010860000","3":"2025"},{"1":"07332010870000","2":"07332010870000","3":"2025"},{"1":"07332010880000","2":"07332010880000","3":"2025"},{"1":"07332010890000","2":"07332010890000","3":"2025"},{"1":"07332010950000","2":"07332010950000","3":"2025"},{"1":"07332010960000","2":"07332010960000","3":"2025"},{"1":"07332010970000","2":"07332010970000","3":"2025"},{"1":"07332010990000","2":"07332010990000","3":"2025"},{"1":"07332011000000","2":"07332011000000","3":"2025"},{"1":"07332011000000","2":"07332011110000","3":"2025"},{"1":"07332011040000","2":"07332011040000","3":"2025"},{"1":"07332011050000","2":"07332011050000","3":"2025"},{"1":"07332011060000","2":"07332011060000","3":"2025"},{"1":"07332011090000","2":"07332011090000","3":"2025"},{"1":"07332011100000","2":"07332011100000","3":"2025"},{"1":"07332011120000","2":"07332011120000","3":"2025"},{"1":"07332011141001","2":"07332011141001","3":"2025"},{"1":"07332011141002","2":"07332011141002","3":"2025"},{"1":"07332011141003","2":"07332011141003","3":"2025"},{"1":"07332011141004","2":"07332011141004","3":"2025"},{"1":"07332011151001","2":"07332011151001","3":"2025"},{"1":"07332011151002","2":"07332011151002","3":"2025"},{"1":"07332011151003","2":"07332011151003","3":"2025"},{"1":"07332011151004","2":"07332011151004","3":"2025"},{"1":"07332020030000","2":"07332020030000","3":"2025"},{"1":"07332020160000","2":"07332020160000","3":"2025"},{"1":"07332020170000","2":"07332020170000","3":"2025"},{"1":"07332020180000","2":"07332020180000","3":"2025"},{"1":"07332020190000","2":"07332011020000","3":"2025"},{"1":"07332020190000","2":"07332020190000","3":"2025"},{"1":"07332020190000","2":"07332020210000","3":"2025"},{"1":"07332020200000","2":"07332020200000","3":"2025"},{"1":"07332020220000","2":"07332020220000","3":"2025"},{"1":"07332020350000","2":"07332020350000","3":"2025"},{"1":"07332020360000","2":"07332020360000","3":"2025"},{"1":"07332020400000","2":"07332020400000","3":"2025"},{"1":"07332020410000","2":"07332020410000","3":"2025"},{"1":"07332020430000","2":"07332020430000","3":"2025"},{"1":"07332020440000","2":"07332020440000","3":"2025"},{"1":"07332020450000","2":"07332020450000","3":"2025"},{"1":"07332020470000","2":"07332020470000","3":"2025"},{"1":"07332020490000","2":"07332020490000","3":"2025"},{"1":"07332020500000","2":"07332020500000","3":"2025"},{"1":"07332020510000","2":"07332020510000","3":"2025"},{"1":"07332020520000","2":"07332020520000","3":"2025"},{"1":"07332020560000","2":"07332020560000","3":"2025"},{"1":"07332020590000","2":"07332020590000","3":"2025"},{"1":"07332020620000","2":"07332020620000","3":"2025"},{"1":"07332020630000","2":"07332020630000","3":"2025"},{"1":"07332020640000","2":"07332020640000","3":"2025"},{"1":"07332020650000","2":"07332020650000","3":"2025"},{"1":"07332020660000","2":"07332020660000","3":"2025"},{"1":"07332020670000","2":"07332020670000","3":"2025"},{"1":"07332020680000","2":"07332020680000","3":"2025"},{"1":"07332020680000","2":"07332020830000","3":"2025"},{"1":"07332020690000","2":"07332020690000","3":"2025"},{"1":"07332020700000","2":"07332020700000","3":"2025"},{"1":"07332020710000","2":"07332020710000","3":"2025"},{"1":"07332020750000","2":"07332020750000","3":"2025"},{"1":"07332020760000","2":"07332020760000","3":"2025"},{"1":"07332020770000","2":"07332020770000","3":"2025"},{"1":"07332020780000","2":"07332020780000","3":"2025"},{"1":"07332020790000","2":"07332020790000","3":"2025"},{"1":"07332020800000","2":"07332020800000","3":"2025"},{"1":"07332020810000","2":"07332020810000","3":"2025"},{"1":"07332020820000","2":"07332020820000","3":"2025"},{"1":"07332020840000","2":"07332020840000","3":"2025"},{"1":"07332030240000","2":"07332030240000","3":"2025"},{"1":"07332030270000","2":"07332030270000","3":"2025"},{"1":"07332030300000","2":"07332030300000","3":"2025"},{"1":"07332030320000","2":"07332030320000","3":"2025"},{"1":"07332030360000","2":"07332030360000","3":"2025"},{"1":"07332030380000","2":"07332030380000","3":"2025"},{"1":"07332030400000","2":"07332030400000","3":"2025"},{"1":"07332030420000","2":"07332030420000","3":"2025"},{"1":"07332030440000","2":"07332030440000","3":"2025"},{"1":"07332030450000","2":"07332030450000","3":"2025"},{"1":"07332030490000","2":"07332030490000","3":"2025"},{"1":"07332030551001","2":"07332030551001","3":"2025"},{"1":"07332030551002","2":"07332030551002","3":"2025"},{"1":"07332030551003","2":"07332030551003","3":"2025"},{"1":"07332030551004","2":"07332030551004","3":"2025"},{"1":"07332030551005","2":"07332030551005","3":"2025"},{"1":"07332030551006","2":"07332030551006","3":"2025"},{"1":"07332030551007","2":"07332030551007","3":"2025"},{"1":"07332030551008","2":"07332030551008","3":"2025"},{"1":"07332030581001","2":"07332030581001","3":"2025"},{"1":"07332030581002","2":"07332030581002","3":"2025"},{"1":"07332030581003","2":"07332030581003","3":"2025"},{"1":"07332030630000","2":"07332030630000","3":"2025"},{"1":"07332030641001","2":"07332030641001","3":"2025"},{"1":"07332030641002","2":"07332030641002","3":"2025"},{"1":"07332030641003","2":"07332030641003","3":"2025"},{"1":"07332030641004","2":"07332030641004","3":"2025"},{"1":"07332030641005","2":"07332030641005","3":"2025"},{"1":"07332030641006","2":"07332030641006","3":"2025"},{"1":"07332030641007","2":"07332030641007","3":"2025"},{"1":"07332030651001","2":"07332030651001","3":"2025"},{"1":"07332030651002","2":"07332030651002","3":"2025"},{"1":"07332030651003","2":"07332030651003","3":"2025"},{"1":"07332030651004","2":"07332030651004","3":"2025"},{"1":"07332030651005","2":"07332030651005","3":"2025"},{"1":"07332030651007","2":"07332030651007","3":"2025"},{"1":"07332030670000","2":"07332030670000","3":"2025"},{"1":"07332030690000","2":"07332030690000","3":"2025"},{"1":"07332040120000","2":"07332040120000","3":"2025"},{"1":"07332040120000","2":"07332040190000","3":"2025"},{"1":"07332040160000","2":"07332040160000","3":"2025"},{"1":"07333000060000","2":"07333000060000","3":"2025"},{"1":"07333010150000","2":"07333010150000","3":"2025"},{"1":"07333010180000","2":"07333010180000","3":"2025"},{"1":"07333010190000","2":"07333010190000","3":"2025"},{"1":"07333010200000","2":"07333010200000","3":"2025"},{"1":"07333010210000","2":"07333010210000","3":"2025"},{"1":"07333010220000","2":"07333010220000","3":"2025"},{"1":"07333010230000","2":"07333010230000","3":"2025"},{"1":"07333010250000","2":"07333010250000","3":"2025"},{"1":"07333010270000","2":"07333010270000","3":"2025"},{"1":"07333010290000","2":"07333010290000","3":"2025"},{"1":"07333010300000","2":"07333010300000","3":"2025"},{"1":"07333030101001","2":"07333030101001","3":"2025"},{"1":"07333030101002","2":"07333030101002","3":"2025"},{"1":"07333030101003","2":"07333030101003","3":"2025"},{"1":"07333030101004","2":"07333030101004","3":"2025"},{"1":"07333030101005","2":"07333030101005","3":"2025"},{"1":"07333030101006","2":"07333030101006","3":"2025"},{"1":"07333030101007","2":"07333030101007","3":"2025"},{"1":"07333030111001","2":"07333030111001","3":"2025"},{"1":"07333030111002","2":"07333030111002","3":"2025"},{"1":"07333030111003","2":"07333030111003","3":"2025"},{"1":"07333030111004","2":"07333030111004","3":"2025"},{"1":"07333030111005","2":"07333030111005","3":"2025"},{"1":"07333030111007","2":"07333030111007","3":"2025"},{"1":"07333030111008","2":"07333030111008","3":"2025"},{"1":"07333030111009","2":"07333030111009","3":"2025"},{"1":"07333030111010","2":"07333030111010","3":"2025"},{"1":"07333030111011","2":"07333030111011","3":"2025"},{"1":"07333030111012","2":"07333030111012","3":"2025"},{"1":"07333030130000","2":"07333030130000","3":"2025"},{"1":"07334000240000","2":"07334000240000","3":"2025"},{"1":"07334000280000","2":"07334000280000","3":"2025"},{"1":"07334000350000","2":"07334000290000","3":"2025"},{"1":"07334000350000","2":"07334000350000","3":"2025"},{"1":"07334000350000","2":"07334000360000","3":"2025"},{"1":"07334000430000","2":"07334000430000","3":"2025"},{"1":"07334000460000","2":"07334000460000","3":"2025"},{"1":"07334000480000","2":"07334000480000","3":"2025"},{"1":"07334000500000","2":"07334000500000","3":"2025"},{"1":"07334000530000","2":"07334000530000","3":"2025"},{"1":"07334000540000","2":"07334000540000","3":"2025"},{"1":"07334020080000","2":"07334020080000","3":"2025"},{"1":"07334020100000","2":"07334020100000","3":"2025"},{"1":"07334020110000","2":"07334020110000","3":"2025"},{"1":"07334020120000","2":"07334020120000","3":"2025"},{"1":"07142000511001","2":"07142000511001","3":"2025"},{"1":"07142000511002","2":"07142000511002","3":"2025"},{"1":"07142000511003","2":"07142000511003","3":"2025"},{"1":"07142000511004","2":"07142000511004","3":"2025"},{"1":"07142000511005","2":"07142000511005","3":"2025"},{"1":"07142000511006","2":"07142000511006","3":"2025"},{"1":"07142000511007","2":"07142000511007","3":"2025"},{"1":"07142000511008","2":"07142000511008","3":"2025"},{"1":"07142000511009","2":"07142000511009","3":"2025"},{"1":"07142000511010","2":"07142000511010","3":"2025"},{"1":"07142000511011","2":"07142000511011","3":"2025"},{"1":"07142000511012","2":"07142000511012","3":"2025"},{"1":"07142000511013","2":"07142000511013","3":"2025"},{"1":"07142000511014","2":"07142000511014","3":"2025"},{"1":"07142000511015","2":"07142000511015","3":"2025"},{"1":"07142000511016","2":"07142000511016","3":"2025"},{"1":"07142000511017","2":"07142000511017","3":"2025"},{"1":"07142000511018","2":"07142000511018","3":"2025"},{"1":"07142000511019","2":"07142000511019","3":"2025"},{"1":"07142000511020","2":"07142000511020","3":"2025"},{"1":"07142000511023","2":"07142000511023","3":"2025"},{"1":"07142000511024","2":"07142000511024","3":"2025"},{"1":"07142000511025","2":"07142000511025","3":"2025"},{"1":"07142000741001","2":"07142000741001","3":"2025"},{"1":"07142000741002","2":"07142000741002","3":"2025"},{"1":"07142000741003","2":"07142000741003","3":"2025"},{"1":"07142000741004","2":"07142000741004","3":"2025"},{"1":"07142000741005","2":"07142000741005","3":"2025"},{"1":"07142000741006","2":"07142000741006","3":"2025"},{"1":"07142000741007","2":"07142000741007","3":"2025"},{"1":"07142000841001","2":"07142000841001","3":"2025"},{"1":"07142000841003","2":"07142000841003","3":"2025"},{"1":"07142000841004","2":"07142000841004","3":"2025"},{"1":"07142000841005","2":"07142000841005","3":"2025"},{"1":"07142000841007","2":"07142000841007","3":"2025"},{"1":"07142000841008","2":"07142000841008","3":"2025"},{"1":"07142000841009","2":"07142000841009","3":"2025"},{"1":"07142000841010","2":"07142000841010","3":"2025"},{"1":"07142000841011","2":"07142000841011","3":"2025"},{"1":"07142000841012","2":"07142000841012","3":"2025"},{"1":"07142000841013","2":"07142000841013","3":"2025"},{"1":"07142000841014","2":"07142000841014","3":"2025"},{"1":"07142000841015","2":"07142000841015","3":"2025"},{"1":"07142000841019","2":"07142000841019","3":"2025"},{"1":"07142000841020","2":"07142000841020","3":"2025"},{"1":"07142000841023","2":"07142000841023","3":"2025"},{"1":"07142000841024","2":"07142000841024","3":"2025"},{"1":"07142000841025","2":"07142000841025","3":"2025"},{"1":"07142000841026","2":"07142000841026","3":"2025"},{"1":"07142000841027","2":"07142000841027","3":"2025"},{"1":"07142000841028","2":"07142000841028","3":"2025"},{"1":"07142000841029","2":"07142000841029","3":"2025"},{"1":"07142000841030","2":"07142000841030","3":"2025"},{"1":"07142000841031","2":"07142000841031","3":"2025"},{"1":"07142000841032","2":"07142000841032","3":"2025"},{"1":"07142000841033","2":"07142000841033","3":"2025"},{"1":"07142000841034","2":"07142000841034","3":"2025"},{"1":"07142000841035","2":"07142000841035","3":"2025"},{"1":"07142000841036","2":"07142000841036","3":"2025"},{"1":"07142000851001","2":"07142000851001","3":"2025"},{"1":"07142000851002","2":"07142000851002","3":"2025"},{"1":"07142000851003","2":"07142000851003","3":"2025"},{"1":"07142000851004","2":"07142000851004","3":"2025"},{"1":"07142000851005","2":"07142000851005","3":"2025"},{"1":"07142000851006","2":"07142000851006","3":"2025"},{"1":"07142000851007","2":"07142000851007","3":"2025"},{"1":"07143020131006","2":"07143020131006","3":"2025"},{"1":"07143020131008","2":"07143020131008","3":"2025"},{"1":"07143020131009","2":"07143020131009","3":"2025"},{"1":"07331000311001","2":"07331000311001","3":"2025"},{"1":"07331000311002","2":"07331000311002","3":"2025"},{"1":"07331000311003","2":"07331000311003","3":"2025"},{"1":"07331000311004","2":"07331000311004","3":"2025"},{"1":"07331000311005","2":"07331000311005","3":"2025"},{"1":"07331020551001","2":"07331020551001","3":"2025"},{"1":"07331020551002","2":"07331020551002","3":"2025"},{"1":"07331020551004","2":"07331020551004","3":"2025"},{"1":"07331020551005","2":"07331020551005","3":"2025"},{"1":"07331050881001","2":"07331050881001","3":"2025"},{"1":"07331050881002","2":"07331050881002","3":"2025"},{"1":"07331050881003","2":"07331050881003","3":"2025"},{"1":"07331050881004","2":"07331050881004","3":"2025"},{"1":"07331050881005","2":"07331050881005","3":"2025"},{"1":"07331050881006","2":"07331050881006","3":"2025"},{"1":"07331050881007","2":"07331050881007","3":"2025"},{"1":"07331050881008","2":"07331050881008","3":"2025"},{"1":"07331050881009","2":"07331050881009","3":"2025"},{"1":"07331050881010","2":"07331050881010","3":"2025"},{"1":"07331050881011","2":"07331050881011","3":"2025"},{"1":"07331050881012","2":"07331050881012","3":"2025"},{"1":"07331050881013","2":"07331050881013","3":"2025"},{"1":"07331050881014","2":"07331050881014","3":"2025"},{"1":"07331050881015","2":"07331050881015","3":"2025"},{"1":"07331050881016","2":"07331050881016","3":"2025"},{"1":"07191050130000","2":"07191050130000","3":"2025"},{"1":"07273020540000","2":"07273020540000","3":"2025"},{"1":"07093010160000","2":"07093010160000","3":"2025"},{"1":"07094000240000","2":"07094000240000","3":"2025"},{"1":"07094000320000","2":"07094000320000","3":"2025"},{"1":"07094000430000","2":"07094000430000","3":"2025"},{"1":"07101010300000","2":"07101010300000","3":"2025"},{"1":"07101010300000","2":"07101010310000","3":"2025"},{"1":"07101010300000","2":"07101010320000","3":"2025"},{"1":"07101010300000","2":"07101010330000","3":"2025"},{"1":"07101010300000","2":"07101010340000","3":"2025"},{"1":"07102020130000","2":"07102020130000","3":"2025"},{"1":"07102030090000","2":"07102030090000","3":"2025"},{"1":"07103000340000","2":"07103000340000","3":"2025"},{"1":"07103000350000","2":"07103000350000","3":"2025"},{"1":"07103000530000","2":"07103000530000","3":"2025"},{"1":"07103000550000","2":"07103000550000","3":"2025"},{"1":"07103000560000","2":"07103000560000","3":"2025"},{"1":"07103000570000","2":"07103000570000","3":"2025"},{"1":"07103000650000","2":"07103000650000","3":"2025"},{"1":"07103000730000","2":"07103000730000","3":"2025"},{"1":"07103000730000","2":"07103000740000","3":"2025"},{"1":"07103000810000","2":"07103000810000","3":"2025"},{"1":"07104000110000","2":"07104000110000","3":"2025"},{"1":"07104000320000","2":"07104000320000","3":"2025"},{"1":"07104000400000","2":"07104000400000","3":"2025"},{"1":"07104000410000","2":"07104000410000","3":"2025"},{"1":"07104000550000","2":"07104000550000","3":"2025"},{"1":"07104000580000","2":"07104000580000","3":"2025"},{"1":"07112020400000","2":"07112020400000","3":"2025"},{"1":"07113040050000","2":"07113040050000","3":"2025"},{"1":"07113040060000","2":"07113040060000","3":"2025"},{"1":"07114000090000","2":"07114000090000","3":"2025"},{"1":"07114000100000","2":"07114000100000","3":"2025"},{"1":"07114000380000","2":"07114000380000","3":"2025"},{"1":"07114000680000","2":"07114000680000","3":"2025"},{"1":"07114000710000","2":"07114000710000","3":"2025"},{"1":"07114000720000","2":"07114000720000","3":"2025"},{"1":"07114000840000","2":"07114000840000","3":"2025"},{"1":"07114000880000","2":"07114000870000","3":"2025"},{"1":"07114000880000","2":"07114000880000","3":"2025"},{"1":"07122010130000","2":"07122010130000","3":"2025"},{"1":"07122010150000","2":"07122010150000","3":"2025"},{"1":"07123000180000","2":"07123000180000","3":"2025"},{"1":"07123000250000","2":"07123000160000","3":"2025"},{"1":"07123000250000","2":"07123000250000","3":"2025"},{"1":"07123000330000","2":"07123000330000","3":"2025"},{"1":"07123000350000","2":"07123000350000","3":"2025"},{"1":"07123000370000","2":"07123000370000","3":"2025"},{"1":"07123000370000","2":"07123000380000","3":"2025"},{"1":"07123000390000","2":"07123000390000","3":"2025"},{"1":"07123000400000","2":"07123000400000","3":"2025"},{"1":"07123000410000","2":"07123000410000","3":"2025"},{"1":"07123000420000","2":"07123000420000","3":"2025"},{"1":"07123000430000","2":"07123000430000","3":"2025"},{"1":"07123020010000","2":"07123020010000","3":"2025"},{"1":"07123020050000","2":"07123020050000","3":"2025"},{"1":"07124000240000","2":"07124000240000","3":"2025"},{"1":"07124000470000","2":"07124000470000","3":"2025"},{"1":"07124000540000","2":"07124000540000","3":"2025"},{"1":"07124000550000","2":"07124000550000","3":"2025"},{"1":"07124010020000","2":"07124010020000","3":"2025"},{"1":"07124010040000","2":"07124010040000","3":"2025"},{"1":"07124010050000","2":"07124010050000","3":"2025"},{"1":"07124010060000","2":"07124010060000","3":"2025"},{"1":"07124020120000","2":"07124020120000","3":"2025"},{"1":"07124020180000","2":"07124020180000","3":"2025"},{"1":"07124020230000","2":"07124020230000","3":"2025"},{"1":"07131000300000","2":"07131000300000","3":"2025"},{"1":"07131000310000","2":"07131000310000","3":"2025"},{"1":"07131010060000","2":"07131010060000","3":"2025"},{"1":"07131010130000","2":"07131010130000","3":"2025"},{"1":"07131010170000","2":"07131010170000","3":"2025"},{"1":"07131010190000","2":"07131010190000","3":"2025"},{"1":"07131010200000","2":"07131010200000","3":"2025"},{"1":"07131010210000","2":"07131010210000","3":"2025"},{"1":"07131020020000","2":"07131020020000","3":"2025"},{"1":"07131030020000","2":"07131030020000","3":"2025"},{"1":"07131030030000","2":"07131030030000","3":"2025"},{"1":"07131030140000","2":"07131030140000","3":"2025"},{"1":"07132000100000","2":"07132000100000","3":"2025"},{"1":"07132000280000","2":"07132000280000","3":"2025"},{"1":"07132000290000","2":"07132000290000","3":"2025"},{"1":"07132000400000","2":"07132000400000","3":"2025"},{"1":"07132000410000","2":"07132000410000","3":"2025"},{"1":"07133000280000","2":"07133000280000","3":"2025"},{"1":"07133000320000","2":"07133000320000","3":"2025"},{"1":"07133000390000","2":"07133000390000","3":"2025"},{"1":"07133060030000","2":"07133060030000","3":"2025"},{"1":"07133060040000","2":"07133060040000","3":"2025"},{"1":"07133060060000","2":"07133060060000","3":"2025"},{"1":"07133060070000","2":"07133060070000","3":"2025"},{"1":"07134000190000","2":"07134000190000","3":"2025"},{"1":"07134000220000","2":"07134000220000","3":"2025"},{"1":"07134000220000","2":"07134000230000","3":"2025"},{"1":"07134000220000","2":"07134000350000","3":"2025"},{"1":"07134000320000","2":"07134000320000","3":"2025"},{"1":"07134080020000","2":"07134080020000","3":"2025"},{"1":"07134080050000","2":"07134080050000","3":"2025"},{"1":"07134080100000","2":"07134080100000","3":"2025"},{"1":"07134080130000","2":"07134080130000","3":"2025"},{"1":"07134080140000","2":"07134080140000","3":"2025"},{"1":"07141010020000","2":"07141010020000","3":"2025"},{"1":"07141010130000","2":"07141010130000","3":"2025"},{"1":"07141010130000","2":"07141010140000","3":"2025"},{"1":"07141010150000","2":"07141010150000","3":"2025"},{"1":"07141010160000","2":"07141010160000","3":"2025"},{"1":"07142000150000","2":"07142000150000","3":"2025"},{"1":"07142000250000","2":"07142000250000","3":"2025"},{"1":"07142000520000","2":"07142000520000","3":"2025"},{"1":"07142000530000","2":"07142000530000","3":"2025"},{"1":"07143020180000","2":"07143020180000","3":"2025"},{"1":"07143020200000","2":"07143020200000","3":"2025"},{"1":"07144000070000","2":"07144000070000","3":"2025"},{"1":"07144010100000","2":"07144010100000","3":"2025"},{"1":"07144010110000","2":"07144010110000","3":"2025"},{"1":"07144010150000","2":"07144010150000","3":"2025"},{"1":"07151000300000","2":"07151000300000","3":"2025"},{"1":"07151000310000","2":"07151000310000","3":"2025"},{"1":"07161010100000","2":"07161010100000","3":"2025"},{"1":"07162000160000","2":"07162000160000","3":"2025"},{"1":"07161010290000","2":"07161010290000","3":"2025"},{"1":"07161060190000","2":"07161030080000","3":"2025"},{"1":"07161060190000","2":"07161060180000","3":"2025"},{"1":"07161060190000","2":"07161060190000","3":"2025"},{"1":"07162000170000","2":"07162000170000","3":"2025"},{"1":"07162000190000","2":"07162000190000","3":"2025"},{"1":"07162000280000","2":"07162000280000","3":"2025"},{"1":"07162000290000","2":"07162000290000","3":"2025"},{"1":"07162000400000","2":"07162000400000","3":"2025"},{"1":"07171000070000","2":"07171000070000","3":"2025"},{"1":"07171000080000","2":"07171000080000","3":"2025"},{"1":"07171170020000","2":"07171170020000","3":"2025"},{"1":"07184000070000","2":"07184000070000","3":"2025"},{"1":"07184000120000","2":"07184000120000","3":"2025"},{"1":"07191050030000","2":"07191050030000","3":"2025"},{"1":"07191050050000","2":"07191050050000","3":"2025"},{"1":"07191050110000","2":"07191050110000","3":"2025"},{"1":"07193000050000","2":"07193000050000","3":"2025"},{"1":"07194000280000","2":"07194000280000","3":"2025"},{"1":"07194000310000","2":"07194000310000","3":"2025"},{"1":"07194000320000","2":"07194000320000","3":"2025"},{"1":"07194000340000","2":"07194000330000","3":"2025"},{"1":"07194000340000","2":"07194000340000","3":"2025"},{"1":"07204000080000","2":"07204000080000","3":"2025"},{"1":"07221040280000","2":"07221040280000","3":"2025"},{"1":"07223010240000","2":"07223010240000","3":"2025"},{"1":"07223010510000","2":"07223010510000","3":"2025"},{"1":"07223010590000","2":"07223010590000","3":"2025"},{"1":"07224000010000","2":"07224000010000","3":"2025"},{"1":"07224010380000","2":"07224010380000","3":"2025"},{"1":"07224060370000","2":"07224060370000","3":"2025"},{"1":"07231010290000","2":"07231010290000","3":"2025"},{"1":"07243000110000","2":"07243000110000","3":"2025"},{"1":"07243030160000","2":"07243030160000","3":"2025"},{"1":"07271010080000","2":"07271010080000","3":"2025"},{"1":"07272000150000","2":"07272000150000","3":"2025"},{"1":"07272000190000","2":"07272000190000","3":"2025"},{"1":"07272010270000","2":"07272010270000","3":"2025"},{"1":"07273000140000","2":"07273000140000","3":"2025"},{"1":"07273000150000","2":"07273000150000","3":"2025"},{"1":"07273000160000","2":"07273000160000","3":"2025"},{"1":"07273000170000","2":"07273000170000","3":"2025"},{"1":"07273000180000","2":"07273000180000","3":"2025"},{"1":"07273000180000","2":"07273000190000","3":"2025"},{"1":"07273020600000","2":"07273020600000","3":"2025"},{"1":"07273020640000","2":"07273020640000","3":"2025"},{"1":"07274000290000","2":"07274000290000","3":"2025"},{"1":"07274000300000","2":"07274000300000","3":"2025"},{"1":"07274000320000","2":"07274000320000","3":"2025"},{"1":"07284090400000","2":"07284090400000","3":"2025"},{"1":"07284090400000","2":"07284090430000","3":"2025"},{"1":"07293090080000","2":"07293090080000","3":"2025"},{"1":"07293090110000","2":"07293090110000","3":"2025"},{"1":"07293090120000","2":"07293090120000","3":"2025"},{"1":"07293090130000","2":"07293090130000","3":"2025"},{"1":"07293090180000","2":"07293090180000","3":"2025"},{"1":"07321020010000","2":"07321020010000","3":"2025"},{"1":"07321020090000","2":"07321020090000","3":"2025"},{"1":"07321020090000","2":"07321020100000","3":"2025"},{"1":"07321050300000","2":"07321050300000","3":"2025"},{"1":"07321070160000","2":"07321070160000","3":"2025"},{"1":"07321090460000","2":"07321090460000","3":"2025"},{"1":"07321090470000","2":"07321090470000","3":"2025"},{"1":"07331010050000","2":"07331010050000","3":"2025"},{"1":"07331010050000","2":"07331010080000","3":"2025"},{"1":"07331020400000","2":"07331020400000","3":"2025"},{"1":"07332000480000","2":"07332000480000","3":"2025"},{"1":"07332000580000","2":"07332000580000","3":"2025"},{"1":"07332000980000","2":"07332000980000","3":"2025"},{"1":"07332020120000","2":"07332020120000","3":"2025"},{"1":"07332030390000","2":"07332030390000","3":"2025"},{"1":"07341190140000","2":"07341190140000","3":"2025"},{"1":"07341190170000","2":"07341190170000","3":"2025"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>There are 1085 PINs in the valuation worksheets with 960 distinct keypins.</p>
+<p>There were 872 projects overall based on manually grouped keypins from combined data sources.</p>
+<p>There were 1171 PINs within this municipality that had been commercial or industrial at some point in time.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Cook County commercial and industrial property projects</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

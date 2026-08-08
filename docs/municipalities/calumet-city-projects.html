@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Calumet City Municipality Projects – PINs to Projects</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+
+<script src="../site_libs/datatables-binding-0.33/datatables.js"></script>
+
+<script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
+<link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+
+<script src="../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+
+<link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+<link href="../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+
+<script src="../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+
+
+</head>
+
+<body class="floating nav-fixed slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">PINs to Projects</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">How PINs Relate to Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../municipalities.html"> 
+<span class="menu-text">By Municipality</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../townships.html"> 
+<span class="menu-text">By Township</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../pins.html"> 
+<span class="menu-text">Search PINs/Projects</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#municipality-overview" id="toc-municipality-overview" class="nav-link active" data-scroll-target="#municipality-overview">Municipality overview</a></li>
+  <li><a href="#parcel-map-outline-only" id="toc-parcel-map-outline-only" class="nav-link" data-scroll-target="#parcel-map-outline-only">Parcel map (outline only)</a></li>
+  <li><a href="#manually-coded-keypins-map" id="toc-manually-coded-keypins-map" class="nav-link" data-scroll-target="#manually-coded-keypins-map">Manually coded keypins – map</a></li>
+  <li><a href="#class-summary-pins-vs-keypins" id="toc-class-summary-pins-vs-keypins" class="nav-link" data-scroll-target="#class-summary-pins-vs-keypins">Class summary (pins vs keypins)</a></li>
+  <li><a href="#keypin-level-summary-fmv-incentives-exemptions" id="toc-keypin-level-summary-fmv-incentives-exemptions" class="nav-link" data-scroll-target="#keypin-level-summary-fmv-incentives-exemptions">Keypin-level summary (fmv, incentives, exemptions)</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Calumet City Municipality Projects</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="../townships.html">Township directory</a> · <a href="../municipalities.html">Municipality directory</a> · <a href="../pins.html">Search PINs</a></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#this_municipality &lt;- params$municipality</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">analyze_municipality</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">municipality_name =</span> params<span class="sc">$</span>municipality,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">year          =</span> <span class="dv">2022</span>,     <span class="co"># adjust if you want a different year</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">comm_ind_df   =</span> comm_ind,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">keypins_df    =</span> keypins</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining with `by = join_by(pin, incent_prop, clean_name, Triad, Township,
+pin10)`
+Joining with `by = join_by(pin, class, tax_code_num, tax_bill_total, av_mailed,
+av_certified, av_board, av_clerk, exe_abate, assess_ratio, improvement_ind,
+comparable_props, `building type`, land_use, incent_prop, class_1dig,
+major_class_code, major_class_type, loa, agency_num, tax_code_rate, clean_name,
+Triad, Township, tax_code_distribution_pct, has_AB_exemp, fmv, fmv_NA_flag,
+in_tif, class_group, multi_muni, multimuni_flag, tif_years, years_existed,
+incentive_years, landuse_change, incent_change, tif_change, incent, exempt,
+gain_incent, lose_incent, became_exempt, became_taxed, leave_tif, enter_tif,
+years_exempt, incent_status, exempt_flag, base_year_fmv_2011, fmv_growth_2011,
+reassessed_year, fmv_pct_change, av_clerk_pct_change, av_mailed_pct_change,
+class_lag, improvement_lag, reassess_lag, reassessed_taxyear,
+incent_change_year, next_reassessment, base_year_fmv_2011_w, fmv_growth_2011_w,
+treatment_year, times_changed, type, pin10)`</code></pre>
+</div>
+</div>
+<section id="municipality-overview" class="level2">
+<h2 class="anchored" data-anchor-id="municipality-overview">Municipality overview</h2>
+<p>There are 1202 PINs in this municipality that were commercial or industrial at least once.</p>
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<pre><code>Municipality: Calumet City</code></pre>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["Township"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"Thornton"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="parcel-map-outline-only" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="parcel-map-outline-only">Parcel map (outline only)</h2>
+<div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(res<span class="sc">$</span>parcels) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>() <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display page-columns page-full">
+<div id="fig-parcels-outline" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-parcels-outline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="calumet-city-projects_files/figure-html/fig-parcels-outline-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-parcels-outline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: All commercial &amp; industrial parcels in the municipality.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="manually-coded-keypins-map" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="manually-coded-keypins-map">Manually coded keypins – map</h2>
+<div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>parcel_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display page-columns page-full">
+<div id="fig-keypin-map" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-keypin-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="calumet-city-projects_files/figure-html/fig-keypin-map-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-keypin-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Parcels grouped by manually coded keypins (based off of appeal IDs, sale documents and proximity).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="class-summary-pins-vs-keypins" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="class-summary-pins-vs-keypins">Class summary (pins vs keypins)</h2>
+<div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>class_summary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-class-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-class-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["class"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["pins"],"name":[2],"type":["int"],"align":["right"]},{"label":["keypins"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"0","2":"108","3":"1"},{"1":"100","2":"15","3":"14"},{"1":"190","2":"12","3":"10"},{"1":"201","2":"1","3":"1"},{"1":"212","2":"6","3":"6"},{"1":"290","2":"10","3":"10"},{"1":"417","2":"1","3":"1"},{"1":"428","2":"1","3":"1"},{"1":"497","2":"3","3":"3"},{"1":"501","2":"2","3":"2"},{"1":"517","2":"334","3":"151"},{"1":"522","2":"47","3":"24"},{"1":"523","2":"18","3":"6"},{"1":"526","2":"2","3":"1"},{"1":"528","2":"15","3":"9"},{"1":"531","2":"8","3":"5"},{"1":"532","2":"1","3":"1"},{"1":"533","2":"7","3":"4"},{"1":"580","2":"24","3":"14"},{"1":"583","2":"6","3":"3"},{"1":"590","2":"314","3":"159"},{"1":"592","2":"18","3":"11"},{"1":"593","2":"65","3":"33"},{"1":"597","2":"22","3":"16"},{"1":"599","2":"12","3":"12"},{"1":"663","2":"15","3":"6"},{"1":"670","2":"9","3":"3"},{"1":"817","2":"52","3":"22"},{"1":"828","2":"3","3":"2"},{"1":"830","2":"2","3":"2"},{"1":"831","2":"2","3":"2"},{"1":"880","2":"6","3":"4"},{"1":"890","2":"32","3":"12"},{"1":"892","2":"1","3":"1"},{"1":"893","2":"23","3":"13"},{"1":"897","2":"5","3":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-class-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: PINs and projects per property class
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="keypin-level-summary-fmv-incentives-exemptions" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="keypin-level-summary-fmv-incentives-exemptions">Keypin-level summary (fmv, incentives, exemptions)</h2>
+<div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>keypin_info_summary <span class="sc">|&gt;</span> DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">rownames =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-keypin-info-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-keypin-info-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-1c4e889207f6e0a05dd6" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1c4e889207f6e0a05dd6">{"x":{"filter":"none","vertical":false,"data":[["29124000010000","30071290280000","29124150190000","29124150310000","30081070030000","30082030250000","30192040050000","29244001120000","29133000080000","30082030060000","30192030130000","29133020180000","29244001190000","29014000050000","30072170140000","30192080190000","29244000390000","29244000820000","29244001100000","30084040220000","30064000390000","29242000720000","30072010050000","29244010240000","30081020010000","29013000480000","29121270330000","29121280360000","29121290440000","29123010010000","29241000370000","29241000390000","29242000100000","29242000380000","29242000510000","29242000660000","29242000840000","29242000900000","29244000270000","29244000290000","29244000320000","29244000340000","29244000360000","29244000490000","29244010250000","30081000140000","30082020330000","30082030470000","30083230450000","30084000520000","30181000200000","30182280180000","30191001340000","30192000220000","30192020050000","30192060060000","30201150140000",null,"29124230340000","30081070130000","29123040060000","30073000010000","29124070010000","29124310280000","29124040010000","29124070270000","30192030110000","29121250190000","29122300260000","29123060010000","29124020030000","30074230090000","30081040040000","30073240030000","30084090110000","29122310270000","29123030080000","30074320230000","30081060060000","29121260230000","29121270220000","29121300250000","29122270250000","29124310220000","30072170240000","30074150210000","30081060110000","30083080350000","30173010040000","29121270280000","29122240350000","29122250230000","30071330280000","30074070250000","30081080010000","30173000680000","29121310290000","29121310330000","29122070210000","29122240320000","29122310140000","29124150280000","30071080200000","30071330340000","30072100040000","30072170300000","30072170360000","30074040010000","30081060050000","30171200060000","30171280040000","30182090350000","30182190330000","30201160320000","29121300300000","29122260230000","30071260040000","30071260450000","30071320530000","30072040270000","30072100200000","30072120110000","30073070030000","30073080010000","30073080140000","30074230280000","30083150030000","30083150130000","30084090430000","30172060250000","30182090300000","30182280250000","30202020200000","29011000020000","29121260310000","29123020030000","29123020090000","29124010010000","29124010050000","29244010280000","30071340200000","30072100110000","30072120070000","30074150120000","30083230340000","30083230440000","30084000010000","30084080450000","30172050350000","30173000210000","30173010140000","30181000090000","30181330200000","30182090390000","30182190460000","30182360120000","30184030260000","30191000080000","30191000460000","30201000050000","30201000230000","30201040040000","29011000060000","29014000180000","29121250310000","29122270230000","29122310330000","29123020010000","29124030010000","29133000300000","29242000170000","29242000190000","30071000050000","30071260010000","30071260100000","30072010140000","30072100090000","30072100140000","30072100240000","30072120160000","30072120360000","30073080050000","30074020290000","30074070320000","30074320120000","30074320140000","30074320160000","30074320480000","30083150200000","30083150230000","30083230010000","30084140170000","30171010480000","30173000190000","30173010100000","30181000010000","30182190390000","30182190640000","30182360150000","30184030240000","30191001350000","30192010020000","30192040170000","30192040260000","29012000080000","29012000100000","29013000070000","29013000090000","29013000450000","29013000470000","29014000120000","29014230150000","29121290420000","29122070250000","29122070390000","29122070400000","29122150180000","29122150190000","29122150200000","29122150210000","29122150220000","29122250330000","29122260270000","29122260330000","29123020330000","29123030440000","29123050280000","29123050310000","29124030060000","29124050330000","29124060390000","29133020240000","29241000300000","29241000330000","29241000350000","29241000360000","29241000380000","29242000050000","29242000130000","29242000210000","29242000341001","29242000341002","29242000341003","29242000341004","29242000341005","29242000341006","29242000341007","29242000341008","29242000341009","29242000341010","29242000341011","29242000341012","29242000390000","29242000400000","29242000430000","29242000440000","29242000500000","29242000570000","29242000610000","29242000680000","29242000850000","29242000880000","29242000890000","29242000910000","29242000920000","29244000220000","29244000520000","29244000810000","29244000840000","29244001050000","29244001060000","29244010190000","29244010210000","29244010290000","30064000130000","30064000380000","30071080180000","30071080190000","30071170560000","30071250250000","30071260540000","30071340240000","30071340250000","30072000020000","30072040070000","30072040080000","30072040170000","30072040200000","30072040210000","30072040220000","30072040230000","30072040240000","30072120380000","30072170350000","30073010070000","30073030050000","30073030060000","30073030070000","30073030080000","30073030090000","30073070050000","30073080070000","30073080080000","30073080090000","30073080100000","30073080110000","30073080120000","30073080130000","30073080180000","30073080190000","30073080200000","30073080210000","30073080220000","30073080230000","30073150090000","30073160030000","30073160450000","30073240190000","30074020190000","30074020350000","30074070290000","30074070300000","30074070310000","30074070340000","30074070350000","30074070360000","30074070460000","30074230400000","30074230450000","30074240010000","30074320410000","30074320420000","30081000100000","30081000150000","30081050160000","30081050210000","30081050460000","30081080130000","30081110480000","30082000030000","30082010140000","30082010160000","30083000170000","30083000190000","30083000230000","30083000250000","30083040010000","30083070190000","30083070380000","30083080140000","30083150050000","30083150070000","30083150220000","30083150480000","30083150500000","30083230300000","30083230310000","30083230320000","30083230370000","30083230380000","30083230430000","30083290390000","30084040230000","30084050010000","30084050370000","30084160400000","30171010420000","30171010430000","30171010460000","30171030030000","30171040240000","30171040480000","30171070480000","30171080440000","30171230340000","30171240260000","30172000070000","30172010410000","30172020210000","30172030080000","30172110310000","30173010430000","30174030020000","30174030030000","30174030040000","30174030050000","30181000160000","30181000210000","30181000230000","30181330190000","30182000010000","30182020358002","30182020358003","30182090290000","30182090630000","30182100010000","30182190720000","30182190740000","30182200010000","30182280230000","30184000010000","30184040050000","30184040060000","30191000060000","30191000990000","30191001290000","30191001310000","30191001320000","30192000070000","30192000130000","30192010050000","30192010060000","30192030230000","30192040220000","30192040230000","30192040240000","30192040250000","30192050160000","30192060070000","30192180230000","30192180258002","30192190010000","30194100130000","30194110540000","30201000080000","30201000210000","30201030080000","30201040020000","30201050010000","30201050120000","30201060120000","30201060240000","30201060290000","30201160330000","30202020050000","30202020100000"],[10,10,9,9,9,8,7,8,6,6,8,5,6,5,4,3,2,2,2,2,4,3,3,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,108,26,22,15,14,13,13,11,11,11,10,10,10,10,10,10,9,9,8,8,8,8,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],["FAMILY DOLLAR STORES,","DAVITA INC","BMO HARRIS BANK NA CRE","CALUMET PROPERTY MANAG","KEVIN DURKIN","BRIAN L. ESSARY","CALUMET CITY INVESTORS","BUSINESS PARK LLC","A &amp; H UNLIMITED LLC","ROBERT WISZ LLC","ALAN MITHANI","DESMOND A ROBERTS / JN","NEW LEAF HOLDINGS LLC","BOSTIK, INC","CALUMET DOCKSIDE SERN","GDT L P 1250B","KAL PROPERTIES LLC","COLLEEN WILLETT / GASV","KIEFER ENTERPRISES LLC","CALUMET PROPERTIES, IN","GATEWAY WHSE","MATT TARSHIS, COURT AP","KAY MANUFACTURING CO.","KIN PROP INC","GELITA USA INC","2150 DOLTON ROAD OWNER","4938 SOUTH KEDZIE, LLC","4938 SOUTH KEDZIE, LLC","4938 SOUTH KEDZIE, LLC","PRITESH D PATEL","JPMORGAN CHASE BANK, N","NATL SHOPPING PLAZAS","BOB'S DISCOUNT FURNITU","DIVERSIFIED RESTAURANT","HORN HOLDINGS LLC","MEGA HOLDINGS LLC","CHETA CHOKSKI DECLARAT","NAPLETON RIVER OAKS CA","MIDLAND CHICAGO REAL E","HILIGHT, LLC","540 BURNHAM AVE LLC","1440 HUNTINGTON BUILDI","TRIDENT HOLDINGS LLC","KAL PROPERTIES LLC","ALDI INC CO RYAN TAX","HB TAYLOR COMPANY","ALTA ENTERPRISES LLC","ROBERT WISZ LLC","KIRITKUMAR I PATEL","NURTURING DEVELOPMENT","JAMAL AHMAD","JOSE L ROJAS","CHICAGOLAND SDI PROPER","ECONOMOS","RIVER OAKS LLC","GDT L P R O DR","MICHAEL GIGLIO / CAL.",null,"PERFORMANCE MANAGEMENT","B&amp;F PARTNERSHIP","BANK FINANCIAL NA","THE HUNTINGTON NATIONA","ADVANCE AUTO PARTS","EMPIRE CITY PROPERTIES","PAUL TSAKIRIS","WALGREEN CO.","OMAKIN RESTAURANTS LLC","HUDSON COMM SOLUTIONS","OREILLY AUTO ENTERPRIS","MANNHEIN INVESTMENTS","MER CAR  CORP","JLV RESTAURANTS, LLC","JAMIE L. HADAC, AS COU","ROMUALDO CAMARENA","PAUL TSAKIRIS","HIGHLAND PARK CVS, LLC","NATIONAL SHOPPING PLAZ","VISION LAND, LLC","CAL CITY AUTO WRECKERS","KANUBHAI NAYI AND REHA","MCDONALD S CORPORATION","NEMEH ZUGHAYER","AFFILIATED RLTY MGMT","AARON'S INC.","GRAHAM REAL ESTATE DEV","540 BURNHAM AVE, LLC","STATE LUMBER CO INC","RALPH EDGAR","MS. JOAN M. SZURA","M ZEMON","SUPREME JUICE CO","NATL SHOPPING PLAZA","RAJVADU REALTY LLC","PAK YING CHIU","MILE JURKOVIC","FIFTH THIRD BANK, NATI","CTLTC TRUST NO. 800234","BETTY YOUNG","JASPREET PETROLEUM","SPDKS AUTO, INC.","IL LUB / INNOVATIVE PT","JACQUELINE RANDLEEL","DOLLY MANSKER","RAJVADU REALTY LLC","LASALLE BANK &amp; TRUST","GRAHAM REAL ESTATE DEV","GRAHAM REAL ESTATE DEV","WILLIAM J HUBER","KEVIN DURKIN","ZIYAD AL HINDI","H2A RETAIL LLC","KEXIN BAO","JOSE L CASTANEDA","RIVERSIDE INVESTMENT","UN SUN BAEK","SANG IM","JOSE REYES","JCC REALTY BCP REALTY","1ST SAVINGS HEGEWISCH",null,"928 SECURITY, LLC","ANGIE HOUGH","CASTAWAYS BOWLING","CALUMET CITY PROPERTY",null,"TERY MIKOLAJCZAK","YOUR TOWN CLEANERS","AURELIANO BRITO","SHERRY COOLEY","MIKE GRELECKI","GERALD GARCIA","BAYVIEW LOAN SERVICING","BEAUTYSECRETS DEAD SEA","WASTE MANAGEMENT INC","CHRIS KOTSIOVOS","LAILA ENTERPRISES INC","J JASNAK &amp; P JASNAK","JESUS A ARREOLA","INCHUN YANG","INGALLS HEALTH VENTURE","MARVA F DAVIS","BRIAN BOOKER C/O SANDR",null,"540 BURNHAM AVE, LLC","T &amp; S CALUMET CITY",null,"ROBERT DEYOUNG","TAXPAYER OF","740 STATE LINE LLC","RICARDO RUIZ","STEVE ZELENIKA","ZOOM CLEAN INC","EMIL ZAGER","MILAN GOJKO RATIC","BANKFINANCIAL","RIGOBERTO GARCIA JR","ERIK GREENE","DIMITRA BISIOULIS","TECH FEDERAL CREDIT UN","KVS CALUMET CITY ENTER","ZAKI ABDELRAHIM","BEVERY SIMMONS","WASTE MANAGEMENT OF IL","PLASTICS COLOR CORPORA","HUDSON COMM SOLUTIONS","MOTA PROPERTIES, LLC","HIGHLAND PARK CVS, LLC","LAILA ENTERPRISES INC","KETAN PATEL","JMBS INVESTMENTS, LLC","US BANK NA","CITIBANK N.A.","FADI ABDELRAHIM","ALEESHA DUNN","YASER MOHAMMAD","CYNTHIA RICHLIK C/O SA","LEE &amp; BARBARA JOHNSON","NICHOLAS COVELLO","JOSE ROCHA","JOSEPH DANIELE","JOHNSON TRUCK INC","RUBEN IBARRA","RICHARD MANTOAN","NETWORKS BARBERSHOP","J HENYARD&amp; AIESHA PROP","DAVID MILNE","DAVID MILNE","CHARLES A BLAIR",null,null,"ALBERTO GUTIERREZ",null,null,null,null,"AUTOZONE 2686",null,"YOVANI E CANCHOLA C/.O","RIGOBERTO GARCIA JR","SHADI SALEM","RIVER OAKS REALTY, LLC","ROBERT SCHLESSER","DENIZ SIDKEY","ALAA ZAMAT","BROWN RIDGE LLC",null,"FERNANDO FERNANDEZ",null,"RBDS LOGISTICS, LLC","SSC PROPERTY HOLDINGS,",null,"NATION WIDE REAL EST","4938 SOUTH KEDZIE, LLC",null,"BAYVIEW LOAN SERVICING",null,null,null,null,null,null,"THE DUKE OF OIL LTD","SANG IM","JAMAL AHMAD","LAILA ENTERPRISES INC","KJ INVESTORS GROUP, IN","DOLTON MEDICAL ASSOC","BORIS NITCHOFF","1609 SIBLEY BLDG LLC","CITY CENTER, INC","MOTA PROPERTIES, LLC","SCHOTTENSTEIN PROPERTY","HAMPTON MERCURY INVEST","NAPLETONS RIVER OAKS","NEW PRIVATE RESTAURANT","NAPLETON S HYUNDAI","NATL SHOPPING PLAZAS","SASAFRASNET BEEP BEEP","PRIDE RESTAURANTS, LLC","TOIA BUILDING PROPERTI","CONCORD COMMONS CONDO.","MANZOOR HUSSAIN","MANZOOR HUSSAIN","ROBERT G MCCLELLAN","JOHN KASPEREK","CONCORD COMMONS CONDO.","JEFF HYNEK","LOREN R BULT","V ING &amp; K CHIN","DEBORAH WATSON","CHARLES ANTONIETTI","CONCORD COMMONS CONDO.","SUNDANCE INC","WHITE CASTLE SYSTM INC","BANK OF AMERICA","CALUMET CITY MOB LP","CFT NV DEVELOPMENTS, L","NTW  LLC","LUXOTTICA","STAR BEAUTY LAND LLC","79 TH ST BBQ CALUMET C","SAM'S CLUB STORE #6489","EL CENTRO MALL LTD","NAPLETON RIVER OAKS LM","CHGO TR 5363 CO NSPI","TRUCK LIFE LLC","ILLIANA FED CREDIT UN","THE HOME DEPOT - STORE","GEORGE DEVRIES TRUST","VALENCIA COURT IRREVOC","GCD SUBURBAN PROP LLC","UHAUL INTERNATIONAL","THE HOME DEPOT - STORE","BRINKER INTERNATIONAL","COM ED","GLG LEASING COMPANY, I",null,null,"DUCKYS",null,null,null,null,null,null,null,null,"EUGENE J CHARNESS",null,null,null,null,"JOHNSON TRUCK INC",null,"VERNICE NELSON",null,null,null,null,null,null,null,null,null,null,null,null,null,null,"ZAKI ABDELRAHIM",null,null,null,null,null,null,null,"RICK NEWELL",null,"MR BRIAN BOOKER",null,null,null,null,null,null,"NWANNEKA RICHARDSON",null,"NEW CALUMET CITY REAL",null,null,null,"ROMAN DECORATING PRODU","HB TAYLOR HOLDINGS LLC",null,"MICHAEL GIGLIO",null,"INDEPENDENT FOOD SERVI",null,"PARK 24 HAMMOND LLC",null,"GREAT LAKES WHSE","BARBARA GREEN","PRO LOCATIONS, INC","ANNA RICOBENE","CATHERINE A KLUSE","ANTONIO PORCARO","HUMBERTO OROZCO",null,"MB REAL ESTATE INVEST",null,null,null,null,"DR MICAH SWANSEY",null,null,"ALICIA GARCIA","RICHARD C PINA",null,null,null,"CAL CITY INVESTORS GRO","BLUE DOLPHIN","AIDAN RAMIREZ AND EMMA","MOZELL BARNES",null,null,"CALUMET CITY CLUB",null,"BRANKO JONLIJA","FIRST NATIONS BK 1645","JUAN GARCIA","THOMAS P MISCH TRUSTEE","MANUEL MARADIAGA","AT&amp;T","YASER MOHAMMAD",null,"DAVID &amp; CHERYL BOSS","M D LAUER","DENIEKE HOWARD","MALECKI MONUMENT",null,null,null,null,"JOHN SOWA","TOBEY DAINAS",null,"DAVID JOHNSON",null,null,null,"GERALD GARCIA","PAVLOS MARGARIS",null,"770 BURNHAM AVENUE LLC","MARTHA L. GUTIERREZ",null,"CLUB TEMULAC",null,"COM ED",null,null,"JW CHICAGO PROPERTIES,","RIVER OAKS REALTY LLC",null,"CASSIDY TIRE",null,"PEPES MEX REST",null,null,"RIVER OAKS LLC",null,null,null,null,"THA CAR WASH, LLC","CHOON KIM","K J INVESTORS GROUP",null,"GUSTAVO MONTES",null,null,"BARAKEH INC","BASSAM ISSA","HONOR &amp; LOYALTY INC","RUPESH PATEL",null,"CONSTANTINE LLC","DM293 HOLDINGS LLC","TINA ALEMIS","EDDIE ANDERSON","RIVERSIDE INVESTMENT","JERMY PATEL","LORIS TISOCCO"],[539120,1424900,644400,656630,508080,267960,808460,1067342,500000,212210,472984,2909920,869120,2307378,185720,444360,793430,1431500,742920,816330,2052410,16130974,1118632,1220990,4907718,1508590,365350,2022150,114680,2056930,868950,274870,1543380,986580,814800,1667640,680500,756160,1484600,1060290,769720,720600,635660,40080,1751430,1015070,1716000,20330,84000,550000,206666.6666666667,136560,381640,460740,2085660,431220,646806.6666666667,0,1457668,1021300,1000000,1131972,830492,565000,687132,1126000,890752,416980,669980,649204,563112,300000,618532,387500,405840,1014900,614804,305132,600000,781356,608860,229508,363360,806188,336376,246064,290128,819796,148500,322400,266000,255036,395708,97500,288640,1094692,276456,310800,345000,147612,234960,296992,270000,228932,177320,380404,224864,205000,467600,195000,591280,302364,192740,4134700,201300,175092,169416,269668,759936,288276,160000,220408,710000,334364,296084,264872,250044,228364,79528,114000,119120,743048,659252,322690,130200,322848,288000,110000,145404,5386980,187900,261080,269044,172116,281832,328228,173060,598684,215024,100800,99972,1144192,295284,105576,110796,205228,203500,270300,480000,194248,176048,641596,2013996,1011996,156264,170868,220904,56616,230160,130072,1290000,925360,52496,155000,42000,385592,214924,449816,84240,324376,239484,157500,247500,165836,83696,60960,134736,164544,146816,259596,77472,70712,100556,129576,58564,607120,131064,197344,295576,156748,4598176,166320,42704,223936,480264,313040,539720,203248,635820,3567876,106204,1330508,404600,64480,27524,289580,16270,18580,18700,19740,18700,330000,25152,484124,29004,213124,157504,165372,114356,573552,281360,2200000,1402744,1167660,1006052,1001404,740520,816212,564144,465156,102920,75180,74080,75180,75176,102908,74500,75176,75172,75012,75000,102908,717848,509800,2195372,1537984,465000,809628,458992,925000,330000,6406920,9143648,756464,526288,1034648,564390,1734772,528432,208364,370000,2426300,4884816,630116,20608,670248,22852,22852,250520,45104,69560,34504,9376,99384,20892,20892,31420,148464,32456,32456,72884,32440,241100,20128,77312,14040,14320,142548,131252,76560,29188,29464,29464,29464,29464,28612,28612,28612,21470,32756,22630,22630,22630,21820,40492,23608,18800,160000,43796,490144,12250,17450,69670,31560,31560,83400,62108,26940,66172,99100,30460,30460,1500000,121476,14520,129752,5216,13808,144280,83200,96860,1483248,85320,119556,64884,229864,130768,167652,26920,92100,24310,12360,150692,6170,127352,11385,11370,106680,44160,19730,6616,18750,317480,50200,214976,309608,77772,40100,59875,90684,65836,88956,61232,154440,60000,518000,17850,23536,32510,93316,179936,64436,37532,20248,68636,32072,344320,797916,28596,155190,34852,16328,16328,11220,184984,34632,215000,131572,99188,72620,98012,66124,52536,218672,1116948,4062700,101270,311484,36156,752664,38480,215180,20280,19250,19250,18810,9960,351512,236036,275012,18948,298952,34400,225750,98936,171900,150000,186700,71872,48172,68992,98400,83968,111240,238616,187820],[10,10,9,9,9,8,7,6,6,6,5,5,4,4,4,3,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>keypin<\/th>\n      <th>n<\/th>\n      <th>appellant<\/th>\n      <th>fmv<\/th>\n      <th>incentive_pins<\/th>\n      <th>exempt<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"name":"keypin","targets":0},{"name":"n","targets":1},{"name":"appellant","targets":2},{"name":"fmv","targets":3},{"name":"incentive_pins","targets":4},{"name":"exempt","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-keypin-info-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Projects in municipality. You can sort each column!
+</figcaption>
+</figure>
+</div>
+</div>
+<p>There are 172 projects with more than 1 pin in them and 436 projects overall based on manually grouped keypins from combined data sources.</p>
+<div class="cell" data-tbl-cap="This many pins were in the valuation worksheets.">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>valuation_wksts <span class="sc">|&gt;</span> <span class="fu">filter</span>(pin <span class="sc">%in%</span> res<span class="sc">$</span>pin_info<span class="sc">$</span>pin)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div data-pagedtable="false"> <div class="table-caption"><p>This many pins were in the valuation worksheets.</p></div>
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["keypin"],"name":[1],"type":["chr"],"align":["left"]},{"label":["pin"],"name":[2],"type":["chr"],"align":["left"]},{"label":["year"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"29123010010000","2":"29123010010000","3":"2023"},{"1":"29012000080000","2":"29012000080000","3":"2023"},{"1":"29013000070000","2":"29013000070000","3":"2023"},{"1":"29013000470000","2":"29013000470000","3":"2023"},{"1":"29014230150000","2":"29014230150000","3":"2023"},{"1":"29121280360000","2":"29121280360000","3":"2023"},{"1":"29122240320000","2":"29122240300000","3":"2023"},{"1":"29122240320000","2":"29122240310000","3":"2023"},{"1":"29122240320000","2":"29122240320000","3":"2023"},{"1":"29122240320000","2":"29122240330000","3":"2023"},{"1":"29122240320000","2":"29122240340000","3":"2023"},{"1":"29122250330000","2":"29122250330000","3":"2023"},{"1":"29122310140000","2":"29122310130000","3":"2023"},{"1":"29122310140000","2":"29122310140000","3":"2023"},{"1":"29122310140000","2":"29122310150000","3":"2023"},{"1":"29122310140000","2":"29122310160000","3":"2023"},{"1":"29122310140000","2":"29122310170000","3":"2023"},{"1":"29123040060000","2":"29123030420000","3":"2023"},{"1":"29123040060000","2":"29123040010000","3":"2023"},{"1":"29123040060000","2":"29123040020000","3":"2023"},{"1":"29123040060000","2":"29123040030000","3":"2023"},{"1":"29123040060000","2":"29123040040000","3":"2023"},{"1":"29123040060000","2":"29123040050000","3":"2023"},{"1":"29123040060000","2":"29123040060000","3":"2023"},{"1":"29123040060000","2":"29123040070000","3":"2023"},{"1":"29123040060000","2":"29123040080000","3":"2023"},{"1":"29123040060000","2":"29123040090000","3":"2023"},{"1":"29123040060000","2":"29123040100000","3":"2023"},{"1":"29123040060000","2":"29123040110000","3":"2023"},{"1":"29123040060000","2":"29123040120000","3":"2023"},{"1":"29123040060000","2":"29123040220000","3":"2023"},{"1":"29123040060000","2":"29123040230000","3":"2023"},{"1":"29123050310000","2":"29123050310000","3":"2023"},{"1":"29124310280000","2":"29124310170000","3":"2023"},{"1":"29124310280000","2":"29124310180000","3":"2023"},{"1":"29124310280000","2":"29124310280000","3":"2023"},{"1":"29124310280000","2":"29124310290000","3":"2023"},{"1":"29124310280000","2":"29124310300000","3":"2023"},{"1":"29124310280000","2":"29124310310000","3":"2023"},{"1":"29124310280000","2":"29124310320000","3":"2023"},{"1":"29124310280000","2":"29124310330000","3":"2023"},{"1":"29124310280000","2":"29124310340000","3":"2023"},{"1":"29124310280000","2":"29124310350000","3":"2023"},{"1":"29124310280000","2":"29124310360000","3":"2023"},{"1":"29124310280000","2":"29124310370000","3":"2023"},{"1":"29124310280000","2":"29124310380000","3":"2023"},{"1":"29133020180000","2":"29133020180000","3":"2023"},{"1":"29133020180000","2":"29133020200000","3":"2023"},{"1":"29133020180000","2":"29133020250000","3":"2023"},{"1":"29133020180000","2":"29133020260000","3":"2023"},{"1":"29133020180000","2":"29135000030000","3":"2023"},{"1":"29241000330000","2":"29241000330000","3":"2023"},{"1":"29241000360000","2":"29241000360000","3":"2023"},{"1":"29241000370000","2":"29241000370000","3":"2023"},{"1":"29242000170000","2":"29242000170000","3":"2023"},{"1":"29242000170000","2":"29242000200000","3":"2023"},{"1":"29242000190000","2":"29242000190000","3":"2023"},{"1":"29242000190000","2":"29242000870000","3":"2023"},{"1":"29242000430000","2":"29242000430000","3":"2023"},{"1":"29242000440000","2":"29242000440000","3":"2023"},{"1":"29242000570000","2":"29242000570000","3":"2023"},{"1":"29242000660000","2":"29242000660000","3":"2023"},{"1":"29242000680000","2":"29242000680000","3":"2023"},{"1":"29242000720000","2":"29242000710000","3":"2023"},{"1":"29242000720000","2":"29242000720000","3":"2023"},{"1":"29242000720000","2":"29242000730000","3":"2023"},{"1":"29242000900000","2":"29242000900000","3":"2023"},{"1":"29242000910000","2":"29242000910000","3":"2023"},{"1":"29244000520000","2":"29244000520000","3":"2023"},{"1":"29244010250000","2":"29244010250000","3":"2023"},{"1":"29244010280000","2":"29244010280000","3":"2023"},{"1":"29244010280000","2":"29244010400000","3":"2023"},{"1":"29244010280000","2":"29244010410000","3":"2023"},{"1":"30071170560000","2":"30071170560000","3":"2023"},{"1":"30071260040000","2":"30071260040000","3":"2023"},{"1":"30071260040000","2":"30071260050000","3":"2023"},{"1":"30071260040000","2":"30071260060000","3":"2023"},{"1":"30071260040000","2":"30071260070000","3":"2023"},{"1":"30071320530000","2":"30071320270000","3":"2023"},{"1":"30071320530000","2":"30071320280000","3":"2023"},{"1":"30071320530000","2":"30071320290000","3":"2023"},{"1":"30071320530000","2":"30071320530000","3":"2023"},{"1":"30072100110000","2":"30072100110000","3":"2023"},{"1":"30072100110000","2":"30072100120000","3":"2023"},{"1":"30072100110000","2":"30072100130000","3":"2023"},{"1":"30072100200000","2":"30072100200000","3":"2023"},{"1":"30072100200000","2":"30072100210000","3":"2023"},{"1":"30072100200000","2":"30072100220000","3":"2023"},{"1":"30072100200000","2":"30072100230000","3":"2023"},{"1":"30072100240000","2":"30072100240000","3":"2023"},{"1":"30072100240000","2":"30072100250000","3":"2023"},{"1":"30072120360000","2":"30072120360000","3":"2023"},{"1":"30072120360000","2":"30072120370000","3":"2023"},{"1":"30073000010000","2":"30073000010000","3":"2023"},{"1":"30073000010000","2":"30073000020000","3":"2023"},{"1":"30073000010000","2":"30073000030000","3":"2023"},{"1":"30073000010000","2":"30073000040000","3":"2023"},{"1":"30073000010000","2":"30073000050000","3":"2023"},{"1":"30073000010000","2":"30073000060000","3":"2023"},{"1":"30073000010000","2":"30073000070000","3":"2023"},{"1":"30073000010000","2":"30073000080000","3":"2023"},{"1":"30073000010000","2":"30073000090000","3":"2023"},{"1":"30073000010000","2":"30073000200000","3":"2023"},{"1":"30073000010000","2":"30073000210000","3":"2023"},{"1":"30073000010000","2":"30073000220000","3":"2023"},{"1":"30073000010000","2":"30073000230000","3":"2023"},{"1":"30073000010000","2":"30073000240000","3":"2023"},{"1":"30073010070000","2":"30073010070000","3":"2023"},{"1":"30073070030000","2":"30073070010000","3":"2023"},{"1":"30073070030000","2":"30073070020000","3":"2023"},{"1":"30073070030000","2":"30073070030000","3":"2023"},{"1":"30073070030000","2":"30073070070000","3":"2023"},{"1":"30073080050000","2":"30073080050000","3":"2023"},{"1":"30073080050000","2":"30073080060000","3":"2023"},{"1":"30073240030000","2":"30073240010000","3":"2023"},{"1":"30073240030000","2":"30073240020000","3":"2023"},{"1":"30073240030000","2":"30073240030000","3":"2023"},{"1":"30073240030000","2":"30073240040000","3":"2023"},{"1":"30073240030000","2":"30073240050000","3":"2023"},{"1":"30073240030000","2":"30073240060000","3":"2023"},{"1":"30073240030000","2":"30073240070000","3":"2023"},{"1":"30073240030000","2":"30073240080000","3":"2023"},{"1":"30073240030000","2":"30073240090000","3":"2023"},{"1":"30074230090000","2":"30074150370000","3":"2023"},{"1":"30074230090000","2":"30074150380000","3":"2023"},{"1":"30074230090000","2":"30074150390000","3":"2023"},{"1":"30074230090000","2":"30074150400000","3":"2023"},{"1":"30074230090000","2":"30074230060000","3":"2023"},{"1":"30074230090000","2":"30074230070000","3":"2023"},{"1":"30074230090000","2":"30074230080000","3":"2023"},{"1":"30074230090000","2":"30074230090000","3":"2023"},{"1":"30074230090000","2":"30074230100000","3":"2023"},{"1":"30074230090000","2":"30074230110000","3":"2023"},{"1":"30074320160000","2":"30074320160000","3":"2023"},{"1":"30074320160000","2":"30074320170000","3":"2023"},{"1":"30074320480000","2":"30074320360000","3":"2023"},{"1":"30074320480000","2":"30074320480000","3":"2023"},{"1":"30081040040000","2":"30081040030000","3":"2023"},{"1":"30081040040000","2":"30081040040000","3":"2023"},{"1":"30081040040000","2":"30081040050000","3":"2023"},{"1":"30081040040000","2":"30081040060000","3":"2023"},{"1":"30081040040000","2":"30081040070000","3":"2023"},{"1":"30081040040000","2":"30081040080000","3":"2023"},{"1":"30081040040000","2":"30081040090000","3":"2023"},{"1":"30081040040000","2":"30081040100000","3":"2023"},{"1":"30081040040000","2":"30081040110000","3":"2023"},{"1":"30081040040000","2":"30081040120000","3":"2023"},{"1":"30081060060000","2":"30081000110000","3":"2023"},{"1":"30081060060000","2":"30081060060000","3":"2023"},{"1":"30081060060000","2":"30081060070000","3":"2023"},{"1":"30081060060000","2":"30081060220000","3":"2023"},{"1":"30081060060000","2":"30081060230000","3":"2023"},{"1":"30081060060000","2":"30081060240000","3":"2023"},{"1":"30081060060000","2":"30081060250000","3":"2023"},{"1":"30081060060000","2":"30081060260000","3":"2023"},{"1":"30083080350000","2":"30074150240000","3":"2023"},{"1":"30083080350000","2":"30074150250000","3":"2023"},{"1":"30083080350000","2":"30074150260000","3":"2023"},{"1":"30083080350000","2":"30074150270000","3":"2023"},{"1":"30083080350000","2":"30074150280000","3":"2023"},{"1":"30083080350000","2":"30074150290000","3":"2023"},{"1":"30083080350000","2":"30083080350000","3":"2023"},{"1":"30084000010000","2":"30084000010000","3":"2023"},{"1":"30084000010000","2":"30084000020000","3":"2023"},{"1":"30084000010000","2":"30084000030000","3":"2023"},{"1":"30084000520000","2":"30084000520000","3":"2023"},{"1":"30084050370000","2":"30084050370000","3":"2023"},{"1":"30171010460000","2":"30171010460000","3":"2023"},{"1":"30171040240000","2":"30171040240000","3":"2023"},{"1":"30171200060000","2":"30171200060000","3":"2023"},{"1":"30171200060000","2":"30171200070000","3":"2023"},{"1":"30171200060000","2":"30171200080000","3":"2023"},{"1":"30171200060000","2":"30171200090000","3":"2023"},{"1":"30171200060000","2":"30171200100000","3":"2023"},{"1":"30171230340000","2":"30171230340000","3":"2023"},{"1":"30172060250000","2":"30172060230000","3":"2023"},{"1":"30172060250000","2":"30172060240000","3":"2023"},{"1":"30172060250000","2":"30172060250000","3":"2023"},{"1":"30172060250000","2":"30172060260000","3":"2023"},{"1":"30173000210000","2":"30173000210000","3":"2023"},{"1":"30173000210000","2":"30173000220000","3":"2023"},{"1":"30173000210000","2":"30173000230000","3":"2023"},{"1":"30173000680000","2":"30173000150000","3":"2023"},{"1":"30173000680000","2":"30173000160000","3":"2023"},{"1":"30173000680000","2":"30173000170000","3":"2023"},{"1":"30173000680000","2":"30173000180000","3":"2023"},{"1":"30173000680000","2":"30173000680000","3":"2023"},{"1":"30173000680000","2":"30184030230000","3":"2023"},{"1":"30181000090000","2":"30181000090000","3":"2023"},{"1":"30181000090000","2":"30181000170000","3":"2023"},{"1":"30181000090000","2":"30181000180000","3":"2023"},{"1":"30181000200000","2":"30181000200000","3":"2023"},{"1":"30181330200000","2":"30181330200000","3":"2023"},{"1":"30181330200000","2":"30181330210000","3":"2023"},{"1":"30181330200000","2":"30181330220000","3":"2023"},{"1":"30182190720000","2":"30182190720000","3":"2023"},{"1":"30182280250000","2":"30171160010000","3":"2023"},{"1":"30182280250000","2":"30171160020000","3":"2023"},{"1":"30182280250000","2":"30171160440000","3":"2023"},{"1":"30182280250000","2":"30182280250000","3":"2023"},{"1":"30184030240000","2":"30184030240000","3":"2023"},{"1":"30184030240000","2":"30184030250000","3":"2023"},{"1":"30191000080000","2":"30191000080000","3":"2023"},{"1":"30191000080000","2":"30191000090000","3":"2023"},{"1":"30191000080000","2":"30191000100000","3":"2023"},{"1":"30191000460000","2":"30191000450000","3":"2023"},{"1":"30191000460000","2":"30191000460000","3":"2023"},{"1":"30191000460000","2":"30191000470000","3":"2023"},{"1":"30191001290000","2":"30191001290000","3":"2023"},{"1":"30191001320000","2":"30191001320000","3":"2023"},{"1":"30191001350000","2":"30191001120000","3":"2023"},{"1":"30191001350000","2":"30191001350000","3":"2023"},{"1":"30192040260000","2":"30192040260000","3":"2023"},{"1":"30192040260000","2":"30192040270000","3":"2023"},{"1":"30192050160000","2":"30192050160000","3":"2023"},{"1":"30201000080000","2":"30201000080000","3":"2023"},{"1":"30201000230000","2":"30201000220000","3":"2023"},{"1":"30201000230000","2":"30201000230000","3":"2023"},{"1":"30201060290000","2":"30201060290000","3":"2023"},{"1":"30201150140000","2":"30201150140000","3":"2023"},{"1":"30083150200000","2":"30083150200000","3":"2023"},{"1":"30083150200000","2":"30083150210000","3":"2023"},{"1":"30182090390000","2":"30182090390000","3":"2023"},{"1":"30182090390000","2":"30182090400000","3":"2023"},{"1":"30182090390000","2":"30182090410000","3":"2023"},{"1":"30173010010000","2":"30173010010000","3":"2023"},{"1":"30173010010000","2":"30173010020000","3":"2023"},{"1":"29124150190000","2":"29124150170000","3":"2023"},{"1":"29124150190000","2":"29124150180000","3":"2023"},{"1":"29124150190000","2":"29124150190000","3":"2023"},{"1":"29124150190000","2":"29124150200000","3":"2023"},{"1":"29124150190000","2":"29124150210000","3":"2023"},{"1":"29124150190000","2":"29124150220000","3":"2023"},{"1":"29124150190000","2":"29124150230000","3":"2023"},{"1":"29124150190000","2":"29124150240000","3":"2023"},{"1":"29124150190000","2":"29124150250000","3":"2023"},{"1":"29244010240000","2":"29244010240000","3":"2023"},{"1":"29244010240000","2":"29244010300000","3":"2023"},{"1":"29121260230000","2":"29121260230000","3":"2023"},{"1":"29121260230000","2":"29121260240000","3":"2023"},{"1":"29121260230000","2":"29121260250000","3":"2023"},{"1":"29121260230000","2":"29121260260000","3":"2023"},{"1":"29121260230000","2":"29121260270000","3":"2023"},{"1":"29121260230000","2":"29121260280000","3":"2023"},{"1":"29121260230000","2":"29121260290000","3":"2023"},{"1":"29121310290000","2":"29121310280000","3":"2023"},{"1":"29121310290000","2":"29121310290000","3":"2023"},{"1":"29121310290000","2":"29121310300000","3":"2023"},{"1":"29121310290000","2":"29121310310000","3":"2023"},{"1":"29121310290000","2":"29121310320000","3":"2023"},{"1":"29122070210000","2":"29122070190000","3":"2023"},{"1":"29122070210000","2":"29122070200000","3":"2023"},{"1":"29122070210000","2":"29122070210000","3":"2023"},{"1":"29122070210000","2":"29122070220000","3":"2023"},{"1":"29122070210000","2":"29122070230000","3":"2023"},{"1":"29122260330000","2":"29122260330000","3":"2023"},{"1":"29123020030000","2":"29123020030000","3":"2023"},{"1":"29123020030000","2":"29123020040000","3":"2023"},{"1":"29123020030000","2":"29123020050000","3":"2023"},{"1":"29242000050000","2":"29242000050000","3":"2023"},{"1":"30064000130000","2":"30064000320000","3":"2023"},{"1":"29011000060000","2":"29011000060000","3":"2023"},{"1":"29011000060000","2":"29011000080000","3":"2023"},{"1":"29014000050000","2":"29012000070000","3":"2023"},{"1":"29014000050000","2":"29014000050000","3":"2023"},{"1":"29014000050000","2":"29014000190000","3":"2023"},{"1":"29014000050000","2":"29014000220000","3":"2023"},{"1":"29013000450000","2":"29013000450000","3":"2023"},{"1":"30074020350000","2":"30074020350000","3":"2023"},{"1":"30081020010000","2":"30081020010000","3":"2023"},{"1":"30081020010000","2":"30082010010000","3":"2023"},{"1":"29244000320000","2":"29244000320000","3":"2023"},{"1":"30081000150000","2":"30081000150000","3":"2023"},{"1":"29244000220000","2":"29244000220000","3":"2023"},{"1":"29244001100000","2":"29244001100000","3":"2023"},{"1":"29244001100000","2":"29244001110000","3":"2023"},{"1":"29244001050000","2":"29244001050000","3":"2023"},{"1":"30082010140000","2":"30082010140000","3":"2023"},{"1":"29244000360000","2":"29244000360000","3":"2023"},{"1":"30072040270000","2":"30072040250000","3":"2023"},{"1":"30072040270000","2":"30072040260000","3":"2023"},{"1":"30072040270000","2":"30072040270000","3":"2023"},{"1":"30072040270000","2":"30072040280000","3":"2023"},{"1":"29244000340000","2":"29244000340000","3":"2023"},{"1":"29013000480000","2":"29013000480000","3":"2023"},{"1":"30072100040000","2":"30072100040000","3":"2023"},{"1":"30072100040000","2":"30072100050000","3":"2023"},{"1":"30072100040000","2":"30072100060000","3":"2023"},{"1":"30072100040000","2":"30072100070000","3":"2023"},{"1":"30072100040000","2":"30072100080000","3":"2023"},{"1":"29133000300000","2":"29133000300000","3":"2023"},{"1":"29133000300000","2":"29133020150000","3":"2023"},{"1":"30072040230000","2":"30072040230000","3":"2023"},{"1":"29014000180000","2":"29014000180000","3":"2023"},{"1":"29014000180000","2":"29014000230000","3":"2023"},{"1":"29133000080000","2":"29133000080000","3":"2023"},{"1":"29133000080000","2":"29133000320000","3":"2023"},{"1":"29133000080000","2":"29133000380000","3":"2023"},{"1":"29133000080000","2":"29133010150000","3":"2023"},{"1":"29133000080000","2":"29133010300000","3":"2023"},{"1":"29133000080000","2":"29133010320000","3":"2023"},{"1":"29244000270000","2":"29244000270000","3":"2023"},{"1":"29244000290000","2":"29244000290000","3":"2023"},{"1":"29244000390000","2":"29244000390000","3":"2023"},{"1":"29244000390000","2":"29244000540000","3":"2023"},{"1":"29244000820000","2":"29244000820000","3":"2023"},{"1":"29244000820000","2":"29244000850000","3":"2023"},{"1":"30064000390000","2":"30072000100000","3":"2023"},{"1":"30064000390000","2":"30072000130000","3":"2023"},{"1":"30064000390000","2":"30072010110000","3":"2023"},{"1":"30064000390000","2":"30072010120000","3":"2023"},{"1":"30072010050000","2":"30072010050000","3":"2023"},{"1":"30072010050000","2":"30072010070000","3":"2023"},{"1":"30072010050000","2":"30072010130000","3":"2023"},{"1":"30072040200000","2":"30072040200000","3":"2023"},{"1":"30072100090000","2":"30072100090000","3":"2023"},{"1":"30072100090000","2":"30072100100000","3":"2023"},{"1":"30072100140000","2":"30072100140000","3":"2023"},{"1":"30072100140000","2":"30072100150000","3":"2023"},{"1":"30072120070000","2":"30072120060000","3":"2023"},{"1":"30072120070000","2":"30072120070000","3":"2023"},{"1":"30072120070000","2":"30072120080000","3":"2023"},{"1":"30072120110000","2":"30072120090000","3":"2023"},{"1":"30072120110000","2":"30072120100000","3":"2023"},{"1":"30072120110000","2":"30072120110000","3":"2023"},{"1":"30072120110000","2":"30072120120000","3":"2023"},{"1":"30072120380000","2":"30072120380000","3":"2023"},{"1":"30074020290000","2":"30074020290000","3":"2023"},{"1":"30074020290000","2":"30074020300000","3":"2023"},{"1":"30074150120000","2":"30074150120000","3":"2023"},{"1":"30074150120000","2":"30074150130000","3":"2023"},{"1":"30074150120000","2":"30074150140000","3":"2023"},{"1":"30074320140000","2":"30074320140000","3":"2023"},{"1":"30074320140000","2":"30074320150000","3":"2023"},{"1":"30081000100000","2":"30081000100000","3":"2023"},{"1":"30081000140000","2":"30081000140000","3":"2023"},{"1":"30081070030000","2":"30081070010000","3":"2023"},{"1":"30081070030000","2":"30081070020000","3":"2023"},{"1":"30081070030000","2":"30081070030000","3":"2023"},{"1":"30081070030000","2":"30081070040000","3":"2023"},{"1":"30081070030000","2":"30081070050000","3":"2023"},{"1":"30081070030000","2":"30081070060000","3":"2023"},{"1":"30081070030000","2":"30081070190000","3":"2023"},{"1":"30081070030000","2":"30081070200000","3":"2023"},{"1":"30081070030000","2":"30081070210000","3":"2023"},{"1":"30081070130000","2":"30081070130000","3":"2023"},{"1":"30081070130000","2":"30081070140000","3":"2023"},{"1":"30081070130000","2":"30081070150000","3":"2023"},{"1":"30081070130000","2":"30081070160000","3":"2023"},{"1":"30081070130000","2":"30081070170000","3":"2023"},{"1":"30081070130000","2":"30081070180000","3":"2023"},{"1":"30081070130000","2":"30081070270000","3":"2023"},{"1":"30081070130000","2":"30081070280000","3":"2023"},{"1":"30081070130000","2":"30081070290000","3":"2023"},{"1":"30081070130000","2":"30081070300000","3":"2023"},{"1":"30081070130000","2":"30081070310000","3":"2023"},{"1":"30081070130000","2":"30081070320000","3":"2023"},{"1":"30081070130000","2":"30081070330000","3":"2023"},{"1":"30081070130000","2":"30081070360000","3":"2023"},{"1":"30081070130000","2":"30081070380000","3":"2023"},{"1":"30081070130000","2":"30082020010000","3":"2023"},{"1":"30081070130000","2":"30082020020000","3":"2023"},{"1":"30081070130000","2":"30082020030000","3":"2023"},{"1":"30081070130000","2":"30082020040000","3":"2023"},{"1":"30081070130000","2":"30082020050000","3":"2023"},{"1":"30081070130000","2":"30082020190000","3":"2023"},{"1":"30081070130000","2":"30082020200000","3":"2023"},{"1":"30082010160000","2":"30082010160000","3":"2023"},{"1":"30082020330000","2":"30082020330000","3":"2023"},{"1":"30082030060000","2":"30082030060000","3":"2023"},{"1":"30082030060000","2":"30082030070000","3":"2023"},{"1":"30082030060000","2":"30082030080000","3":"2023"},{"1":"30082030060000","2":"30082030290000","3":"2023"},{"1":"30082030060000","2":"30082030300000","3":"2023"},{"1":"30082030060000","2":"30082030310000","3":"2023"},{"1":"30082030250000","2":"30082030020000","3":"2023"},{"1":"30082030250000","2":"30082030030000","3":"2023"},{"1":"30082030250000","2":"30082030040000","3":"2023"},{"1":"30082030250000","2":"30082030230000","3":"2023"},{"1":"30082030250000","2":"30082030240000","3":"2023"},{"1":"30082030250000","2":"30082030250000","3":"2023"},{"1":"30082030250000","2":"30082030260000","3":"2023"},{"1":"30082030250000","2":"30082030270000","3":"2023"},{"1":"30171240260000","2":"30171240260000","3":"2023"},{"1":"30081060110000","2":"30081060080000","3":"2023"},{"1":"30081060110000","2":"30081060110000","3":"2023"},{"1":"30081060110000","2":"30081060120000","3":"2023"},{"1":"30081060110000","2":"30081060130000","3":"2023"},{"1":"30081060110000","2":"30081060140000","3":"2023"},{"1":"29242000690000","2":"29242000690000","3":"2023"},{"1":"30081060050000","2":"30081060030000","3":"2023"},{"1":"30081060050000","2":"30081060040000","3":"2023"},{"1":"30081060050000","2":"30081060050000","3":"2023"},{"1":"30081060050000","2":"30081060270000","3":"2023"},{"1":"30081060050000","2":"30081060280000","3":"2023"},{"1":"29011000110000","2":"29011000110000","3":"2023"},{"1":"29242000341001","2":"29242000341001","3":"2023"},{"1":"29242000341002","2":"29242000341002","3":"2023"},{"1":"29242000341003","2":"29242000341003","3":"2023"},{"1":"29242000341004","2":"29242000341004","3":"2023"},{"1":"29242000341005","2":"29242000341005","3":"2023"},{"1":"29242000341006","2":"29242000341006","3":"2023"},{"1":"29242000341007","2":"29242000341007","3":"2023"},{"1":"29242000341008","2":"29242000341008","3":"2023"},{"1":"29242000341009","2":"29242000341009","3":"2023"},{"1":"29242000341010","2":"29242000341010","3":"2023"},{"1":"29242000341011","2":"29242000341011","3":"2023"},{"1":"29242000341012","2":"29242000341012","3":"2023"},{"1":"30182090350000","2":"30182090340000","3":"2023"},{"1":"30182090350000","2":"30182090350000","3":"2023"},{"1":"30182090350000","2":"30182090360000","3":"2023"},{"1":"30182090350000","2":"30182090370000","3":"2023"},{"1":"30182090350000","2":"30182090380000","3":"2023"},{"1":"30201000050000","2":"30201000050000","3":"2023"},{"1":"30201000050000","2":"30201000060000","3":"2023"},{"1":"30201000050000","2":"30201000070000","3":"2023"},{"1":"30171080440000","2":"30171080440000","3":"2023"},{"1":"29244001120000","2":"29244000480000","3":"2023"},{"1":"29244001120000","2":"29244001120000","3":"2023"},{"1":"29244001120000","2":"29244001130000","3":"2023"},{"1":"29244001120000","2":"29244001140000","3":"2023"},{"1":"29244001120000","2":"29244001150000","3":"2023"},{"1":"29244001120000","2":"29244001160000","3":"2023"},{"1":"29244001120000","2":"29244001170000","3":"2023"},{"1":"29244001120000","2":"29244001180000","3":"2023"},{"1":"30201060120000","2":"30201060120000","3":"2023"},{"1":"30083230450000","2":"30083230450000","3":"2023"},{"1":"29122260230000","2":"29122260230000","3":"2023"},{"1":"29122260230000","2":"29122260240000","3":"2023"},{"1":"29122260230000","2":"29122260250000","3":"2023"},{"1":"29122260230000","2":"29122260260000","3":"2023"},{"1":"29122240350000","2":"29122240350000","3":"2023"},{"1":"29122240350000","2":"29122240360000","3":"2023"},{"1":"29122240350000","2":"29122240380000","3":"2023"},{"1":"29122240350000","2":"29122240390000","3":"2023"},{"1":"29122240350000","2":"29122240400000","3":"2023"},{"1":"29122240350000","2":"29122240410000","3":"2023"},{"1":"29121250310000","2":"29121250310000","3":"2023"},{"1":"29121250310000","2":"29121250320000","3":"2023"},{"1":"29244001060000","2":"29244001060000","3":"2023"},{"1":"29123050280000","2":"29123050280000","3":"2023"},{"1":"30071260010000","2":"30071260010000","3":"2023"},{"1":"30071260010000","2":"30071260020000","3":"2023"},{"1":"29121250190000","2":"29121250180000","3":"2023"},{"1":"29121250190000","2":"29121250190000","3":"2023"},{"1":"29121250190000","2":"29121250200000","3":"2023"},{"1":"29121250190000","2":"29121250210000","3":"2023"},{"1":"29121250190000","2":"29121250220000","3":"2023"},{"1":"29121250190000","2":"29121250390000","3":"2023"},{"1":"29122270250000","2":"29122270250000","3":"2023"},{"1":"29122270250000","2":"29122270260000","3":"2023"},{"1":"29122270250000","2":"29122270270000","3":"2023"},{"1":"29122270250000","2":"29122270280000","3":"2023"},{"1":"29122270250000","2":"29122270290000","3":"2023"},{"1":"29122270250000","2":"29122270300000","3":"2023"},{"1":"29122270250000","2":"29122270310000","3":"2023"},{"1":"30172050350000","2":"30172050330000","3":"2023"},{"1":"30172050350000","2":"30172050340000","3":"2023"},{"1":"30172050350000","2":"30172050350000","3":"2023"},{"1":"30182280230000","2":"30182280230000","3":"2023"},{"1":"30071330340000","2":"30071330340000","3":"2023"},{"1":"30071330340000","2":"30071330350000","3":"2023"},{"1":"30071330340000","2":"30071330360000","3":"2023"},{"1":"30071330340000","2":"30071330370000","3":"2023"},{"1":"30071330340000","2":"30071330380000","3":"2023"},{"1":"30084040230000","2":"30084040230000","3":"2023"},{"1":"29244010210000","2":"29244010210000","3":"2023"},{"1":"29123030440000","2":"29123030440000","3":"2023"},{"1":"30074320230000","2":"30074320230000","3":"2023"},{"1":"30074320230000","2":"30074320240000","3":"2023"},{"1":"30074320230000","2":"30074320250000","3":"2023"},{"1":"30074320230000","2":"30074320260000","3":"2023"},{"1":"30074320230000","2":"30074320270000","3":"2023"},{"1":"30074320230000","2":"30074320280000","3":"2023"},{"1":"30074320230000","2":"30074320290000","3":"2023"},{"1":"30074070250000","2":"30074070230000","3":"2023"},{"1":"30074070250000","2":"30074070240000","3":"2023"},{"1":"30074070250000","2":"30074070250000","3":"2023"},{"1":"30074070250000","2":"30074070260000","3":"2023"},{"1":"30074070250000","2":"30074070270000","3":"2023"},{"1":"30074070250000","2":"30074070280000","3":"2023"},{"1":"29242000850000","2":"29242000850000","3":"2023"},{"1":"29133020240000","2":"29133020240000","3":"2023"},{"1":"30083230370000","2":"30083230370000","3":"2023"},{"1":"30182190330000","2":"30182190330000","3":"2023"},{"1":"30182190330000","2":"30182190340000","3":"2023"},{"1":"30182190330000","2":"30182190370000","3":"2023"},{"1":"30182190330000","2":"30182190380000","3":"2023"},{"1":"30182190330000","2":"30182190600000","3":"2023"},{"1":"30072170140000","2":"30072170120000","3":"2023"},{"1":"30072170140000","2":"30072170130000","3":"2023"},{"1":"30072170140000","2":"30072170140000","3":"2023"},{"1":"30072170140000","2":"30072170150000","3":"2023"},{"1":"30171070480000","2":"30171070480000","3":"2023"},{"1":"29244010190000","2":"29244010190000","3":"2023"},{"1":"30173010040000","2":"30173010030000","3":"2023"},{"1":"30173010040000","2":"30173010040000","3":"2023"},{"1":"30173010040000","2":"30173010050000","3":"2023"},{"1":"30173010040000","2":"30173010060000","3":"2023"},{"1":"30173010040000","2":"30173010070000","3":"2023"},{"1":"30173010040000","2":"30173010080000","3":"2023"},{"1":"30173010040000","2":"30173010090000","3":"2023"},{"1":"30083000170000","2":"30083000170000","3":"2023"},{"1":"30072170240000","2":"30072170230000","3":"2023"},{"1":"30072170240000","2":"30072170240000","3":"2023"},{"1":"30072170240000","2":"30072170250000","3":"2023"},{"1":"30072170240000","2":"30072170260000","3":"2023"},{"1":"30072170240000","2":"30072170270000","3":"2023"},{"1":"30072170240000","2":"30072170280000","3":"2023"},{"1":"30072170240000","2":"30072170290000","3":"2023"},{"1":"30074070320000","2":"30074070320000","3":"2023"},{"1":"30074070320000","2":"30074070330000","3":"2023"},{"1":"30083000190000","2":"30083000190000","3":"2023"},{"1":"29121300300000","2":"29121300300000","3":"2023"},{"1":"29121300300000","2":"29121300310000","3":"2023"},{"1":"29121300300000","2":"29121300320000","3":"2023"},{"1":"29121300300000","2":"29121300500000","3":"2023"},{"1":"30182090300000","2":"30182090300000","3":"2023"},{"1":"30182090300000","2":"30182090310000","3":"2023"},{"1":"30182090300000","2":"30182090320000","3":"2023"},{"1":"30182090300000","2":"30182090330000","3":"2023"},{"1":"30083150500000","2":"30083150500000","3":"2023"},{"1":"30074040010000","2":"30074040010000","3":"2023"},{"1":"30074040010000","2":"30074040020000","3":"2023"},{"1":"30074040010000","2":"30074040030000","3":"2023"},{"1":"30074040010000","2":"30074040040000","3":"2023"},{"1":"30074040010000","2":"30074040120000","3":"2023"},{"1":"29244001190000","2":"29244001190000","3":"2023"},{"1":"29244001190000","2":"29244001200000","3":"2023"},{"1":"29244001190000","2":"29244001210000","3":"2023"},{"1":"29244001190000","2":"29244001220000","3":"2023"},{"1":"29244001190000","2":"29244001230000","3":"2023"},{"1":"29244001190000","2":"29244001240000","3":"2023"},{"1":"30084090110000","2":"30084090110000","3":"2023"},{"1":"30084090110000","2":"30084090120000","3":"2023"},{"1":"30084090110000","2":"30084090130000","3":"2023"},{"1":"30084090110000","2":"30084090140000","3":"2023"},{"1":"30084090110000","2":"30084090150000","3":"2023"},{"1":"30084090110000","2":"30084090160000","3":"2023"},{"1":"30084090110000","2":"30084090170000","3":"2023"},{"1":"30084090110000","2":"30084090180000","3":"2023"},{"1":"30084090110000","2":"30084090190000","3":"2023"},{"1":"30083230010000","2":"30083230010000","3":"2023"},{"1":"30083230010000","2":"30083230020000","3":"2023"},{"1":"30171040480000","2":"30171040480000","3":"2023"},{"1":"30201060240000","2":"30201060240000","3":"2023"},{"1":"30184030260000","2":"30184030260000","3":"2023"},{"1":"30184030260000","2":"30184030270000","3":"2023"},{"1":"30184030260000","2":"30184030280000","3":"2023"},{"1":"29121270220000","2":"29121270200000","3":"2023"},{"1":"29121270220000","2":"29121270210000","3":"2023"},{"1":"29121270220000","2":"29121270220000","3":"2023"},{"1":"29121270220000","2":"29121270290000","3":"2023"},{"1":"29121270220000","2":"29121270300000","3":"2023"},{"1":"29121270220000","2":"29121270310000","3":"2023"},{"1":"29121270220000","2":"29121270320000","3":"2023"},{"1":"30171030030000","2":"30171030030000","3":"2023"},{"1":"30173010430000","2":"30173010430000","3":"2023"},{"1":"30182280180000","2":"30182280180000","3":"2023"},{"1":"30083000250000","2":"30083000250000","3":"2023"},{"1":"30083000230000","2":"30083000230000","3":"2023"},{"1":"29122250230000","2":"29122250230000","3":"2023"},{"1":"29122250230000","2":"29122250240000","3":"2023"},{"1":"29122250230000","2":"29122250250000","3":"2023"},{"1":"29122250230000","2":"29122250260000","3":"2023"},{"1":"29122250230000","2":"29122250270000","3":"2023"},{"1":"29122250230000","2":"29122250340000","3":"2023"},{"1":"29121260310000","2":"29121260300000","3":"2023"},{"1":"29121260310000","2":"29121260310000","3":"2023"},{"1":"29121260310000","2":"29121260320000","3":"2023"},{"1":"30182360150000","2":"30182360150000","3":"2023"},{"1":"30182360150000","2":"30182360210000","3":"2023"},{"1":"29241000380000","2":"29241000380000","3":"2023"},{"1":"30074070360000","2":"30074070360000","3":"2023"},{"1":"30083040010000","2":"30083040010000","3":"2023"},{"1":"30084140170000","2":"30084140170000","3":"2023"},{"1":"30084140170000","2":"30084140180000","3":"2023"},{"1":"30074230450000","2":"30074230450000","3":"2023"},{"1":"30071330280000","2":"30071330280000","3":"2023"},{"1":"30071330280000","2":"30071330290000","3":"2023"},{"1":"30071330280000","2":"30071330300000","3":"2023"},{"1":"30071330280000","2":"30071330310000","3":"2023"},{"1":"30071330280000","2":"30071330320000","3":"2023"},{"1":"30071330280000","2":"30071330330000","3":"2023"},{"1":"30083150220000","2":"30083150220000","3":"2023"},{"1":"29244000840000","2":"29244000840000","3":"2023"},{"1":"30182190740000","2":"30182190740000","3":"2023"},{"1":"29122270230000","2":"29122270230000","3":"2023"},{"1":"29122270230000","2":"29122270240000","3":"2023"},{"1":"30083150230000","2":"30083150230000","3":"2023"},{"1":"30083150230000","2":"30083150240000","3":"2023"},{"1":"29124150280000","2":"29124150260000","3":"2023"},{"1":"29124150280000","2":"29124150270000","3":"2023"},{"1":"29124150280000","2":"29124150280000","3":"2023"},{"1":"29124150280000","2":"29124150290000","3":"2023"},{"1":"29124150280000","2":"29124150300000","3":"2023"},{"1":"30071340200000","2":"30071340200000","3":"2023"},{"1":"30071340200000","2":"30071340210000","3":"2023"},{"1":"30071340200000","2":"30071340270000","3":"2023"},{"1":"29121310330000","2":"29121310330000","3":"2023"},{"1":"29121310330000","2":"29121310340000","3":"2023"},{"1":"29121310330000","2":"29121310350000","3":"2023"},{"1":"29121310330000","2":"29121310360000","3":"2023"},{"1":"29121310330000","2":"29121310370000","3":"2023"},{"1":"30083080140000","2":"30083080140000","3":"2023"},{"1":"30182090630000","2":"30182090630000","3":"2023"},{"1":"30182190460000","2":"30182190450000","3":"2023"},{"1":"30182190460000","2":"30182190460000","3":"2023"},{"1":"30182190460000","2":"30182190470000","3":"2023"},{"1":"30182190640000","2":"30182190640000","3":"2023"},{"1":"30182190640000","2":"30182190650000","3":"2023"},{"1":"30072170360000","2":"30072170360000","3":"2023"},{"1":"30072170360000","2":"30072170370000","3":"2023"},{"1":"30072170360000","2":"30072170380000","3":"2023"},{"1":"30072170360000","2":"30072170390000","3":"2023"},{"1":"30072170360000","2":"30072170400000","3":"2023"},{"1":"29124230340000","2":"29124230340000","3":"2023"},{"1":"29124230340000","2":"29124230350000","3":"2023"},{"1":"29124230340000","2":"29124230360000","3":"2023"},{"1":"29124230340000","2":"29124230370000","3":"2023"},{"1":"29124230340000","2":"29124230380000","3":"2023"},{"1":"29124230340000","2":"29124230390000","3":"2023"},{"1":"29124230340000","2":"29124230430000","3":"2023"},{"1":"29124230340000","2":"29124230440000","3":"2023"},{"1":"29124230340000","2":"29124230450000","3":"2023"},{"1":"29124230340000","2":"29124230460000","3":"2023"},{"1":"29124230340000","2":"29124230470000","3":"2023"},{"1":"29124230340000","2":"29124230480000","3":"2023"},{"1":"29124230340000","2":"29124230490000","3":"2023"},{"1":"29124230340000","2":"29124230500000","3":"2023"},{"1":"29124230340000","2":"29124230510000","3":"2023"},{"1":"29124230340000","2":"29124230520000","3":"2023"},{"1":"29124230340000","2":"29124230530000","3":"2023"},{"1":"29124230340000","2":"29124230540000","3":"2023"},{"1":"29124230340000","2":"29124230550000","3":"2023"},{"1":"29124230340000","2":"29124230560000","3":"2023"},{"1":"29124230340000","2":"29124230570000","3":"2023"},{"1":"29124230340000","2":"29124230580000","3":"2023"},{"1":"29124230340000","2":"29124230590000","3":"2023"},{"1":"29124230340000","2":"29124230600000","3":"2023"},{"1":"29124230340000","2":"29124230610000","3":"2023"},{"1":"29124230340000","2":"29124230620000","3":"2023"},{"1":"30074230280000","2":"30074230280000","3":"2023"},{"1":"30074230280000","2":"30074230290000","3":"2023"},{"1":"30074230280000","2":"30074230300000","3":"2023"},{"1":"30074230280000","2":"30074230440000","3":"2023"},{"1":"29124060390000","2":"29124060390000","3":"2023"},{"1":"30084050010000","2":"30084050010000","3":"2023"},{"1":"29124020030000","2":"29124020010000","3":"2023"},{"1":"29124020030000","2":"29124020020000","3":"2023"},{"1":"29124020030000","2":"29124020030000","3":"2023"},{"1":"29124020030000","2":"29124020040000","3":"2023"},{"1":"29124020030000","2":"29124020050000","3":"2023"},{"1":"29124020030000","2":"29124020060000","3":"2023"},{"1":"29124020030000","2":"29124020070000","3":"2023"},{"1":"29124020030000","2":"29124020080000","3":"2023"},{"1":"29124020030000","2":"29124020090000","3":"2023"},{"1":"29124020030000","2":"29124020100000","3":"2023"},{"1":"29242000880000","2":"29242000880000","3":"2023"},{"1":"30071080200000","2":"30071080200000","3":"2023"},{"1":"30071080200000","2":"30071080210000","3":"2023"},{"1":"30071080200000","2":"30071080220000","3":"2023"},{"1":"30071080200000","2":"30071080230000","3":"2023"},{"1":"30071080200000","2":"30071080240000","3":"2023"},{"1":"30202020200000","2":"30202020180000","3":"2023"},{"1":"30202020200000","2":"30202020200000","3":"2023"},{"1":"30202020200000","2":"30202020240000","3":"2023"},{"1":"30202020200000","2":"30202020270000","3":"2023"},{"1":"30073240190000","2":"30073240190000","3":"2023"},{"1":"30201000240000","2":"30201000240000","3":"2023"},{"1":"30083150130000","2":"30083150110000","3":"2023"},{"1":"30083150130000","2":"30083150120000","3":"2023"},{"1":"30083150130000","2":"30083150130000","3":"2023"},{"1":"30083150130000","2":"30083150140000","3":"2023"},{"1":"30192030130000","2":"30192030040000","3":"2023"},{"1":"30192030130000","2":"30192030050000","3":"2023"},{"1":"30192030130000","2":"30192030120000","3":"2023"},{"1":"30192030130000","2":"30192030130000","3":"2023"},{"1":"30192030130000","2":"30192030140000","3":"2023"},{"1":"30192030130000","2":"30192030150000","3":"2023"},{"1":"30192030130000","2":"30192030160000","3":"2023"},{"1":"30192030130000","2":"30192030220000","3":"2023"},{"1":"29121290420000","2":"29121290420000","3":"2023"},{"1":"30083150030000","2":"30083150010000","3":"2023"},{"1":"30083150030000","2":"30083150020000","3":"2023"},{"1":"30083150030000","2":"30083150030000","3":"2023"},{"1":"30083150030000","2":"30083150040000","3":"2023"},{"1":"30202020050000","2":"30202020050000","3":"2023"},{"1":"30171010480000","2":"30171010110000","3":"2023"},{"1":"30171010480000","2":"30171010480000","3":"2023"},{"1":"29124000010000","2":"29124000010000","3":"2023"},{"1":"29124000010000","2":"29124000020000","3":"2023"},{"1":"29124000010000","2":"29124000030000","3":"2023"},{"1":"29124000010000","2":"29124000040000","3":"2023"},{"1":"29124000010000","2":"29124000050000","3":"2023"},{"1":"29124000010000","2":"29124000060000","3":"2023"},{"1":"29124000010000","2":"29124000070000","3":"2023"},{"1":"29124000010000","2":"29124000080000","3":"2023"},{"1":"29124000010000","2":"29124000090000","3":"2023"},{"1":"29124000010000","2":"29124000100000","3":"2023"},{"1":"30084080450000","2":"30084080230000","3":"2023"},{"1":"30084080450000","2":"30084080450000","3":"2023"},{"1":"30084080450000","2":"30084080460000","3":"2023"},{"1":"30181000160000","2":"30181000160000","3":"2023"},{"1":"30202020100000","2":"30202020100000","3":"2023"},{"1":"29242000210000","2":"29242000210000","3":"2023"},{"1":"29124040010000","2":"29124030090000","3":"2023"},{"1":"29124040010000","2":"29124030100000","3":"2023"},{"1":"29124040010000","2":"29124040010000","3":"2023"},{"1":"29124040010000","2":"29124040020000","3":"2023"},{"1":"29124040010000","2":"29124040030000","3":"2023"},{"1":"29124040010000","2":"29124040040000","3":"2023"},{"1":"29124040010000","2":"29124040050000","3":"2023"},{"1":"29124040010000","2":"29124040060000","3":"2023"},{"1":"29124040010000","2":"29124040070000","3":"2023"},{"1":"29124040010000","2":"29124040080000","3":"2023"},{"1":"29124040010000","2":"29124040090000","3":"2023"},{"1":"30201030080000","2":"30201030080000","3":"2023"},{"1":"30192080190000","2":"30192080190000","3":"2023"},{"1":"30192080190000","2":"30192080200000","3":"2023"},{"1":"30192080190000","2":"30192080570000","3":"2023"},{"1":"30074320120000","2":"30074320120000","3":"2023"},{"1":"30074320120000","2":"30074320130000","3":"2023"},{"1":"29124050330000","2":"29124050330000","3":"2023"},{"1":"29242000920000","2":"29242000920000","3":"2023"},{"1":"29124010010000","2":"29124010010000","3":"2023"},{"1":"29124010010000","2":"29124010020000","3":"2023"},{"1":"29124010010000","2":"29124010030000","3":"2023"},{"1":"29124150310000","2":"29124150310000","3":"2023"},{"1":"29124150310000","2":"29124150320000","3":"2023"},{"1":"29124150310000","2":"29124150330000","3":"2023"},{"1":"29124150310000","2":"29124150340000","3":"2023"},{"1":"29124150310000","2":"29124150350000","3":"2023"},{"1":"29124150310000","2":"29124150360000","3":"2023"},{"1":"29124150310000","2":"29124150370000","3":"2023"},{"1":"29124150310000","2":"29124150380000","3":"2023"},{"1":"29124150310000","2":"29124150390000","3":"2023"},{"1":"30084040220000","2":"30084020100000","3":"2023"},{"1":"30084040220000","2":"30084040220000","3":"2023"},{"1":"30072170300000","2":"30072170300000","3":"2023"},{"1":"30072170300000","2":"30072170310000","3":"2023"},{"1":"30072170300000","2":"30072170320000","3":"2023"},{"1":"30072170300000","2":"30072170330000","3":"2023"},{"1":"30072170300000","2":"30072170340000","3":"2023"},{"1":"29123060010000","2":"29123060010000","3":"2023"},{"1":"29123060010000","2":"29123060020000","3":"2023"},{"1":"29123060010000","2":"29123060030000","3":"2023"},{"1":"29123060010000","2":"29123060040000","3":"2023"},{"1":"29123060010000","2":"29123060050000","3":"2023"},{"1":"29123060010000","2":"29123060060000","3":"2023"},{"1":"29123060010000","2":"29123060070000","3":"2023"},{"1":"29123060010000","2":"29123060080000","3":"2023"},{"1":"29123060010000","2":"29123060090000","3":"2023"},{"1":"29123060010000","2":"29123060100000","3":"2023"},{"1":"29124010050000","2":"29124010040000","3":"2023"},{"1":"29124010050000","2":"29124010050000","3":"2023"},{"1":"29124010050000","2":"29124010060000","3":"2023"},{"1":"30171280040000","2":"30171280010000","3":"2023"},{"1":"30171280040000","2":"30171280020000","3":"2023"},{"1":"30171280040000","2":"30171280030000","3":"2023"},{"1":"30171280040000","2":"30171280040000","3":"2023"},{"1":"30171280040000","2":"30171280050000","3":"2023"},{"1":"30073080140000","2":"30073080140000","3":"2023"},{"1":"30073080140000","2":"30073080150000","3":"2023"},{"1":"30073080140000","2":"30073080160000","3":"2023"},{"1":"30073080140000","2":"30073080170000","3":"2023"},{"1":"29123030080000","2":"29123030060000","3":"2023"},{"1":"29123030080000","2":"29123030070000","3":"2023"},{"1":"29123030080000","2":"29123030080000","3":"2023"},{"1":"29123030080000","2":"29123030090000","3":"2023"},{"1":"29123030080000","2":"29123030110000","3":"2023"},{"1":"29123030080000","2":"29123030430000","3":"2023"},{"1":"29123030080000","2":"29123030450000","3":"2023"},{"1":"29123030080000","2":"29123030460000","3":"2023"},{"1":"29124030060000","2":"29124030060000","3":"2023"},{"1":"30192020050000","2":"30192020050000","3":"2023"},{"1":"30192180230000","2":"30192180230000","3":"2023"},{"1":"30192060070000","2":"30192060070000","3":"2023"},{"1":"30201040020000","2":"30201040020000","3":"2023"},{"1":"30181000210000","2":"30181000210000","3":"2023"},{"1":"30173010100000","2":"30173010100000","3":"2023"},{"1":"30173010100000","2":"30173010110000","3":"2023"},{"1":"30073080010000","2":"30073080010000","3":"2023"},{"1":"30073080010000","2":"30073080020000","3":"2023"},{"1":"30073080010000","2":"30073080030000","3":"2023"},{"1":"30073080010000","2":"30073080040000","3":"2023"},{"1":"30173010140000","2":"30173010120000","3":"2023"},{"1":"30173010140000","2":"30173010130000","3":"2023"},{"1":"30173010140000","2":"30173010140000","3":"2023"},{"1":"29242000380000","2":"29242000380000","3":"2023"},{"1":"30192190010000","2":"30192190010000","3":"2023"},{"1":"30181000010000","2":"30181000010000","3":"2023"},{"1":"30181000010000","2":"30181000130000","3":"2023"},{"1":"29242000100000","2":"29242000100000","3":"2023"},{"1":"30074150210000","2":"30074150150000","3":"2023"},{"1":"30074150210000","2":"30074150160000","3":"2023"},{"1":"30074150210000","2":"30074150170000","3":"2023"},{"1":"30074150210000","2":"30074150180000","3":"2023"},{"1":"30074150210000","2":"30074150210000","3":"2023"},{"1":"30074150210000","2":"30074150430000","3":"2023"},{"1":"30074150210000","2":"30074150440000","3":"2023"},{"1":"29122300260000","2":"29122300230000","3":"2023"},{"1":"29122300260000","2":"29122300240000","3":"2023"},{"1":"29122300260000","2":"29122300250000","3":"2023"},{"1":"29122300260000","2":"29122300260000","3":"2023"},{"1":"29122300260000","2":"29122300270000","3":"2023"},{"1":"29122300260000","2":"29122300280000","3":"2023"},{"1":"29122300260000","2":"29122300290000","3":"2023"},{"1":"29122300260000","2":"29122300300000","3":"2023"},{"1":"29244010290000","2":"29244010290000","3":"2023"},{"1":"30173000190000","2":"30173000190000","3":"2023"},{"1":"30173000190000","2":"30173000200000","3":"2023"},{"1":"29124070270000","2":"29124070250000","3":"2023"},{"1":"29124070270000","2":"29124070260000","3":"2023"},{"1":"29124070270000","2":"29124070270000","3":"2023"},{"1":"29124070270000","2":"29124070280000","3":"2023"},{"1":"29124070270000","2":"29124070290000","3":"2023"},{"1":"29124070270000","2":"29124070300000","3":"2023"},{"1":"29124070270000","2":"29124070310000","3":"2023"},{"1":"29124070270000","2":"29124070320000","3":"2023"},{"1":"29124070270000","2":"29124070330000","3":"2023"},{"1":"29124070270000","2":"29124070340000","3":"2023"},{"1":"29124070270000","2":"29124070350000","3":"2023"},{"1":"30191001340000","2":"30191001340000","3":"2023"},{"1":"30192060060000","2":"30192060060000","3":"2023"},{"1":"29122070250000","2":"29122070250000","3":"2023"},{"1":"29242000400000","2":"29242000400000","3":"2023"},{"1":"29241000390000","2":"29241000390000","3":"2023"},{"1":"29124070010000","2":"29124070010000","3":"2023"},{"1":"29124070010000","2":"29124070020000","3":"2023"},{"1":"29124070010000","2":"29124070030000","3":"2023"},{"1":"29124070010000","2":"29124070040000","3":"2023"},{"1":"29124070010000","2":"29124070180000","3":"2023"},{"1":"29124070010000","2":"29124070190000","3":"2023"},{"1":"29124070010000","2":"29124070200000","3":"2023"},{"1":"29124070010000","2":"29124070210000","3":"2023"},{"1":"29124070010000","2":"29124070220000","3":"2023"},{"1":"29124070010000","2":"29124070230000","3":"2023"},{"1":"29124070010000","2":"29124070240000","3":"2023"},{"1":"29124070010000","2":"29124070360000","3":"2023"},{"1":"29124070010000","2":"29124070370000","3":"2023"},{"1":"29241000300000","2":"29241000300000","3":"2023"},{"1":"30192040050000","2":"30192040050000","3":"2023"},{"1":"30192040050000","2":"30192040060000","3":"2023"},{"1":"30192040050000","2":"30192040070000","3":"2023"},{"1":"30192040050000","2":"30192040080000","3":"2023"},{"1":"30192040050000","2":"30192040190000","3":"2023"},{"1":"30192040050000","2":"30192040200000","3":"2023"},{"1":"30192040050000","2":"30192040210000","3":"2023"},{"1":"29123020090000","2":"29123020090000","3":"2023"},{"1":"29123020090000","2":"29123020100000","3":"2023"},{"1":"29123020090000","2":"29123020340000","3":"2023"},{"1":"29242000500000","2":"29242000500000","3":"2023"},{"1":"30083230340000","2":"30083230330000","3":"2023"},{"1":"30083230340000","2":"30083230340000","3":"2023"},{"1":"30083230340000","2":"30083230350000","3":"2023"},{"1":"30192030110000","2":"30192030060000","3":"2023"},{"1":"30192030110000","2":"30192030070000","3":"2023"},{"1":"30192030110000","2":"30192030080000","3":"2023"},{"1":"30192030110000","2":"30192030090000","3":"2023"},{"1":"30192030110000","2":"30192030100000","3":"2023"},{"1":"30192030110000","2":"30192030110000","3":"2023"},{"1":"30192030110000","2":"30192030170000","3":"2023"},{"1":"30192030110000","2":"30192030180000","3":"2023"},{"1":"30192030110000","2":"30192030190000","3":"2023"},{"1":"30192030110000","2":"30192030200000","3":"2023"},{"1":"30192030110000","2":"30192030210000","3":"2023"},{"1":"30084090430000","2":"30084090200000","3":"2023"},{"1":"30084090430000","2":"30084090210000","3":"2023"},{"1":"30084090430000","2":"30084090430000","3":"2023"},{"1":"30084090430000","2":"30084090440000","3":"2023"},{"1":"30083230320000","2":"30083230320000","3":"2023"},{"1":"29124310220000","2":"29124310190000","3":"2023"},{"1":"29124310220000","2":"29124310200000","3":"2023"},{"1":"29124310220000","2":"29124310210000","3":"2023"},{"1":"29124310220000","2":"29124310220000","3":"2023"},{"1":"29124310220000","2":"29124310230000","3":"2023"},{"1":"29124310220000","2":"29124310240000","3":"2023"},{"1":"29124310220000","2":"29124310250000","3":"2023"},{"1":"29242000840000","2":"29242000840000","3":"2023"},{"1":"29242000390000","2":"29242000390000","3":"2023"},{"1":"29121300250000","2":"29121300230000","3":"2023"},{"1":"29121300250000","2":"29121300240000","3":"2023"},{"1":"29121300250000","2":"29121300250000","3":"2023"},{"1":"29121300250000","2":"29121300260000","3":"2023"},{"1":"29121300250000","2":"29121300270000","3":"2023"},{"1":"29121300250000","2":"29121300280000","3":"2023"},{"1":"29121300250000","2":"29121300490000","3":"2023"},{"1":"30201040040000","2":"30201040040000","3":"2023"},{"1":"30201040040000","2":"30201040050000","3":"2023"},{"1":"30201040040000","2":"30201040060000","3":"2023"},{"1":"30192000130000","2":"30192000130000","3":"2023"},{"1":"30192000220000","2":"30192000220000","3":"2023"},{"1":"30084160400000","2":"30084160400000","3":"2023"},{"1":"29241000350000","2":"29241000350000","3":"2023"},{"1":"30071260450000","2":"30071260160000","3":"2023"},{"1":"30071260450000","2":"30071260170000","3":"2023"},{"1":"30071260450000","2":"30071260430000","3":"2023"},{"1":"30071260450000","2":"30071260450000","3":"2023"},{"1":"29242000130000","2":"29242000130000","3":"2023"},{"1":"30192010020000","2":"30192010010000","3":"2023"},{"1":"30192010020000","2":"30192010020000","3":"2023"},{"1":"29242000890000","2":"29242000890000","3":"2023"},{"1":"30083070190000","2":"30083070190000","3":"2023"},{"1":"29242000610000","2":"29242000610000","3":"2023"},{"1":"29242000510000","2":"29242000510000","3":"2023"},{"1":"30083230440000","2":"30083230140000","3":"2023"},{"1":"30083230440000","2":"30083230150000","3":"2023"},{"1":"30083230440000","2":"30083230440000","3":"2023"},{"1":"29124030010000","2":"29124030010000","3":"2023"},{"1":"29124030010000","2":"29124030020000","3":"2023"},{"1":"30191000990000","2":"30191000990000","3":"2023"},{"1":"30072120160000","2":"30072120150000","3":"2023"},{"1":"30072120160000","2":"30072120160000","3":"2023"},{"1":"30071290280000","2":"30071290230000","3":"2023"},{"1":"30071290280000","2":"30071290240000","3":"2023"},{"1":"30071290280000","2":"30071290250000","3":"2023"},{"1":"30071290280000","2":"30071290260000","3":"2023"},{"1":"30071290280000","2":"30071290270000","3":"2023"},{"1":"30071290280000","2":"30071290280000","3":"2023"},{"1":"30071290280000","2":"30071290290000","3":"2023"},{"1":"30071290280000","2":"30071290300000","3":"2023"},{"1":"30071290280000","2":"30071290310000","3":"2023"},{"1":"30071290280000","2":"30071290320000","3":"2023"},{"1":"29121270280000","2":"29121270230000","3":"2023"},{"1":"29121270280000","2":"29121270240000","3":"2023"},{"1":"29121270280000","2":"29121270250000","3":"2023"},{"1":"29121270280000","2":"29121270260000","3":"2023"},{"1":"29121270280000","2":"29121270270000","3":"2023"},{"1":"29121270280000","2":"29121270280000","3":"2023"},{"1":"29122310270000","2":"29122310250000","3":"2023"},{"1":"29122310270000","2":"29122310260000","3":"2023"},{"1":"29122310270000","2":"29122310270000","3":"2023"},{"1":"29122310270000","2":"29122310280000","3":"2023"},{"1":"29122310270000","2":"29122310290000","3":"2023"},{"1":"29122310270000","2":"29122310300000","3":"2023"},{"1":"29122310270000","2":"29122310310000","3":"2023"},{"1":"29122310270000","2":"29122310320000","3":"2023"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>There are 938 PINs in the valuation worksheets with 309 distinct keypins.</p>
+<p>There were 436 projects overall based on manually grouped keypins from combined data sources.</p>
+<p>There were 1202 PINs within this municipality that had been commercial or industrial at some point in time.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Cook County commercial and industrial property projects</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
