@@ -1,7 +1,7 @@
 ---
-title: "Township Project Report"
+title: "Municipality Project Report"
 params: 
-  township: "Worth"
+  municipality: "Evanston"
 format: 
   html:
     toc: true
@@ -53,13 +53,13 @@ valuation_wksts <- read_csv("../Merriman RA/ptax/Output/keypins_from_methodwksht
 
 
 ```{r}
-#| label: fn-analyze-township
+#| label: fn-analyze-municipality
 #| echo: false
 
 # ------------------------------------------------------------------
-# Core function: run analysis for a single township
+# Core function: run analysis for a single municipality
 # ------------------------------------------------------------------
-analyze_township <- function(township_name,
+analyze_municipality <- function(municipality_name,
                              year = 2022,
                              comm_ind_df = comm_ind,
                              keypins_df = keypins) {
@@ -67,13 +67,13 @@ analyze_township <- function(township_name,
   # IMPORTANT:
   # Change `Township` below to whatever column in comm_ind actually holds the township name,
   # e.g. `twnshp`, `township`, or `clean_name`.
-  twnshp_pins <- comm_ind_df |>
-    dplyr::filter(Township == township_name) |>
+  muni_pins <- comm_ind_df |>
+    dplyr::filter(clean_name == municipality_name) |>
     dplyr::mutate(pin10 = stringr::str_sub(pin, 1, 10))
   
   
   pins_geo <- lookup_pin10_geometry(year = year, 
-                                    pin10 = twnshp_pins$pin10) %>%
+                                    pin10 = muni_pins$pin10) %>%
     st_as_sf(wkt = "geometry", crs = 4326)
   
   points <- st_as_sf(pins_geo, coords = c("longitude", "latitude"), crs = 4326)
@@ -95,7 +95,7 @@ analyze_township <- function(township_name,
   
   
   # 2. Join parcels to keypins
-  parcel_comparison <- twnshp_pins |>
+  parcel_comparison <- muni_pins |>
     left_join(parcels, by = "pin10") |>
     dplyr::left_join(keypins_df) |>
     dplyr::select(pin10, keypin, dplyr::everything())
@@ -119,7 +119,7 @@ analyze_township <- function(township_name,
     ggplot2::scale_fill_discrete(na.value = "white") +
     ggplot2::theme(legend.position = "none")
 
-  # 5. Join to comm_ind-level data for this township
+  # 5. Join to comm_ind-level data for this municipality
   pin_info <- comm_ind_df |>
     dplyr::inner_join(
       parcel_comparison,
@@ -153,7 +153,7 @@ analyze_township <- function(township_name,
     dplyr::arrange(dplyr::desc(incentive_pins), dplyr::desc(n))
 
   list(
-    township              = township_name,
+    municipality          = municipality_name,
     parcels               = parcels,
     parcel_comparison     = parcel_comparison,
   #  parcel_keypin_summary = parcel_keypin_summary,
@@ -168,10 +168,10 @@ analyze_township <- function(township_name,
 ```{r}
 #| label: run-analysis
 
-#this_township <- params$township
+#this_municipality <- params$municipality
 
-res <- analyze_township(
-  township_name = params$township,
+res <- analyze_municipality(
+  municipality_name = params$municipality,
   year          = 2022,     # adjust if you want a different year
   comm_ind_df   = comm_ind,
   keypins_df    = keypins
@@ -179,31 +179,31 @@ res <- analyze_township(
 
 ```
 
-## Township overview
+## Municipality overview
 
-There are `r paste(comm_ind |> filter(Township == params$township) |> distinct(pin) |> count())` PINs in this township that were commercial or industrial at least once.
+There are `r paste(comm_ind |> filter(clean_name == params$municipality) |> distinct(pin) |> count())` PINs in this municipality that were commercial or industrial at least once.
 
 
 ```{r}
-#| label: township-name
+#| label: municipality-name
 #| echo: false
 #| layout-ncol: 2
 
-cat("Township:", res$township)
+cat("Municipality:", res$municipality)
 
-municipalities_in_township <- comm_ind |>
-  filter(Township == params$township, !is.na(clean_name), clean_name != "") |>
-  distinct(Municipality = clean_name) |>
-  arrange(Municipality)
+townships_in_municipality <- comm_ind |>
+  filter(clean_name == params$municipality, !is.na(Township), Township != "") |>
+  distinct(Township) |>
+  arrange(Township)
 
-municipalities_in_township
+townships_in_municipality
 ```
 
 ## Parcel map (outline only)
 
 ```{r}
 #| label: fig-parcels-outline
-#| fig.cap: "All commercial & industrial parcels in the township."
+#| fig.cap: "All commercial & industrial parcels in the municipality."
 #| warning: false
 #| message: false
 
@@ -237,7 +237,7 @@ res$class_summary
 
 ```{r}
 #| label: tbl-keypin-info-summary
-#| tbl-cap: "Projects in township. You can sort each column!"
+#| tbl-cap: "Projects in municipality. You can sort each column!"
 
 res$keypin_info_summary |> DT::datatable(rownames = FALSE)
 ```
@@ -261,4 +261,4 @@ There are `r paste(valuation_wksts |> filter(pin %in% res$pin_info$pin) |> count
 
 There were   `r paste(res$parcel_comparison |> distinct(keypin) |> count() ) ` projects overall based on manually grouped keypins from combined data sources.
 
-There were  `r paste(res$parcel_comparison |> distinct(pin) |> count() ) ` PINs within this township that had been commercial or industrial at some point in time. 
+There were  `r paste(res$parcel_comparison |> distinct(pin) |> count() ) ` PINs within this municipality that had been commercial or industrial at some point in time. 
