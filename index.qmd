@@ -6,15 +6,16 @@ page-layout: full
 This website documents how individual Property Index Numbers (PINs) were grouped into larger commercial and industrial property projects.
 
 ::: {.grid}
-::: {.g-col-12 .g-col-md-4}
-### How the data are organized
 
-Read how PINs, key PINs, projects, municipalities, and townships relate to one another.
+::: {.g-col-12 .g-col-md-6}
+### Browse by Township
 
-[Read the documentation](about.qmd)
+Search for a township and open the township report containing its commercial and industrial PINs.
+
+[Browse townships](townships.qmd)
 :::
 
-::: {.g-col-12 .g-col-md-4}
+::: {.g-col-12 .g-col-md-6}
 ### Browse by municipality
 
 Search for a municipality and open the township report or reports containing its commercial and industrial PINs.
@@ -22,15 +23,21 @@ Search for a municipality and open the township report or reports containing its
 [Browse municipalities](municipalities.qmd)
 :::
 
-::: {.g-col-12 .g-col-md-4}
-### Find a PIN
+::: {.g-col-12 .g-col-md-6}
+### Find a PIN or Project
 
 Search for a PIN, municipality, township, project key PIN, or appellant.
 
 [Search PINs](pins.qmd)
 :::
+
+
+::: {.g-col-12 .g-col-md-6}
+### How the data are organized
+
+Read how PINs, key PINs, projects, municipalities, and townships relate to one another.
+
+[Read the documentation](about.qmd)
 :::
 
-## Why reports are organized by township
-
-The underlying analysis and parcel retrieval are already township-based. Township reports also avoid generating roughly 130 largely repetitive municipality pages. Municipality and PIN lookup tables provide direct paths into the relevant pre-rendered township reports.
+:::
