@@ -17,6 +17,7 @@ project:
     - "!municipality-template.qmd"
     - "!township_report_template.qmd"
     - "!municipality_report_template.qmd"
+    - "!archive/**"
 
 
 website:
