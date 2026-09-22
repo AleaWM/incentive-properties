@@ -5,10 +5,10 @@ library(janitor)
 library(naniar)
 
 # Helper function to read sheets
-read_sheets <- function(file_path) {
+read_sheets <- function(file_path, exclude_sheets = "Summary") {
   # Get the list of sheets, excluding summary sheets
   sheets <- excel_sheets(file_path)
-  sheets <- sheets[!sheets %in% "Summary"]
+  sheets <- sheets[!sheets %in% exclude_sheets]
   
   # Create a dataframe by combining each sheet's content
   dfs <- map_dfr(sheets, function(sheet) {
@@ -113,7 +113,7 @@ final_df_chi <- final_df_chi |>
 # final_df_chi <- final_df_chi %>%
 #   replace_with_na_all(~.x == "NA" )
 
-write.csv(final_df_chi, "Output/combined_methodologyworksheets_chicago2024.csv")
+write.csv(final_df_chi, "Output/Combined Methodology Worksheets/combined_methodologyworksheets_chicago2024.csv")
  
 
 # North 2025 Townships ----------------------------------------------------
@@ -135,6 +135,35 @@ final_df_chi <- final_df_chi |>
 #   replace_with_na_all(~.x == "NA" )
 
 write.csv(final_df_chi, "Output/Combined Methodology Worksheets/combined_methodologyworksheets_north2025.csv")  
+
+
+# South 2026 Townships ----------------------------------------------------
+
+# As of 2026-09-21, 2026 methodology worksheets have not yet been released
+# for Bloom, Orland, Rich, and Thornton townships. This combines only the
+# township workbooks currently available in the south_2026 input directory.
+dir_path_south_2026 <- "inputs/methodologyreports/south_2026"
+
+file_paths <- list.files(
+  dir_path_south_2026,
+  pattern = "\\.xlsx$",
+  full.names = TRUE,
+  ignore.case = TRUE
+)
+
+final_df_south_2026 <- map_dfr(
+  file_paths,
+  ~ read_sheets(.x, exclude_sheets = c("Summary", "TownIDs", "Township"))
+)
+
+final_df_south_2026 <- final_df_south_2026 |>
+  mutate(pi_ns = ifelse(is.na(pi_ns), key_pin, pi_ns)) |>
+  filter(!is.na(pi_ns))
+
+write.csv(
+  final_df_south_2026,
+  "Output/Combined Methodology Worksheets/combined_methodologyworksheets_south2026.csv"
+)
 
 
 
