@@ -21,6 +21,7 @@ keypins <- read_xlsx("../Merriman RA/ptax/Output/projects_checked_MAINFILE.xlsx"
 
 townships <- keypins |>
   filter(!is.na(Township), Township != "", Township != "Chicago") |>
+  filter(Township %nin% c("Hyde Park", "Jefferson", "Lake", " Lake View", "North Chicago", "Rogers Park", "South Chicago", "West Chicago")) |>
   distinct(Township) |>
   arrange(Township) |>
   pull(Township)
