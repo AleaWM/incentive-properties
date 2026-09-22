@@ -23,6 +23,8 @@ comm_ind <- read_csv(
 
 municipalities <- comm_ind |>
   filter(!is.na(clean_name), clean_name != "") |>
+  filter(clean_name != "Chicago") |> # to help render faster until we are
+  # confident with website formatting and keypin coding
   distinct(clean_name) |>
   arrange(clean_name) |>
   pull(clean_name)
