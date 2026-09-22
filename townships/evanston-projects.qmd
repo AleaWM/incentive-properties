@@ -44,7 +44,7 @@ ptaxsim_db_conn <- DBI::dbConnect(RSQLite::SQLite(), "../Merriman RA/ptax/ptaxsi
 
 
 # manually coded projects
-keypins <- read_xlsx("../Merriman RA/ptax/Output/projects_checked_MAINFILE.xlsx") |>
+keypins <- read_xlsx("projects_checked_MAINFILE_REVIEWED_2.xlsx") |>
   mutate(keypin = main_keypin)
 
 valuation_wksts <- read_csv("../Merriman RA/ptax/Output/keypins_from_methodwkshts.csv")
