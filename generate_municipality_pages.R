@@ -16,10 +16,9 @@ slugify <- function(x) {
 }
 
 comm_ind <- read_csv(
-  "../Merriman RA/ptax/Output/comm_ind_PINs_2011to2022_timeseries.csv",
-  show_col_types = FALSE
-) |>
-  filter(year == 2022)
+  "CookCounty-PropertyTaxes/Output/commercial_industrial_pin_universe_2026_09_21.csv",
+  col_types = cols(.default = col_character())
+) |> rename(clean_name = municipality)
 
 municipalities <- comm_ind |>
   filter(!is.na(clean_name), clean_name != "") |>
