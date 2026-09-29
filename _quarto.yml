@@ -10,14 +10,13 @@ project:
     - pins.qmd
     - townships/*.qmd
     - municipalities/*.qmd
-    - "*.qmd"
-    - "townships/*.qmd"
-    - "municipalities/*.qmd"
     - "!township_report_template.qmd"
     - "!municipality-template.qmd"
     - "!township_report_template.qmd"
     - "!municipality_report_template.qmd"
     - "!archive/**"
+    - "!CookCounty-PropertyTaxes/**"
+
 
 
 website:
@@ -35,7 +34,6 @@ website:
       - href: townships.qmd
         text: By Township
 
-        
       - href: pins.qmd
         text: Search PINs/Projects
   page-footer:
