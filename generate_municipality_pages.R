@@ -16,7 +16,7 @@ slugify <- function(x) {
 }
 
 comm_ind <- read_csv(
-  "CookCounty-PropertyTaxes/Output/commercial_industrial_pin_universe_2026_09_21.csv",
+  "Output/commercial_industrial_pin_universe_2026_09_21.csv",
   col_types = cols(.default = col_character())
 ) |> rename(clean_name = municipality)
 
