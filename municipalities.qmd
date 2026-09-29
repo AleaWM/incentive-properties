@@ -14,9 +14,7 @@ Because projects may cross municipal or township boundaries, report counts are n
 #| warning: false
 
 library(tidyverse)
-library(readr)
 library(readxl)
-library(stringr)
 library(DT)
 
 slugify <- function(x) {
@@ -28,18 +26,15 @@ slugify <- function(x) {
 }
 
 comm_ind <- read_csv(
-  "../Merriman RA/ptax/Output/comm_ind_PINs_2011to2022_timeseries.csv",
-  show_col_types = FALSE
-) |>
-  filter(year == 2022) |>
-  mutate(pin = as.character(pin))
+  "../Merriman RA/ptax/Output/comm_ind_PINs_2006to2024_timeseries.csv") |> select(pin, class, clean_name, Triad, Township, incent_prop, class, fmv, tif_years, years_existed, incentive_years, final_tax_to_dist, final_tax_to_tif, year) |>
+  mutate(pin = as.character(pin))  |> filter(year > 2023) 
 
 keypins <- read_xlsx(
-  "../Merriman RA/ptax/Output/projects_checked_MAINFILE.xlsx"
+  "Output/project_assignments_phase7_2026_09_22.xlsx"
 ) |>
   transmute(
     pin = as.character(pin),
-    keypin = as.character(main_keypin)
+    keypin = as.character(phase7_project_keypin)
   ) |>
   distinct(pin, keypin)
 
@@ -54,10 +49,13 @@ municipality_directory <- comm_ind |>
     .groups = "drop"
   ) |>
   arrange(Municipality) |>
-  mutate(
+   mutate(
     Report = paste0(
+
       '<a href="municipalities/', slugify(Municipality),
+
       '-projects.html">Open report</a>'
+
     )
   )
 
