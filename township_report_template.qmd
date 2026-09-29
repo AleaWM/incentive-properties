@@ -1,264 +1,86 @@
 ---
 title: "Township Project Report"
-params: 
+params:
   township: "Worth"
-format: 
+format:
   html:
     toc: true
     toc-location: left
-    fig-cap-location: margin
-    tbl-cap-location: margin
     code-fold: true
-    link-external-newwindow: true
     df-print: paged
-    message: false
-
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
 [Township directory](../townships.qmd) · [Municipality directory](../municipalities.qmd) · [Search PINs](../pins.qmd)
 
-```{r, message=FALSE, warning=FALSE}
+```{r}
 #| label: setup
-#| echo: false
-
-library(tidyverse)
-library(sf)
-library(stringr)
-library(readxl)
-library(ggplot2)
-library(ptaxsim)
-
-# ------------------------------------------------------------------
-# Data inputs
-# ------------------------------------------------------------------
-
-comm_ind <- read_csv("../Merriman RA/ptax/Output/comm_ind_PINs_2011to2022_timeseries.csv") %>% 
-  filter(year == 2022) |> 
-  select(-year) |>
-    mutate(pin10 = str_sub(pin, 1, 10))
-
-
-geo_names <- comm_ind |> select(pin, clean_name, Triad, Township)
-
-ptaxsim_db_conn <- DBI::dbConnect(RSQLite::SQLite(), "../Merriman RA/ptax/ptaxsim.db/ptaxsim-2023.0.0.db")
-
-
-# manually coded projects
-keypins <- read_xlsx("projects_checked_MAINFILE_REVIEWED_2.xlsx") |>
-  mutate(keypin = main_keypin)
-
-valuation_wksts <- read_csv("../Merriman RA/ptax/Output/keypins_from_methodwkshts.csv")
-
+source("R/region_summary.R")
+region_data <- load_region_data("township", params$township)
+res <- summarize_region(region_data, "township", params$township)
 ```
 
+## Explore Parcels & PINs in `r params$township`
+
+Gray footprints contain only exempt/railroad PINs. Blue shades distinguish single-PIN and multi-PIN projects within this region; colors describe categories, not individual project identities. White means unknown status or no 2024 observation. Pink marks footprints containing more than one category.
+
+
+Zoom in and click a footprint to emphasize every mapped footprint sharing one of its key PINs. Click the blank map background to reset. Hover over a footprint for PIN classes, project PIN counts, latest BOR appellant names and their appeal tax years, and recorded buyer names when available; click to keep the details open. These names apply to the PINs in that footprint. An appeal tax year is the assessment year, not necessarily the filing date. The records can identify a company or legal entity, but do not establish current ownership or a public-facing business name. Where multiple projects share a footprint, all matching projects are highlighted. Highlighting preserves the status colors.
 
 ```{r}
-#| label: fn-analyze-township
-#| echo: false
-
-# ------------------------------------------------------------------
-# Core function: run analysis for a single township
-# ------------------------------------------------------------------
-analyze_township <- function(township_name,
-                             year = 2022,
-                             comm_ind_df = comm_ind,
-                             keypins_df = keypins) {
-  
-  # IMPORTANT:
-  # Change `Township` below to whatever column in comm_ind actually holds the township name,
-  # e.g. `twnshp`, `township`, or `clean_name`.
-  twnshp_pins <- comm_ind_df |>
-    dplyr::filter(Township == township_name) |>
-    dplyr::mutate(pin10 = stringr::str_sub(pin, 1, 10))
-  
-  
-  pins_geo <- lookup_pin10_geometry(year = year, 
-                                    pin10 = twnshp_pins$pin10) %>%
-    st_as_sf(wkt = "geometry", crs = 4326)
-  
-  points <- st_as_sf(pins_geo, coords = c("longitude", "latitude"), crs = 4326)
-  
-  parcels <- st_as_sf(pins_geo, wkt = "geometry", crs = 4326)
-  
-  invalid_geom <- st_is_valid(parcels)
-#   table(invalid_geom)
-  
-  parcels$geometry <- st_make_valid(parcels$geometry)
-  
-  # Filter out invalid geometries
-  parcels <- parcels[st_is_valid(parcels), ]
-  
-  
-  ggplot(parcels) +
-    geom_sf() +
-    theme_minimal() + theme(legend.position = "none")
-  
-  
-  # 2. Join parcels to keypins
-  parcel_comparison <- twnshp_pins |>
-    left_join(parcels, by = "pin10") |>
-    dplyr::left_join(keypins_df) |>
-    dplyr::select(pin10, keypin, dplyr::everything())
-  
-  # 3. Summary by keypin (from parcels)
-  # parcel_keypin_summary <- parcel_comparison |>
-  #   sf::st_drop_geometry() |>
-  #   dplyr::group_by(keypin) |>
-  #   dplyr::summarise(
-  #     n           = dplyr::n(),
-  #     incent_pins = sum(incent_prop == "Incentive", na.rm = TRUE),
-  #     .groups     = "drop"
-  #   ) |>
-  #   dplyr::arrange(dplyr::desc(n))
-
-  # 4. Map by appealid–keypin combo
-  parcel_plot <- parcel_comparison |>
-    ggplot2::ggplot() +
-    ggplot2::geom_sf(ggplot2::aes( geometry = geometry, fill = keypin)) +
-    ggplot2::theme_minimal() +
-    ggplot2::scale_fill_discrete(na.value = "white") +
-    ggplot2::theme(legend.position = "none")
-
-  # 5. Join to comm_ind-level data for this township
-  pin_info <- comm_ind_df |>
-    dplyr::inner_join(
-      parcel_comparison,
-      # by = "pin10"
-    )
-
-  # 6. Class-level summary (pins + distinct keypins)
-  class_summary <- pin_info |>
-        sf::st_drop_geometry() |>
-
-  #  dplyr::filter(!is.na(keypin) & !is.na(class)) |>
-    dplyr::group_by(class) |>
-    dplyr::summarise(
-      pins    = dplyr::n(),
-      keypins = dplyr::n_distinct(keypin),
-     # .groups = "drop"
-    )
-
-  # 7. Keypin-level summary from comm_ind
-  keypin_info_summary <- pin_info |>
-    #dplyr::filter(!is.na(keypin)) |>
-    dplyr::group_by(keypin) |>
-    dplyr::summarise(
-      n             = dplyr::n(),
-      appellant      = first(appellant),
-      fmv            = sum(fmv,    na.rm = TRUE),
-      incentive_pins = sum(incent, na.rm = TRUE),
-      exempt         = sum(exempt, na.rm = TRUE),
-    #  .groups        = "drop"
-    ) |>
-    dplyr::arrange(dplyr::desc(incentive_pins), dplyr::desc(n))
-
-  list(
-    township              = township_name,
-    parcels               = parcels,
-    parcel_comparison     = parcel_comparison,
-  #  parcel_keypin_summary = parcel_keypin_summary,
-    parcel_plot           = parcel_plot,
-    pin_info              = pin_info,
-    class_summary         = class_summary,
-    keypin_info_summary   = keypin_info_summary
-  )
-}
-```
- 
-```{r}
-#| label: run-analysis
-
-#this_township <- params$township
-
-res <- analyze_township(
-  township_name = params$township,
-  year          = 2022,     # adjust if you want a different year
-  comm_ind_df   = comm_ind,
-  keypins_df    = keypins
-)
-
+#| label: interactive-keypins
+interactive_region(res)
 ```
 
-## Township overview
+## Explore Projects in `r params$township` with multiple PINs
 
-There are `r paste(comm_ind |> filter(Township == params$township) |> distinct(pin) |> count())` PINs in this township that were commercial or industrial at least once.
-
+Click a land parcel to highlight the footprints sharing its key PINs; click the blank map background to reset. Only projects with at least two PINs **within this region** are included. Counts include unmapped PINs; shared footprints can belong to more than one project. Gray indicates a footprint shared by multiple displayed projects. 
 
 ```{r}
-#| label: township-name
-#| echo: false
-#| layout-ncol: 2
-
-cat("Township:", res$township)
-
-municipalities_in_township <- comm_ind |>
-  filter(Township == params$township, !is.na(clean_name), clean_name != "") |>
-  distinct(Municipality = clean_name) |>
-  arrange(Municipality)
-
-municipalities_in_township
+#| label: interactive-projects
+interactive_projects(res)
 ```
 
-## Parcel map (outline only)
+## `r params$township` Property Overview
+
+These counts cover distinct fourteen-digit PINs in the historical commercial/industrial universe (2006–2024). Status and parcel geometry are from **2024**. Region membership uses the universe's latest available geographic assignment; this is not a historical boundary analysis.
+
+**Exempt** means class 0 (or could be railroad property), following the project's existing exemption flag. 
 
 ```{r}
-#| label: fig-parcels-outline
-#| fig.cap: "All commercial & industrial parcels in the township."
-#| warning: false
-#| message: false
-
-ggplot(res$parcels) +
-  geom_sf() +
-  theme_void() +
-  theme(legend.position = "none")
+#| label: tbl-region-overview
+knitr::kable(res$counts, format.args = list(big.mark = ","))
 ```
 
-## Manually coded keypins – map
+Of the `r sum(!is.na(res$pins$observed_2024))` PINs observed in 2024, **`r sum(res$pins$status == 'Exempt (class 0)')` are class 0** (`r if (sum(!is.na(res$pins$observed_2024)) > 0) sprintf('%.1f%%', 100 * sum(res$pins$status == 'Exempt (class 0)') / sum(!is.na(res$pins$observed_2024))) else 'not available'`).
 
-```{r}
-#| label: fig-keypin-map
-#| fig.cap: "Parcels grouped by manually coded keypins (based off of appeal IDs, sale documents and proximity)."
-#| warning: false
-#| message: false
+## What types of property are these PINs in 2024?
 
-res$parcel_plot
-```
-
-
-## Class summary (pins vs keypins)
+This table counts individual PINs by their **2024 assessor property classification**, with the class description beside each code. It does not count projects: one project can contain PINs in several classes. Because the sample includes properties that were commercial or industrial in earlier years, residential, vacant, and exempt classes can also appear. The final missing-record category has no known 2024 classification.
 
 ```{r}
 #| label: tbl-class-summary
-#| tbl-cap: "PINs and projects per property class"
-res$class_summary
+#| tbl-cap: "PIN counts by 2024 property class"
+class_summary(res$pins) |> knitr::kable()
 ```
 
-## Keypin-level summary (fmv, incentives, exemptions)
+## Projects in `r params$township`
+
+Counts and values include only PINs within this region. A project may extend into another region, so regional project counts are not additive. Unassigned PINs are excluded from project totals. FMV means estimated fair market value. Incentive PINs are 2024 classes 600-899. FMV is summed only over known 2024 values; an entirely missing valuation remains missing. The project identifier uses Appellant, falling back to Key PIN. Last Year of Paid Taxbill lists each distinct latest year in which a PIN had a bill greater than $0 during 2006-2024; it does not confirm payment. PINs without a positive bill in that history are identified separately. TIF counts use 2024 PIN-to-TIF membership records regardless of payment or increment, rather than positive distributions. Missing 2024 records are not counted as known TIF members.
 
 ```{r}
-#| label: tbl-keypin-info-summary
-#| tbl-cap: "Projects in township. You can sort each column!"
-
-res$keypin_info_summary |> DT::datatable(rownames = FALSE)
+#| label: tbl-projects
+#| column: page-inset
+#| 
+#| tbl-cap: "Projects, appellants, and 2024 values"
+project_table(res)
 ```
 
+## Sources and coverage
 
-There are `r paste(res$parcel_comparison %>% group_by(keypin) %>% summarize(pins_ingroup = n()) |> filter(pins_ingroup > 1) |> n_distinct())` projects with more than 1 pin in them and  `r paste(res$parcel_comparison %>% group_by(keypin) %>% summarize(pins_ingroup = n()) |> n_distinct())` projects overall based on manually grouped keypins from combined data sources.
+Historical universe: `commercial_industrial_pin_universe_2026_09_21.csv`, derived from `comm_ind_PINs_ever_2006to2024.csv`. Classification and FMV: 2024 observations in that underlying extract. Project assignments: `project_assignments_phase7_2026_09_22.csv` (phase-7 key PIN). Appellants and appeal years: latest tax-year records for each PIN in `borappeals_UPDATED.csv`, including all ties. Names come only from BOR records for that PIN, with no fallback to reviewed names. Buyer names come from the assignment file; purchase years are matched by PIN, sale document, and buyer in Assessor_Parcel_Sales_20250105.csv. Unmatched years are shown as unavailable. Last positive bills use the 2006-2024 history, and TIF membership uses tif_record_present in the 2024 extract. Class descriptions: `class_dict_expanded.csv`. Geometry: 2024 footprints from `ptaxsim-2024.0.0.db`.
 
-
-
-
-
-```{r}
-#| tbl-cap: "This many pins were in the valuation worksheets."
-
-
-valuation_wksts |> filter(pin %in% res$pin_info$pin)
-```
-
-There are `r paste(valuation_wksts |> filter(pin %in% res$pin_info$pin) |> count())` PINs in the valuation worksheets with `r paste(valuation_wksts |> filter(pin %in% res$pin_info$pin)|> distinct(keypin) |> count())` distinct keypins.
-
-
-There were   `r paste(res$parcel_comparison |> distinct(keypin) |> count() ) ` projects overall based on manually grouped keypins from combined data sources.
-
-There were  `r paste(res$parcel_comparison |> distinct(pin) |> count() ) ` PINs within this township that had been commercial or industrial at some point in time. 
+PIN totals come from the tabular universe, independently of map coverage. Footprints are drawn once even when multiple PINs share the same ten-digit identifier. Assignment-review counts identify flagged records; absence of a flag does not certify an assignment. Directory and PIN-search pages may still use older data vintages.
