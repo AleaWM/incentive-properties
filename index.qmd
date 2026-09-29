@@ -1,14 +1,19 @@
 ---
 title: "PINs to Projects"
 page-layout: full
+format:
+  html:
+    css: index.css
 ---
 
 This website documents how individual Property Index Numbers (PINs) were grouped into larger commercial and industrial property projects.
 
-::: {.grid}
+::: {.grid .index-cards}
 
 ::: {.g-col-12 .g-col-md-6}
 ### Browse by Township
+
+![](images/townships.png){.card-image fig-alt="Map of Cook County townships"}
 
 Search for a township and open the township report containing its commercial and industrial PINs.
 
@@ -18,6 +23,8 @@ Search for a township and open the township report containing its commercial and
 ::: {.g-col-12 .g-col-md-6}
 ### Browse by municipality
 
+![](images/cook-county-municipalities.png){.card-image fig-alt="Map of municipal boundaries in Cook County"}
+
 Search for a municipality and open the township report or reports containing its commercial and industrial PINs.
 
 [Browse municipalities](municipalities.qmd)
@@ -25,6 +32,8 @@ Search for a municipality and open the township report or reports containing its
 
 ::: {.g-col-12 .g-col-md-6}
 ### Find a PIN or Project
+
+![](images/data-organization.svg){.card-image fig-alt="Diagram showing PIN records linked to a project key PIN and regional summaries"}
 
 Search for a PIN, municipality, township, project key PIN, or appellant.
 
@@ -37,7 +46,38 @@ Search for a PIN, municipality, township, project key PIN, or appellant.
 
 Read how PINs, key PINs, projects, municipalities, and townships relate to one another.
 
+
+[![](images/project-identifier-sources.svg){.source-diagram fig-alt="PTAXSIM PIN population, CCAO valuation worksheets, Board of Review appeals, and sales records connect to reviewed assignments and the PIN-to-project-key-PIN crosswalk. Current identifiers come from reviewed assignments."}](images/project-identifier-sources.svg)
+
+
 [Read the documentation](about.qmd)
+:::
+
+:::
+## Examaple: Different ways to define a project
+
+These four views of Matteson near I-57 and Lincoln Highway illustrate how manually coded projects, assessor valuation worksheets, and CMAP developments group properties differently. None of them are wrong, but they are different. They also are snapshots from different points in time. 
+
+::: {.comparison-grid}
+
+::: {.comparison-item}
+![Manually coded projects: 85 projects representing 163 PINs. Projects defined by keypin variable in keypins_checked_MAINFILE.xlsx](images/land-block-comparisons/image5.png)
+:::
+
+::: {.comparison-item}
+![Valuation worksheets: 140 PINs, 88 distinct key PINs, and 22 unmatched PINs.](images/land-block-comparisons/image6.png)
+
+Matteson is located in Rich Township. KeyPINs were from the 2023 Reassessment of the South Triad. 
+:::
+
+::: {.comparison-item}
+![CMAP developments: another way to group the same area.](images/land-block-comparisons/image7.png)
+
+See CMAP's [Development Database](https://cmap.illinois.gov/data/land-use/development-database/) for another great resource on developments in Cook, DuPage, Kane, Kendall, Lake, McHenry, and Will County.
+:::
+
+::: {.comparison-item}
+![Google aerial screenshot: the physical setting for comparison.](images/land-block-comparisons/image8.png)
 :::
 
 :::
