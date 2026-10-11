@@ -10,6 +10,7 @@ output_dir <- "Output"
 methodology_dir <- file.path(output_dir, "Combined Methodology Worksheets")
 checked_dir <- file.path(output_dir, "Pin to Project Files")
 output_date <- "2026_09_21"
+phase7_output_date <- "2026_09_24"
 
 write_csv_auditable <- function(data, path) {
   tryCatch(
@@ -48,7 +49,7 @@ infer_township <- function(file_name) {
 read_methodology <- function(file_name, year, triad, pin_column) {
   path <- file.path(methodology_dir, file_name)
   data <- read_csv(path, col_types = cols(.default = col_character()),
-                   show_col_types = FALSE, name_repair = "unique")
+    show_col_types = FALSE, name_repair = "unique")
   required <- c("key_pin", pin_column, "file_name", "sheet_name")
   if (!all(required %in% names(data))) stop("Missing required fields in ", path)
   data |>
@@ -65,7 +66,7 @@ parse_methodology <- function(data) {
     mutate(
       methodology_keypin = normalize_pin(methodology_keypin_raw),
       pin_text = str_remove_all(str_to_lower(coalesce(pin_list_raw, "")), "-"),
-      has_unexpanded_range = str_detect(pin_text, "\\b(thru|through)\\b"),
+      has_unexpanded_range = str_detect(pin_text, "\\b(thru|through)\\b"),  # projects recently appealed no longer have this issue. thank god.
       parsed_pins = str_extract_all(pin_text, "(?<![0-9])[0-9]{14}(?![0-9])"),
       parsed_pin_count = lengths(parsed_pins), invalid_keypin = is.na(methodology_keypin)
     )
@@ -74,7 +75,7 @@ parse_methodology <- function(data) {
     select(-pin_text) |>
     unnest_longer(parsed_pins, values_to = "pin") |>
     transmute(pin, methodology_keypin, methodology_year, triad, township,
-              source_file, source_sheet) |>
+      source_file, source_sheet) |>
     distinct()
   exceptions <- staged |>
     filter(has_unexpanded_range | invalid_keypin | parsed_pin_count == 0) |>
@@ -205,7 +206,7 @@ best_current <- best_current |>
   left_join(project_lineage |>
     group_by(pin) |>
     summarise(historical_project_split = any(methodology_keypin %in% split_keypins), .groups = "drop"),
-    by = "pin") |>
+  by = "pin") |>
   mutate(historical_projects_merged = best_methodology_keypin %in% merged_best_keypins) |>
   arrange(pin)
 
@@ -256,7 +257,7 @@ read_checked_sheet <- function(path, sheet) {
 checked_inventory <- map_dfr(checked_files, function(path) map_dfr(excel_sheets(path), function(sheet) {
   data <- read_excel(path, sheet = sheet, col_types = "text") |> clean_names()
   tibble(source_file = basename(path), source_sheet = sheet, source_township = checked_township(path),
-         rows = nrow(data), columns = ncol(data), column_names = paste(names(data), collapse = " | "))
+    rows = nrow(data), columns = ncol(data), column_names = paste(names(data), collapse = " | "))
 }))
 
 checked_assignments <- map_dfr(checked_files, function(path) {
@@ -279,7 +280,7 @@ checked_inventory <- checked_inventory |>
       duplicate_pin_rows = sum(duplicated(pin) & !is.na(pin)), invalid_pins = sum(invalid_pin),
       invalid_keypins = sum(invalid_checked_keypin),
       conflicting_pins = n_distinct(pin[checked_assignment_conflict], na.rm = TRUE), .groups = "drop"),
-    by = c("source_file", "source_sheet"))
+  by = c("source_file", "source_sheet"))
 
 write_csv_auditable(checked_assignments, file.path(output_dir, paste0("checked_township_assignments_", output_date, ".csv")))
 write_csv_auditable(checked_conflicts, file.path(output_dir, paste0("checked_township_conflicts_", output_date, ".csv")))
@@ -325,7 +326,7 @@ universe_raw <- data.table::fread(
 ) |>
   as_tibble() |>
   mutate(pin = normalize_pin(pin), year = suppressWarnings(as.integer(year)),
-         class = str_trim(class), incentive_numeric = suppressWarnings(as.numeric(incent_prop))) |>
+    class = str_trim(class), incentive_numeric = suppressWarnings(as.numeric(incent_prop))) |>
   filter(!is.na(pin), !is.na(year))
 
 latest_universe_year <- max(universe_raw$year, na.rm = TRUE)
@@ -341,7 +342,7 @@ pin_universe <- universe_raw |>
     township = first_nonblank(Township),
     triad = first_nonblank(Triad),
     ever_incentive_class = any(suppressWarnings(as.integer(class)) >= 600 &
-                                 suppressWarnings(as.integer(class)) < 900, na.rm = TRUE) |
+      suppressWarnings(as.integer(class)) < 900, na.rm = TRUE) |
       any(incentive_numeric == 1, na.rm = TRUE),
     incentive_labels_observed = collapse_unique(incent_prop),
     observed_year_count = n_distinct(year),
@@ -354,10 +355,10 @@ pin_universe <- universe_raw |>
     universe_source_file = basename(universe_path)
   ) |>
   select(pin, pin10, pin7, township, municipality, triad, classes_observed,
-         current_class, first_year_observed, last_year_observed,
-         currently_exists_in_latest_extract, ever_incentive_class,
-         incentive_labels_observed, observed_year_count, universe_latest_year,
-         universe_source_file) |>
+    current_class, first_year_observed, last_year_observed,
+    currently_exists_in_latest_extract, ever_incentive_class,
+    incentive_labels_observed, observed_year_count, universe_latest_year,
+    universe_source_file) |>
   arrange(pin)
 
 write_csv_auditable(pin_universe, file.path(output_dir, paste0("commercial_industrial_pin_universe_", output_date, ".csv")))
@@ -396,8 +397,11 @@ checked_evidence <- checked_assignments |>
   ) |>
   mutate(across(c(checked_appeal_year, checked_sale_year), ~ if_else(is.infinite(.x), NA_integer_, .x)))
 
-bor_candidates <- c(file.path(output_dir, "borappeals.csv"),
-                    file.path("..", "..", "Merriman RA", "ptax", "Output", "borappeals.csv"))
+
+# added new appeals observations on September 24, 2026: "../Merriman RA/ptax/Output/borappeals_UPDATED.csv"
+bor_candidates <- c(file.path(output_dir, "borappeals_UPDATED.csv"),
+  # bor_candidates <- c(file.path(output_dir, "borappeals.csv"),
+  file.path("..", "..", "Merriman RA", "ptax", "Output", "borappeals.csv"))
 bor_path <- bor_candidates[file.exists(bor_candidates)][1]
 if (is.na(bor_path)) stop("borappeals.csv was not found")
 bor_evidence <- data.table::fread(
@@ -427,12 +431,12 @@ if (is.na(sales_path)) stop("Assessor parcel sales data was not found")
 sales_evidence <- data.table::fread(
   sales_path,
   select = c("pin", "year", "class", "sale_document_num", "sale_seller_name",
-             "num_parcels_sale", "sale_buyer_name"),
+    "num_parcels_sale", "sale_buyer_name"),
   colClasses = "character", showProgress = FALSE
 ) |>
   as_tibble() |>
   mutate(pin = normalize_pin(pin), year = suppressWarnings(as.integer(year)),
-         class_numeric = suppressWarnings(as.integer(class))) |>
+    class_numeric = suppressWarnings(as.integer(class))) |>
   filter(!is.na(pin), class_numeric >= 400, class_numeric < 900) |>
   arrange(pin, desc(year)) |>
   group_by(pin) |>
@@ -447,27 +451,51 @@ sales_evidence <- data.table::fread(
   mutate(latest_sale_year = if_else(is.infinite(latest_sale_year), NA_integer_, latest_sale_year))
 
 prior_main_path <- file.path("..", "projects_checked_MAINFILE_REVIEWED_2.xlsx")
-prior_main <- if (file.exists(prior_main_path)) {
-  read_excel(prior_main_path, sheet = 1, col_types = "text") |>
-    clean_names() |>
-    transmute(
-      pin = normalize_pin(pin),
-      prior_main_keypin = normalize_pin(coalesce(reviewed_main_keypin, main_keypin)),
-      prior_main_original_keypin = normalize_pin(main_keypin),
-      prior_main_review_confidence = keypin_review_confidence,
-      prior_main_review_reference = keypin_review_reference,
-      prior_main_review_reason = keypin_review_reason
-    ) |>
-    filter(!is.na(pin)) |>
-    distinct(pin, .keep_all = TRUE)
-} else tibble(pin = character(), prior_main_keypin = character())
+if (!file.exists(prior_main_path)) {
+  stop("The Phase 7 reviewed workbook was not found: ", prior_main_path)
+}
+
+prior_main_raw <- read_excel(prior_main_path, sheet = 1, col_types = "text") |>
+  clean_names()
+
+# The reviewed workbook currently calls this field reviewed_main_keypin. Accept
+# reviewed_project_keypin too so the script remains valid if the workbook header
+# is updated to match the research terminology used in Phase 7.
+reviewed_keypin_column <- intersect(
+  c("reviewed_project_keypin", "reviewed_main_keypin"),
+  names(prior_main_raw)
+) |>
+  first()
+if (is.null(reviewed_keypin_column)) {
+  stop("The reviewed workbook needs reviewed_project_keypin or reviewed_main_keypin")
+}
+if (!"main_keypin" %in% names(prior_main_raw)) {
+  stop("The reviewed workbook needs main_keypin so the original assignment can be retained")
+}
+
+prior_main <- prior_main_raw |>
+  transmute(
+    pin = normalize_pin(pin),
+    project_keypin = normalize_pin(main_keypin),
+    reviewed_project_keypin = normalize_pin(.data[[reviewed_keypin_column]]),
+    reviewed_project_keypin_source_column = reviewed_keypin_column,
+    reviewed_project_change_type = keypin_change_type,
+    reviewed_project_confidence = keypin_review_confidence,
+    reviewed_project_reference = keypin_review_reference,
+    reviewed_project_reason = keypin_review_reason
+  ) |>
+  filter(!is.na(pin)) |>
+  group_by(pin) |>
+  mutate(reviewed_workbook_duplicate_pin = n() > 1) |>
+  ungroup() |>
+  distinct(pin, .keep_all = TRUE)
 
 project_evidence <- pin_universe |>
   left_join(current_evidence, by = "pin") |>
   left_join(best_current |>
     select(pin, best_methodology_keypin, best_methodology_year,
-           methodology_keypin_changed, methodology_years, historical_keypins,
-           historical_project_split, historical_projects_merged), by = "pin") |>
+      methodology_keypin_changed, methodology_years, historical_keypins,
+      historical_project_split, historical_projects_merged), by = "pin") |>
   left_join(checked_evidence, by = "pin") |>
   left_join(bor_evidence, by = "pin") |>
   left_join(sales_evidence, by = "pin") |>
@@ -483,7 +511,7 @@ project_evidence <- pin_universe |>
     appeal_id = coalesce(checked_appeal_id, latest_appeal_id),
     sale_document_number = coalesce(checked_sale_document_number, latest_sale_document_number),
     evidence_year = pmax(best_methodology_year, checked_appeal_year, checked_sale_year,
-                         latest_appeal_year, latest_sale_year, na.rm = TRUE),
+      latest_appeal_year, latest_sale_year, na.rm = TRUE),
     evidence_year = if_else(is.infinite(evidence_year), NA_real_, evidence_year),
     evidence_source_files = paste0(
       "universe:", universe_source_file,
@@ -491,7 +519,7 @@ project_evidence <- pin_universe |>
       if_else(!is.na(checked_source_files), paste0(" | checked:", checked_source_files), ""),
       if_else(!is.na(latest_appeal_id), paste0(" | appeals:", basename(bor_path)), ""),
       if_else(!is.na(latest_sale_document_number), paste0(" | sales:", basename(sales_path)), ""),
-      if_else(!is.na(prior_main_keypin), paste0(" | prior_main:", basename(prior_main_path)), "")
+      if_else(!is.na(reviewed_project_keypin), paste0(" | reviewed_main:", basename(prior_main_path)), "")
     )
   ) |>
   group_by(best_methodology_keypin) |>
@@ -560,7 +588,7 @@ project_evidence <- pin_universe |>
     evidence_conflict = coalesce(current_methodology_conflict, FALSE) |
       coalesce(checked_assignment_conflict, FALSE) |
       (!is.na(checked_keypins) & !is.na(best_methodology_keypin) &
-         checked_keypins != best_methodology_keypin) |
+        checked_keypins != best_methodology_keypin) |
       coalesce(methodology_keypin_changed, FALSE)
   ) |>
   select(-.evidence_row, -pin7_numeric, -previous_pin7_gap, -next_pin7_gap) |>
@@ -568,4 +596,98 @@ project_evidence <- pin_universe |>
 
 write_csv_auditable(project_evidence, file.path(output_dir, paste0("project_linkage_evidence_", output_date, ".csv")))
 
-message("Created Phase 2-6 methodology, checked-assignment, PIN-universe, and evidence outputs in ", output_dir)
+# Phase 7: use the manually reviewed assignment as the sole project authority.
+# The original assignment is retained for comparison, but neither it nor BOR,
+# sales, methodology, appellant, owner, buyer, or proximity evidence can
+# overwrite reviewed_project_keypin. PINs absent from the reviewed workbook stay
+# unassigned and are routed to the review queue rather than silently clustered.
+phase7_assignments <- project_evidence |>
+  mutate(
+    phase7_project_keypin = if_else(
+      coalesce(reviewed_workbook_duplicate_pin, FALSE),
+      NA_character_,
+      reviewed_project_keypin
+    ),
+    reviewed_project_keypin_changed = !is.na(project_keypin) &
+      !is.na(reviewed_project_keypin) & project_keypin != reviewed_project_keypin,
+    phase7_assignment_source = if_else(
+      !is.na(phase7_project_keypin),
+      paste0(basename(prior_main_path), ":", reviewed_project_keypin_source_column),
+      NA_character_
+    ),
+    phase7_assignment_status = case_when(
+      reviewed_workbook_duplicate_pin %in% TRUE ~ "review_required_duplicate_pin_in_reviewed_workbook",
+      is.na(reviewed_project_keypin) ~ "review_required_no_reviewed_assignment",
+      TRUE ~ "assigned_from_reviewed_workbook"
+    ),
+    phase7_review_required = phase7_assignment_status != "assigned_from_reviewed_workbook",
+    phase7_evidence_disagrees = !is.na(reviewed_project_keypin) & (
+      (!is.na(best_methodology_keypin) & best_methodology_keypin != reviewed_project_keypin) |
+        (!is.na(checked_keypins) & checked_keypins != reviewed_project_keypin)
+    )
+  ) |>
+  select(
+    pin, pin10, pin7, township, municipality, triad,
+    phase7_project_keypin, project_keypin, reviewed_project_keypin,
+    reviewed_project_keypin_changed, reviewed_project_change_type,
+    reviewed_project_confidence, reviewed_project_reference,
+    reviewed_project_reason, reviewed_project_keypin_source_column,
+    phase7_assignment_source, phase7_assignment_status,
+    phase7_review_required, phase7_evidence_disagrees,
+    reviewed_workbook_duplicate_pin,
+    best_methodology_keypin, checked_keypins, appeal_id, appellant_name,
+    sale_document_number, buyer_name, proximity_evidence_status,
+    evidence_conflict, evidence_source_files
+  ) |>
+  arrange(pin)
+
+phase7_review_queue <- phase7_assignments |>
+  filter(phase7_review_required) |>
+  select(
+    pin, township, municipality, triad, phase7_assignment_status,
+    project_keypin, reviewed_project_keypin, best_methodology_keypin,
+    checked_keypins, appeal_id, appellant_name, sale_document_number,
+    buyer_name, proximity_evidence_status, evidence_conflict,
+    evidence_source_files
+  ) |>
+  arrange(township, municipality, pin)
+
+phase7_variable_dictionary <- tribble(
+  ~variable, ~indicates,
+  "project_keypin", "Original project assignment from main_keypin in projects_checked_MAINFILE_REVIEWED_2.xlsx; retained only for comparison with the first website grouping.",
+  "reviewed_project_keypin", "Manually reviewed project assignment. Read from reviewed_project_keypin when present, otherwise the workbook's current reviewed_main_keypin header.",
+  "phase7_project_keypin", "Phase 7 project identifier used for the new crosswalk; exactly equals reviewed_project_keypin and is never replaced by weaker evidence.",
+  "reviewed_project_keypin_changed", "TRUE when the reviewed assignment differs from the original project_keypin.",
+  "reviewed_project_change_type", "Reviewer's change category copied from keypin_change_type in the reviewed workbook.",
+  "reviewed_project_confidence", "Review confidence copied from keypin_review_confidence in the reviewed workbook.",
+  "reviewed_project_reference", "Review source/reference copied from keypin_review_reference in the reviewed workbook.",
+  "reviewed_project_reason", "Review rationale copied from keypin_review_reason in the reviewed workbook.",
+  "reviewed_project_keypin_source_column", "Physical workbook column used for reviewed_project_keypin; currently reviewed_main_keypin.",
+  "reviewed_workbook_duplicate_pin", "TRUE if a PIN appeared more than once on the reviewed workbook's first sheet before deduplication.",
+  "phase7_assignment_source", "Workbook and column that supplied phase7_project_keypin.",
+  "phase7_assignment_status", "Whether the PIN was assigned from the reviewed workbook or requires review because no unique reviewed assignment exists.",
+  "phase7_review_required", "TRUE when Phase 7 did not find a usable reviewed assignment.",
+  "phase7_evidence_disagrees", "TRUE when methodology or older checked-township evidence differs from the reviewed assignment; diagnostic only and does not override it.",
+  "bor_project_ids_observed", "Historical BOR project_id values. In the inspected legacy code this was the appeal ID; project_appellant/proj_appellant was the field combining it with appellant name. Not used for Phase 7 assignment.",
+  "best_methodology_keypin", "Most recent unambiguous Assessor methodology worksheet keypin available for the PIN; supporting evidence only.",
+  "checked_keypins", "Older manually checked township-workbook keypin(s); supporting evidence only.",
+  "appeal_id", "Appeal identifier retained as supporting evidence; not a Phase 7 project identifier.",
+  "appellant_name", "Appeal-associated name retained as supporting evidence; not a verified owner or project identifier.",
+  "sale_document_number", "Most relevant available sale document number retained as supporting evidence.",
+  "proximity_evidence_status", "Rule-based description of PIN10/PIN7 and appellant proximity evidence; diagnostic only."
+)
+
+write_csv_auditable(
+  phase7_assignments,
+  file.path(output_dir, paste0("project_assignments_phase7_", phase7_output_date, ".csv"))
+)
+write_csv_auditable(
+  phase7_review_queue,
+  file.path(output_dir, paste0("project_assignment_review_queue_phase7_", phase7_output_date, ".csv"))
+)
+write_csv_auditable(
+  phase7_variable_dictionary,
+  file.path(output_dir, paste0("project_assignment_variables_phase7_", phase7_output_date, ".csv"))
+)
+
+message("Created Phase 2-7 methodology, evidence, reviewed assignments, review queue, and variable dictionary in ", output_dir)
