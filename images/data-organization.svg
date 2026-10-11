@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250" role="img" aria-labelledby="title desc">
+  <title id="title">From PIN records to regional summaries</title>
+  <desc id="desc">Three PIN records link to a project key PIN, which links to municipality and township summaries.</desc>
+  <g fill="none" stroke="#60788f" stroke-width="3">
+    <path d="M65 68V92H295V68M180 92V116M180 160V184M95 184H265M95 184V202M265 184V202"/>
+  </g>
+  <g stroke="#0072b2" stroke-width="2" fill="#e8f3fa">
+    <rect x="15" y="22" width="100" height="46" rx="8"/>
+    <rect x="130" y="22" width="100" height="46" rx="8"/>
+    <rect x="245" y="22" width="100" height="46" rx="8"/>
+    <rect x="80" y="116" width="200" height="44" rx="8" fill="#0072b2"/>
+    <rect x="15" y="202" width="160" height="38" rx="8"/>
+    <rect x="185" y="202" width="160" height="38" rx="8"/>
+  </g>
+  <g font-family="sans-serif" font-size="17" text-anchor="middle" fill="#243b53">
+    <text x="65" y="51">PIN</text><text x="180" y="51">PIN</text><text x="295" y="51">PIN</text>
+    <text x="180" y="144" fill="white">Project key PIN</text>
+    <text x="95" y="227">Municipality</text><text x="265" y="227">Township</text>
+  </g>
+</svg>

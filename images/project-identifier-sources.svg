@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
+  <title id="title">Sources behind project identifiers</title>
+  <desc id="desc">PTAXSIM defines the historical commercial and industrial PIN population. CCAO valuation methodology worksheets, Board of Review appeals, and sale records provide grouping and name evidence. Reviewed assignments determine the current project key PIN, retained in the PIN-to-project crosswalk. Supporting evidence does not automatically override reviewed assignments.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#60788f"/></marker></defs>
+  <rect width="760" height="520" rx="16" fill="#f8fafc"/>
+  <g fill="none" stroke="#60788f" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M190 114V128H365V272"/>
+    <path d="M570 114V128H395V272"/>
+    <path d="M190 232V251H345V272"/>
+    <path d="M570 232V251H415V272"/>
+    <path d="M380 354V406"/>
+  </g>
+  <g stroke-width="2">
+    <rect x="24" y="24" width="332" height="90" rx="12" fill="#e8f3fa" stroke="#0072b2"/>
+    <rect x="404" y="24" width="332" height="90" rx="12" fill="#e8f3fa" stroke="#0072b2"/>
+    <rect x="24" y="142" width="332" height="90" rx="12" fill="#e8f3fa" stroke="#0072b2"/>
+    <rect x="404" y="142" width="332" height="90" rx="12" fill="#e8f3fa" stroke="#0072b2"/>
+    <rect x="170" y="276" width="420" height="78" rx="12" fill="#fff2d7" stroke="#bd8500"/>
+    <rect x="140" y="410" width="480" height="78" rx="12" fill="#0072b2" stroke="#0072b2"/>
+  </g>
+  <g font-family="Arial, sans-serif" text-anchor="middle" fill="#243b53">
+    <g font-size="24" font-weight="bold">
+      <text x="190" y="61">PTAXSIM</text>
+      <text x="570" y="61">CCAO worksheets</text>
+      <text x="190" y="179">Board of Review</text>
+      <text x="570" y="179">Sale records</text>
+      <text x="380" y="307">Reviewed assignments</text>
+      <text x="380" y="442" fill="white">PIN → Project key PIN</text>
+    </g>
+    <g font-size="21">
+      <text x="190" y="91">Historical C&amp;I PIN population</text>
+      <text x="570" y="91">Valuation groups / key PINs</text>
+      <text x="190" y="209">Appeal groups / appellants</text>
+      <text x="570" y="209">Documents / buyers / sellers</text>
+      <text x="380" y="336">Names, groups &amp; land-block context</text>
+      <text x="380" y="384">Reviewed key PIN retained</text>
+      <text x="380" y="471" fill="white">Current project assignment crosswalk</text>
+    </g>
+  </g>
+</svg>
