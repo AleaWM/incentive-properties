@@ -7,7 +7,7 @@ Search for a township below and open its report. Township reports summarize the 
 
 Because projects may cross municipal or township boundaries, report counts are not additive across geographies.
 
-Total counts cover 2011–2024. The 2024 columns count PINs observed that year and projects with at least one of those PINs, using the reviewed project assignments.
+Total counts cover 2006–2024. The 2024 columns count PINs observed that year and projects with at least one of those PINs, using the reviewed project assignments.
 
 ```{r}
 #| label: township-directory
