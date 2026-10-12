@@ -16,12 +16,17 @@ slugify <- function(x) {
     str_remove("-$")
 }
 
-keypins <- read_xlsx("../Merriman RA/ptax/Output/projects_checked_MAINFILE.xlsx") |>
-  mutate(keypin = main_keypin)
+# keypins <- read_xlsx("../Merriman RA/ptax/Output/projects_checked_MAINFILE.xlsx") |>
+# mutate(keypin = main_keypin)
+
+# manually coded projects
+keypins <- read_xlsx("Output/project_assignments_phase7_2026_09_22.xlsx") |>
+  mutate(keypin = phase7_project_keypin,
+    Township = township)
 
 townships <- keypins |>
   filter(!is.na(Township), Township != "", Township != "Chicago") |>
-  filter(Township %nin% c("Hyde Park", "Jefferson", "Lake", " Lake View", "North Chicago", "Rogers Park", "South Chicago", "West Chicago")) |>
+  filter(!Township %in% c("Hyde Park", "Jefferson", "Lake", " Lake View", "North Chicago", "Rogers Park", "South Chicago", "West Chicago")) |>
   distinct(Township) |>
   arrange(Township) |>
   pull(Township)
