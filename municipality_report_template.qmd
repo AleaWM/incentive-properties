@@ -84,13 +84,13 @@ Counts and values include only PINs within this region. A project may extend int
 
 ```{r}
 #| label: tbl-projects
-#| column: screen-inset
+#| column: page
 #| tbl-cap: "Projects, appellants, and 2024 values"
 project_table(res)
 ```
 
 ## Sources and coverage
 
-Historical universe: `commercial_industrial_pin_universe_2026_09_21.csv`, derived from `comm_ind_PINs_ever_2006to2024.csv`. Classification and FMV: 2024 observations in that underlying extract. Project assignments: `project_assignments_phase7_2026_09_22.csv` (phase-7 key PIN). Appellants and appeal years: latest tax-year records for each PIN in `borappeals_UPDATED.csv`, including all ties. Names come only from BOR records for that PIN, with no fallback to reviewed names. Buyer names come from the assignment file; purchase years are matched by PIN, sale document, and buyer in Assessor_Parcel_Sales_20250105.csv. Unmatched years are shown as unavailable. Last positive bills use the 2006-2024 history, and TIF membership uses tif_record_present in the 2024 extract. Class descriptions: `class_dict_expanded.csv`. Geometry: 2024 footprints from `ptaxsim-2024.0.0.db`.
+Historical universe: `commercial_industrial_pin_universe_2026_09_21.csv`, derived from `comm_ind_PINs_ever_2006to2024.csv`. Classification and FMV: 2024 observations in that underlying extract. Project assignments: `projects_checked_MAINFILE_REVIEWED_2.xlsx` (which will be renamed to a  cleaner name once finalized as the main file again post data updates, cleaned project identifier is the phase-7 key PIN). Appellants and appeal years: latest tax-year records for each PIN in `borappeals_UPDATED.csv`, including all ties. Names come only from BOR records for that PIN, with no fallback to reviewed names. Buyer names come from the assignment file; purchase years are matched by PIN, sale document, and buyer in Assessor_Parcel_Sales_20250105.csv. Unmatched years are shown as unavailable. Last positive bills use the 2006-2024 history, and TIF membership uses tif_record_present in the 2024 extract. Class descriptions: `class_dict_expanded.csv`. Geometry: 2024 footprints from `ptaxsim-2024.0.0.db`.
 
 PIN totals come from the tabular universe, independently of map coverage. Footprints are drawn once even when multiple PINs share the same ten-digit identifier. Assignment-review counts identify flagged records; absence of a flag does not certify an assignment. Directory and PIN-search pages may still use older data vintages.
