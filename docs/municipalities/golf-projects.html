@@ -23,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -109,17 +74,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 
+<script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+
+<script src="../site_libs/leaflet-1.3.1/leaflet.js"></script>
+
+<link href="../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+
+<script src="../site_libs/proj4-2.6.2/proj4.min.js"></script>
+
+<script src="../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+
+<link href="../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+
+<script src="../site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+
 <link href="../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
 
 <script src="../site_libs/datatables-binding-0.33/datatables.js"></script>
-
-<script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 
 <link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
 
 <link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
 
 <script src="../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+
+<link href="../site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
+
+<script src="../site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+
+<link href="../site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
+
+<script src="../site_libs/selectize-0.12.0/selectize.min.js"></script>
 
 <link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
 
@@ -133,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="floating nav-fixed slimcontent quarto-light">
+<body class="floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -185,11 +172,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#municipality-overview" id="toc-municipality-overview" class="nav-link active" data-scroll-target="#municipality-overview">Municipality overview</a></li>
-  <li><a href="#parcel-map-outline-only" id="toc-parcel-map-outline-only" class="nav-link" data-scroll-target="#parcel-map-outline-only">Parcel map (outline only)</a></li>
-  <li><a href="#manually-coded-keypins-map" id="toc-manually-coded-keypins-map" class="nav-link" data-scroll-target="#manually-coded-keypins-map">Manually coded keypins – map</a></li>
-  <li><a href="#class-summary-pins-vs-keypins" id="toc-class-summary-pins-vs-keypins" class="nav-link" data-scroll-target="#class-summary-pins-vs-keypins">Class summary (pins vs keypins)</a></li>
-  <li><a href="#keypin-level-summary-fmv-incentives-exemptions" id="toc-keypin-level-summary-fmv-incentives-exemptions" class="nav-link" data-scroll-target="#keypin-level-summary-fmv-incentives-exemptions">Keypin-level summary (fmv, incentives, exemptions)</a></li>
+  <li><a href="#explore-parcels-pins-in-golf" id="toc-explore-parcels-pins-in-golf" class="nav-link active" data-scroll-target="#explore-parcels-pins-in-golf">Explore Parcels &amp; PINs in Golf</a></li>
+  <li><a href="#explore-projects-in-golf-with-multiple-pins" id="toc-explore-projects-in-golf-with-multiple-pins" class="nav-link" data-scroll-target="#explore-projects-in-golf-with-multiple-pins">Explore Projects in Golf with multiple PINs</a></li>
+  <li><a href="#golf-property-overview" id="toc-golf-property-overview" class="nav-link" data-scroll-target="#golf-property-overview">Golf Property Overview</a></li>
+  <li><a href="#what-types-of-property-are-these-pins-in-2024" id="toc-what-types-of-property-are-these-pins-in-2024" class="nav-link" data-scroll-target="#what-types-of-property-are-these-pins-in-2024">What types of property are these PINs in 2024?</a></li>
+  <li><a href="#projects-in-golf" id="toc-projects-in-golf" class="nav-link" data-scroll-target="#projects-in-golf">Projects in Golf</a></li>
+  <li><a href="#sources-and-coverage" id="toc-sources-and-coverage" class="nav-link" data-scroll-target="#sources-and-coverage">Sources and coverage</a></li>
   </ul>
 </nav>
 </nav>
@@ -220,162 +208,164 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><a href="../townships.html">Township directory</a> · <a href="../municipalities.html">Municipality directory</a> · <a href="../pins.html">Search PINs</a></p>
+<section id="explore-parcels-pins-in-golf" class="level2">
+<h2 class="anchored" data-anchor-id="explore-parcels-pins-in-golf">Explore Parcels &amp; PINs in Golf</h2>
+<p>Gray footprints contain only exempt/railroad PINs. Blue shades distinguish single-PIN and multi-PIN projects within this region; colors describe categories, not individual project identities. White means unknown status or no 2024 observation. Pink marks footprints containing more than one category.</p>
+<p>Zoom in and click a parcel footprint to emphasize every mapped footprint identified as being part of a project, or common development (based on taxpayer/owner information). Click the blank map background to reset. Hover over a footprint for PIN classes, project PIN counts, latest BOR appellant names and their appeal tax years, and recorded buyer names when available; click to keep the details open. These names apply to the PINs in that footprint. An appeal tax year is the assessment year, not necessarily the filing date. Where multiple projects share a footprint, all matching projects are highlighted.</p>
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#this_municipality &lt;- params$municipality</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">analyze_municipality</span>(</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">municipality_name =</span> params<span class="sc">$</span>municipality,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">year          =</span> <span class="dv">2022</span>,     <span class="co"># adjust if you want a different year</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">comm_ind_df   =</span> comm_ind,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">keypins_df    =</span> keypins</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(pin, incent_prop, clean_name, Triad, Township,
-pin10)`
-Joining with `by = join_by(pin, class, tax_code_num, tax_bill_total, av_mailed,
-av_certified, av_board, av_clerk, exe_abate, assess_ratio, improvement_ind,
-comparable_props, `building type`, land_use, incent_prop, class_1dig,
-major_class_code, major_class_type, loa, agency_num, tax_code_rate, clean_name,
-Triad, Township, tax_code_distribution_pct, has_AB_exemp, fmv, fmv_NA_flag,
-in_tif, class_group, multi_muni, multimuni_flag, tif_years, years_existed,
-incentive_years, landuse_change, incent_change, tif_change, incent, exempt,
-gain_incent, lose_incent, became_exempt, became_taxed, leave_tif, enter_tif,
-years_exempt, incent_status, exempt_flag, base_year_fmv_2011, fmv_growth_2011,
-reassessed_year, fmv_pct_change, av_clerk_pct_change, av_mailed_pct_change,
-class_lag, improvement_lag, reassess_lag, reassessed_taxyear,
-incent_change_year, next_reassessment, base_year_fmv_2011_w, fmv_growth_2011_w,
-treatment_year, times_changed, type, pin10)`</code></pre>
-</div>
-</div>
-<section id="municipality-overview" class="level2">
-<h2 class="anchored" data-anchor-id="municipality-overview">Municipality overview</h2>
-<p>There are 3 PINs in this municipality that were commercial or industrial at least once.</p>
-<div class="cell quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Municipality: Golf</code></pre>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div data-pagedtable="false">
-  <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["Township"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"Niles"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-</div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-8a05529db8b01a816755" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-8a05529db8b01a816755">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"preferCanvas":true},"calls":[{"method":"addPolygons","args":[[[[{"lng":[-87.78927,-87.78927,-87.78937999999999,-87.78952,-87.78952,-87.78927],"lat":[42.06245,42.06254,42.06254,42.06254,42.06245,42.06245]}]],[[{"lng":[-87.79567999999999,-87.79570000000001,-87.79576999999999,-87.79612,-87.79615,-87.7962,-87.79625,-87.79629,-87.79631999999999,-87.79634,-87.79634,-87.79633,-87.79649999999999,-87.79640999999999,-87.79624,-87.79571,-87.79567999999999],"lat":[42.05784999999999,42.05788,42.05803,42.05806,42.05806,42.05806,42.05804,42.05801,42.05798,42.05793999999999,42.0579,42.05786,42.05781,42.05765,42.0577,42.05784,42.05784999999999]}]],[[{"lng":[-87.77587,-87.77578,-87.78002000000001,-87.78048,-87.78061,-87.78103,-87.78139999999999,-87.78194999999999,-87.7821,-87.78246999999999,-87.78279999999999,-87.78297999999999,-87.78349999999999,-87.78400999999999,-87.78422999999999,-87.78452999999999,-87.78506999999999,-87.78554,-87.78684,-87.78779,-87.78788,-87.78899,-87.78927,-87.78927,-87.78952,-87.78952,-87.78952,-87.78913,-87.78872,-87.78864999999999,-87.78864999999999,-87.78841,-87.78766999999999,-87.78746,-87.78739999999999,-87.78716999999999,-87.78703000000002,-87.78689,-87.78685,-87.78681,-87.78681,-87.78676999999999,-87.7867,-87.78672,-87.78657,-87.78663,-87.78664999999999,-87.78671,-87.78673999999999,-87.78570999999999,-87.78572,-87.78572,-87.78572,-87.78569,-87.78081,-87.7808,-87.77596,-87.77596,-87.77587],"lat":[42.05896,42.06251,42.06253,42.06253,42.06253,42.06253,42.06253,42.06253,42.06253,42.06253,42.06254,42.06254000000001,42.06254,42.06254000000001,42.06254,42.06254000000001,42.06254,42.06254,42.06254,42.06254,42.06254,42.06254,42.06254,42.06245,42.06245,42.06207999999999,42.06204,42.06172000000001,42.06137,42.06131,42.06097,42.06086000000001,42.06054,42.06043999999999,42.06031,42.05976,42.05946,42.05913,42.05902,42.05893,42.05887999999999,42.05888999999999,42.05869999999999,42.05782,42.05775000000001,42.0576,42.05749,42.05715,42.05715000000001,42.05558,42.05537999999999,42.05537,42.05531999999999,42.05532,42.05534000000001,42.05534,42.05536,42.05543,42.05896]},{"lng":[-87.78407,-87.78404999999999,-87.7838,-87.78323999999999,-87.78404999999999,-87.78407,-87.78407],"lat":[42.05589,42.05667,42.05668,42.05586,42.05586,42.05586,42.05589]}]]],["1007400123","1007403001","1008300007"],null,{"interactive":true,"className":"","stroke":true,"color":"#555555","weight":0.6,"opacity":0.5,"fill":true,"fillColor":["#0072B2","#E69F00","#0072B2"],"fillOpacity":0.85,"smoothFactor":1,"noClip":false},["<b>Footprint: <\/b>1007400123<br><b>Key PINs: <\/b>10074001230000<br><b>Appellant(s): <\/b>GLENVIEW GOLF CLUB (appeal tax year: 2024)<br><b>Recorded buyer(s): <\/b>Not available<br><b>PIN / 2024 class: <\/b>class 535<br><b>Project PIN counts in this region: <\/b>2 PINs<br><b>Exempt PINs (2024): <\/b>0<br>Multi-PIN project<br><small>Names from appeal/sale records; current ownership is not verified.<\/small>","<b>Footprint: <\/b>1007403001<br><b>Key PINs: <\/b><br><b>Appellant(s): <\/b>ILLINOIS PROF GOLFERS (appeal tax year: 2024)<br><b>Recorded buyer(s): <\/b>Not available<br><b>PIN / 2024 class: <\/b>class 517<br><b>Project PIN counts in this region: <\/b><br><b>Exempt PINs (2024): <\/b>0<br>Unassigned<br><small>Names from appeal/sale records; current ownership is not verified.<\/small>","<b>Footprint: <\/b>1008300007<br><b>Key PINs: <\/b>10074001230000<br><b>Appellant(s): <\/b>GLENVIEW GOLF CLUB (appeal tax year: 2024)<br><b>Recorded buyer(s): <\/b>Not available<br><b>PIN / 2024 class: <\/b>class 535<br><b>Project PIN counts in this region: <\/b>2 PINs<br><b>Exempt PINs (2024): <\/b>0<br>Multi-PIN project<br><small>Names from appeal/sale records; current ownership is not verified.<\/small>"],{"maxWidth":450,"minWidth":50,"maxHeight":300,"autoPan":true,"keepInView":false,"closeButton":true,"className":"","offset":[0,-30]},["<b>Footprint: <\/b>1007400123<br><b>Key PINs: <\/b>10074001230000<br><b>Appellant(s): <\/b>GLENVIEW GOLF CLUB (appeal tax year: 2024)<br><b>Recorded buyer(s): <\/b>Not available<br><b>PIN / 2024 class: <\/b>class 535<br><b>Project PIN counts in this region: <\/b>2 PINs<br><b>Exempt PINs (2024): <\/b>0<br>Multi-PIN project<br><small>Names from appeal/sale records; current ownership is not verified.<\/small>","<b>Footprint: <\/b>1007403001<br><b>Key PINs: <\/b><br><b>Appellant(s): <\/b>ILLINOIS PROF GOLFERS (appeal tax year: 2024)<br><b>Recorded buyer(s): <\/b>Not available<br><b>PIN / 2024 class: <\/b>class 517<br><b>Project PIN counts in this region: <\/b><br><b>Exempt PINs (2024): <\/b>0<br>Unassigned<br><small>Names from appeal/sale records; current ownership is not verified.<\/small>","<b>Footprint: <\/b>1008300007<br><b>Key PINs: <\/b>10074001230000<br><b>Appellant(s): <\/b>GLENVIEW GOLF CLUB (appeal tax year: 2024)<br><b>Recorded buyer(s): <\/b>Not available<br><b>PIN / 2024 class: <\/b>class 535<br><b>Project PIN counts in this region: <\/b>2 PINs<br><b>Exempt PINs (2024): <\/b>0<br>Multi-PIN project<br><small>Names from appeal/sale records; current ownership is not verified.<\/small>"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"12px","textOnly":false,"style":{"white-space":"normal","max-width":"380px","max-height":"240px","overflow-y":"auto"},"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#80B1D3","#0072B2","#E69F00","#BDBDBD","#FFFFFF","#CC79A7"],"labels":["Single-PIN project","Multi-PIN project","Unassigned","Exempt (class 0)","Unknown / not observed","Mixed footprint"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"topright","type":"unknown","title":null,"extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[42.05531999999999,42.06254000000001],"lng":[-87.79649999999999,-87.77578]}},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (function(el, x, data) {\n    var map = this, layers = [];\n    data.forEach(function(row) {\n      var layer = map.layerManager.getLayer('shape', row.pin10);\n      if (!layer || !layer.setStyle) return;\n      layer.regionKeys = row.keypins ? row.keypins.split(', ') : [];\n      layer.options.bubblingMouseEvents = false;\n      layers.push(layer);\n      layer.on('click', function(e) {\n        var selected = layer.regionKeys;\n        layers.forEach(function(other) {\n          var keys = other.regionKeys;\n          var match = other === layer || keys.some(function(k) { return selected.indexOf(k) >= 0; });\n          other.setStyle({color: match ? '#111111' : '#555555', weight: match ? 3 : 0.6,\n                          fillOpacity: match ? 1 : 0.2});\n          if (match) other.bringToFront();\n        });\n      });\n    });\n    map.on('click', function() {\n      layers.forEach(function(layer) { layer.setStyle({color: '#555555', weight: 0.6, fillOpacity: 0.85}); });\n    });\n  }).call(this.getMap(), el, x, data);\n}","data":[{"pin10":"1007400123","keypins":"10074001230000"},{"pin10":"1007403001","keypins":""},{"pin10":"1008300007","keypins":"10074001230000"}]}]}}</script>
 </div>
 </div>
 </section>
-<section id="parcel-map-outline-only" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="parcel-map-outline-only">Parcel map (outline only)</h2>
-<div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(res<span class="sc">$</span>parcels) <span class="sc">+</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>() <span class="sc">+</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display page-columns page-full">
-<div id="fig-parcels-outline" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
-<figure class="quarto-float quarto-float-fig figure page-columns page-full">
-<div aria-describedby="fig-parcels-outline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="golf-projects_files/figure-html/fig-parcels-outline-1.png" class="img-fluid figure-img" width="672">
+<section id="explore-projects-in-golf-with-multiple-pins" class="level2">
+<h2 class="anchored" data-anchor-id="explore-projects-in-golf-with-multiple-pins">Explore Projects in Golf with multiple PINs</h2>
+<p>Click a footprint to highlight the footprints sharing its key PINs; click the blank map background to reset. Only projects with at least two PINs <strong>within this region</strong> are included. Counts include unmapped PINs; shared footprints can belong to more than one project. Gray indicates a footprint shared by multiple displayed projects.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-0214db0231d6b4d3fd9e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-0214db0231d6b4d3fd9e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"preferCanvas":true},"calls":[{"method":"addPolygons","args":[[[[{"lng":[-87.78927,-87.78927,-87.78937999999999,-87.78952,-87.78952,-87.78927],"lat":[42.06245,42.06254,42.06254,42.06254,42.06245,42.06245]}]],[[{"lng":[-87.77587,-87.77578,-87.78002000000001,-87.78048,-87.78061,-87.78103,-87.78139999999999,-87.78194999999999,-87.7821,-87.78246999999999,-87.78279999999999,-87.78297999999999,-87.78349999999999,-87.78400999999999,-87.78422999999999,-87.78452999999999,-87.78506999999999,-87.78554,-87.78684,-87.78779,-87.78788,-87.78899,-87.78927,-87.78927,-87.78952,-87.78952,-87.78952,-87.78913,-87.78872,-87.78864999999999,-87.78864999999999,-87.78841,-87.78766999999999,-87.78746,-87.78739999999999,-87.78716999999999,-87.78703000000002,-87.78689,-87.78685,-87.78681,-87.78681,-87.78676999999999,-87.7867,-87.78672,-87.78657,-87.78663,-87.78664999999999,-87.78671,-87.78673999999999,-87.78570999999999,-87.78572,-87.78572,-87.78572,-87.78569,-87.78081,-87.7808,-87.77596,-87.77596,-87.77587],"lat":[42.05896,42.06251,42.06253,42.06253,42.06253,42.06253,42.06253,42.06253,42.06253,42.06253,42.06254,42.06254000000001,42.06254,42.06254000000001,42.06254,42.06254000000001,42.06254,42.06254,42.06254,42.06254,42.06254,42.06254,42.06254,42.06245,42.06245,42.06207999999999,42.06204,42.06172000000001,42.06137,42.06131,42.06097,42.06086000000001,42.06054,42.06043999999999,42.06031,42.05976,42.05946,42.05913,42.05902,42.05893,42.05887999999999,42.05888999999999,42.05869999999999,42.05782,42.05775000000001,42.0576,42.05749,42.05715,42.05715000000001,42.05558,42.05537999999999,42.05537,42.05531999999999,42.05532,42.05534000000001,42.05534,42.05536,42.05543,42.05896]},{"lng":[-87.78407,-87.78404999999999,-87.7838,-87.78323999999999,-87.78404999999999,-87.78407,-87.78407],"lat":[42.05589,42.05667,42.05668,42.05586,42.05586,42.05586,42.05589]}]]],["1007400123","1008300007"],null,{"interactive":true,"className":"","stroke":true,"color":"#555555","weight":0.6,"opacity":0.5,"fill":true,"fillColor":["#0072B2","#0072B2"],"fillOpacity":0.85,"smoothFactor":1,"noClip":false},["<b>Footprint: <\/b>1007400123<br><b>Key PINs: <\/b>10074001230000<br><b>Appellant(s): <\/b>GLENVIEW GOLF CLUB (appeal tax year: 2024)<br><b>Recorded buyer(s): <\/b>Not available<br><b>PIN / 2024 class: <\/b>class 535<br><b>Project PIN counts in this region: <\/b>2 PINs<br><b>Incentive PINs as of 2024 by project (within this region): <\/b>0<br><b>PINs in a TIF in 2024 by project (within this region): <\/b>0<br><small>Names are from appeal/sale records or commercial valuation reports; current ownership and use was not verified.<\/small>","<b>Footprint: <\/b>1008300007<br><b>Key PINs: <\/b>10074001230000<br><b>Appellant(s): <\/b>GLENVIEW GOLF CLUB (appeal tax year: 2024)<br><b>Recorded buyer(s): <\/b>Not available<br><b>PIN / 2024 class: <\/b>class 535<br><b>Project PIN counts in this region: <\/b>2 PINs<br><b>Incentive PINs as of 2024 by project (within this region): <\/b>0<br><b>PINs in a TIF in 2024 by project (within this region): <\/b>0<br><small>Names are from appeal/sale records or commercial valuation reports; current ownership and use was not verified.<\/small>"],{"maxWidth":300,"minWidth":50,"maxHeight":300,"autoPan":true,"keepInView":false,"closeButton":true,"className":"","offset":[0,-30]},["<b>Footprint: <\/b>1007400123<br><b>Key PINs: <\/b>10074001230000<br><b>Appellant(s): <\/b>GLENVIEW GOLF CLUB (appeal tax year: 2024)<br><b>Recorded buyer(s): <\/b>Not available<br><b>PIN / 2024 class: <\/b>class 535<br><b>Project PIN counts in this region: <\/b>2 PINs<br><b>Incentive PINs as of 2024 by project (within this region): <\/b>0<br><b>PINs in a TIF in 2024 by project (within this region): <\/b>0<br><small>Names are from appeal/sale records or commercial valuation reports; current ownership and use was not verified.<\/small>","<b>Footprint: <\/b>1008300007<br><b>Key PINs: <\/b>10074001230000<br><b>Appellant(s): <\/b>GLENVIEW GOLF CLUB (appeal tax year: 2024)<br><b>Recorded buyer(s): <\/b>Not available<br><b>PIN / 2024 class: <\/b>class 535<br><b>Project PIN counts in this region: <\/b>2 PINs<br><b>Incentive PINs as of 2024 by project (within this region): <\/b>0<br><b>PINs in a TIF in 2024 by project (within this region): <\/b>0<br><small>Names are from appeal/sale records or commercial valuation reports; current ownership and use was not verified.<\/small>"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"12px","textOnly":false,"style":{"white-space":"normal","max-width":"380px","max-height":"240px","overflow-y":"auto"},"className":"","sticky":true},null]}],"limits":{"lat":[42.05531999999999,42.06254000000001],"lng":[-87.78952,-87.77578]}},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (function(el, x, data) {\n\n      var map = this,\n          layers = [];\n\n      data.forEach(function(row) {\n\n        var layer =\n          map.layerManager.getLayer('shape', row.pin10);\n\n        if (!layer || !layer.setStyle) return;\n\n        layer.projectKeys =\n          row.keypins\n            ? row.keypins.split(',').map(function(x) {\n                return x.trim();\n              })\n            : [];\n\n        layer.options.bubblingMouseEvents = false;\n\n        layers.push(layer);\n\n        layer.on('click', function(e) {\n\n          var selected = layer.projectKeys;\n\n          layers.forEach(function(other) {\n\n            var keys = other.projectKeys;\n\n            var match =\n              other === layer ||\n              keys.some(function(k) {\n                return selected.indexOf(k) >= 0;\n              });\n\n            other.setStyle({\n              color: match ? '#111111' : '#555555',\n              weight: match ? 3 : 0.6,\n              fillOpacity: match ? 1 : 0.2\n            });\n\n            if (match) other.bringToFront();\n          });\n        });\n      });\n\n      map.on('click', function() {\n\n        layers.forEach(function(layer) {\n          layer.setStyle({\n            color: '#555555',\n            weight: 0.6,\n            fillOpacity: 0.85\n          });\n        });\n      });\n    }).call(this.getMap(), el, x, data);\n}","data":[{"pin10":"1007400123","keypins":"10074001230000"},{"pin10":"1008300007","keypins":"10074001230000"}]}]}}</script>
 </div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-parcels-outline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: All commercial &amp; industrial parcels in the municipality.
+</div>
+</section>
+<section id="golf-property-overview" class="level2">
+<h2 class="anchored" data-anchor-id="golf-property-overview">Golf Property Overview</h2>
+<p>These counts cover distinct fourteen-digit PINs in the historical commercial/industrial universe (2006–2024). Status and parcel geometry are from <strong>2024</strong>. Region membership uses the universe’s latest available geographic assignment; this is not a historical boundary analysis.</p>
+<div class="cell">
+<div id="tbl-region-overview" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-region-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1
 </figcaption>
+<div aria-describedby="tbl-region-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Measure</th>
+<th style="text-align: right;">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Historical C&amp;I PINs (2006-2024 universe)</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Observed in 2024</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Exempt in 2024 (class 0)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Incentive PINs (2024 classes 600-899)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PINs in a TIF (2024 membership)</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Unknown 2024 class</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Not observed in 2024</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Assigned projects</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Projects with multiple PINs in this region</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PINs without a project assignment</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mapped ten-digit footprints (2024 geometry)</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PINs without usable 2024 geometry</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </figure>
 </div>
 </div>
-</div>
+<p>Of the 3 PINs observed in 2024, <strong>0 are class 0</strong> (0.0%).</p>
 </section>
-<section id="manually-coded-keypins-map" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="manually-coded-keypins-map">Manually coded keypins – map</h2>
-<div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>parcel_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display page-columns page-full">
-<div id="fig-keypin-map" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
-<figure class="quarto-float quarto-float-fig figure page-columns page-full">
-<div aria-describedby="fig-keypin-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="golf-projects_files/figure-html/fig-keypin-map-1.png" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-keypin-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Parcels grouped by manually coded keypins (based off of appeal IDs, sale documents and proximity).
+<section id="what-types-of-property-are-these-pins-in-2024" class="level2">
+<h2 class="anchored" data-anchor-id="what-types-of-property-are-these-pins-in-2024">What types of property are these PINs in 2024?</h2>
+<p>This table counts individual PINs by their <strong>2024 assessor property classification</strong>, with the class description beside each code. It does not count projects: one project can contain PINs in several classes. Because the sample includes properties that were commercial or industrial in earlier years, residential, vacant, and exempt classes can also appear. The final missing-record category has no known 2024 classification.</p>
+<div class="cell">
+<div id="tbl-class-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-class-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: PIN counts by 2024 property class
 </figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="class-summary-pins-vs-keypins" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="class-summary-pins-vs-keypins">Class summary (pins vs keypins)</h2>
-<div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>class_summary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div id="tbl-class-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
-<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
 <div aria-describedby="tbl-class-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div data-pagedtable="false">
-  <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["class"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["pins"],"name":[2],"type":["int"],"align":["right"]},{"label":["keypins"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"0","2":"1","3":"1"},{"1":"535","2":"2","3":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
+<table class="cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">2024 class</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: right;">PINs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">517</td>
+<td style="text-align: left;">One-story commercial building</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">535</td>
+<td style="text-align: left;">Golf course improvement</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-</div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-class-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: PINs and projects per property class
-</figcaption>
 </figure>
 </div>
 </div>
 </section>
-<section id="keypin-level-summary-fmv-incentives-exemptions" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="keypin-level-summary-fmv-incentives-exemptions">Keypin-level summary (fmv, incentives, exemptions)</h2>
+<section id="projects-in-golf" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="projects-in-golf">Projects in Golf</h2>
+<p>Counts and values include only PINs within this region. A project may extend into another region, so regional project counts are not additive. Unassigned PINs are excluded from project totals. FMV means estimated fair market value. Incentive PINs are 2024 classes 600-899. FMV is summed only over known 2024 values; an entirely missing valuation remains missing. The project identifier uses Appellant, falling back to Key PIN. Last Year of Paid Taxbill lists each distinct latest year in which a PIN had a bill greater than $0 during 2006-2024; it does not confirm payment. PINs without a positive bill in that history are identified separately. TIF counts use 2024 PIN-to-TIF membership records regardless of payment or increment, rather than positive distributions. Missing 2024 records are not counted as known TIF members.</p>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>keypin_info_summary <span class="sc">|&gt;</span> DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">rownames =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div id="tbl-keypin-info-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<div id="tbl-projects" class="cell quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="quarto-float quarto-float-tbl figure page-columns page-full">
-<div aria-describedby="tbl-keypin-info-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-70860071320a38ca2b65" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-70860071320a38ca2b65">{"x":{"filter":"none","vertical":false,"data":[["10074001230000",null],[2,1],["GLENVIEW GOLF CLUB",null],[6328432,0],[0,0],[0,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>keypin<\/th>\n      <th>n<\/th>\n      <th>appellant<\/th>\n      <th>fmv<\/th>\n      <th>incentive_pins<\/th>\n      <th>exempt<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"name":"keypin","targets":0},{"name":"n","targets":1},{"name":"appellant","targets":2},{"name":"fmv","targets":3},{"name":"incentive_pins","targets":4},{"name":"exempt","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-keypin-info-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Projects in municipality. You can sort each column!
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-projects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Projects, appellants, and 2024 values
 </figcaption>
+<div aria-describedby="tbl-projects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<div class="cell-output-display column-screen-inset">
+<div id="htmlwidget-55540c9a215281b5b1f8" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-55540c9a215281b5b1f8">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"1\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"1\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"1\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"1\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"1\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"1\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["GLENVIEW GOLF CLUB - 2413175"],[2],[6328484],[0],[0],["2024"],["10074001230000"],["GLENVIEW GOLF CLUB"],[0],[2],[""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Project (Appellant / Key PIN)<\/th>\n      <th>PINs<\/th>\n      <th>FMV (2024)<\/th>\n      <th>Incentive PINs (2024)<\/th>\n      <th>PINs in a TIF (2024)<\/th>\n      <th>Last Year of Paid Taxbill<\/th>\n      <th>Key PIN<\/th>\n      <th>Exempt PINs (2024)<\/th>\n      <th>Observed PINs (2024)<\/th>\n      <th>Recorded buyer and purchase year<\/th>\n      <th>Appellant and appeal tax year<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"scrollX":true,"autoWidth":true,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatCurrency(data, \"$\", 0, 3, \",\", \".\", true, null);\n  }"},{"className":"dt-right","targets":[1,2,3,4,8,9]},{"name":"project_identifier","targets":0},{"name":"pins_in_region","targets":1},{"name":"fmv_2024","targets":2},{"name":"incentive_class_pins_2024","targets":3},{"name":"tif_pins_2024","targets":4},{"name":"last_positive_bill_years","targets":5},{"name":"keypin","targets":6},{"name":"appellant","targets":7},{"name":"exempt_2024","targets":8},{"name":"observed_2024","targets":9},{"name":"buyer","targets":10}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":["options.columnDefs.0.render"],"jsHooks":[]}</script>
+</div>
+</div>
 </figure>
 </div>
 </div>
-<p>There are 1 projects with more than 1 pin in them and 2 projects overall based on manually grouped keypins from combined data sources.</p>
-<div class="cell" data-tbl-cap="This many pins were in the valuation worksheets.">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>valuation_wksts <span class="sc">|&gt;</span> <span class="fu">filter</span>(pin <span class="sc">%in%</span> res<span class="sc">$</span>pin_info<span class="sc">$</span>pin)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div data-pagedtable="false"> <div class="table-caption"><p>This many pins were in the valuation worksheets.</p></div>
-  <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["keypin"],"name":[1],"type":["chr"],"align":["left"]},{"label":["pin"],"name":[2],"type":["chr"],"align":["left"]},{"label":["year"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"10074030010000","2":"10074030010000","3":"2025"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-</div>
-</div>
-<p>There are 1 PINs in the valuation worksheets with 1 distinct keypins.</p>
-<p>There were 2 projects overall based on manually grouped keypins from combined data sources.</p>
-<p>There were 3 PINs within this municipality that had been commercial or industrial at some point in time.</p>
+</section>
+<section id="sources-and-coverage" class="level2">
+<h2 class="anchored" data-anchor-id="sources-and-coverage">Sources and coverage</h2>
+<p>Historical universe: <code>commercial_industrial_pin_universe_2026_09_21.csv</code>, derived from <code>comm_ind_PINs_ever_2006to2024.csv</code>. Classification and FMV: 2024 observations in that underlying extract. Project assignments: <code>project_assignments_phase7_2026_09_22.csv</code> (phase-7 key PIN). Appellants and appeal years: latest tax-year records for each PIN in <code>borappeals_UPDATED.csv</code>, including all ties. Names come only from BOR records for that PIN, with no fallback to reviewed names. Buyer names come from the assignment file; purchase years are matched by PIN, sale document, and buyer in Assessor_Parcel_Sales_20250105.csv. Unmatched years are shown as unavailable. Last positive bills use the 2006-2024 history, and TIF membership uses tif_record_present in the 2024 extract. Class descriptions: <code>class_dict_expanded.csv</code>. Geometry: 2024 footprints from <code>ptaxsim-2024.0.0.db</code>.</p>
+<p>PIN totals come from the tabular universe, independently of map coverage. Footprints are drawn once even when multiple PINs share the same ten-digit identifier. Assignment-review counts identify flagged records; absence of a flag does not certify an assignment. Directory and PIN-search pages may still use older data vintages.</p>
 
 
 </section>
