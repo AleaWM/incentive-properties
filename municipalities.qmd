@@ -7,6 +7,8 @@ Search for a municipality below and open its report. Municipality reports summar
 
 Because projects may cross municipal or township boundaries, report counts are not additive across geographies.
 
+Total counts cover 2006–2024. The 2024 columns count PINs observed that year and projects with at least one of those PINs, using the reviewed project assignments.
+
 ```{r}
 #| label: municipality-directory
 #| echo: false
@@ -27,11 +29,11 @@ slugify <- function(x) {
 
 comm_ind <- read_csv(
   "../Merriman RA/ptax/Output/comm_ind_PINs_2006to2024_timeseries.csv") |> select(pin, class, clean_name, Triad, Township, incent_prop, class, fmv, tif_years, years_existed, incentive_years, final_tax_to_dist, final_tax_to_tif, year) |>
-  mutate(pin = as.character(pin))  |> filter(year > 2023) 
+  mutate(pin = as.character(pin))
 
-keypins <- read_xlsx(
-  "Output/project_assignments_phase7_2026_09_22.xlsx"
-) |>
+#keypins <- read_xlsx(
+#  "Output/project_assignments_phase7_2026_09_22.xlsx") |>
+  keypins <- read_xlsx("projects_checked_MAINFILE_REVIEWED_2.xlsx")  |>
   transmute(
     pin = as.character(pin),
     keypin = as.character(phase7_project_keypin)
@@ -43,9 +45,11 @@ municipality_directory <- comm_ind |>
   left_join(keypins, by = "pin") |>
   group_by(Municipality = clean_name) |>
   summarise(
-    `C&I PINs` = n_distinct(pin),
-    Projects = n_distinct(keypin, na.rm = TRUE),
-    Townships = n_distinct(Township, na.rm = TRUE),
+    `C&I PINs (Exist in 2024)` = n_distinct(pin[!is.na(year) & year == 2024], na.rm = TRUE),
+    `Projects (Exist in 2024)` = n_distinct(na_if(keypin[!is.na(year) & year == 2024], ""), na.rm = TRUE),
+    `Unique C&I PINs (2006–2024)` = n_distinct(pin, na.rm = TRUE),
+    `Unique Projects (2006–2024)` = n_distinct(na_if(keypin, ""), na.rm = TRUE),
+
     .groups = "drop"
   ) |>
   arrange(Municipality) |>
